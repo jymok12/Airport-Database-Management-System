@@ -1,16 +1,32 @@
 # This is a sample Python script.
+import mysql.connector
+db = mysql.connector.connect(
+    host = "localhost",
+    user = "root",
+    passwd = "mju765",
+    database = "354temp"
+    )
+mycursor = db.cursor()
+mycursor.execute("SELECT * FROM Country")
+for x in mycursor:
+        print(x)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+mycursor.execute("SELECT * FROM AirplaneType")
+for x in mycursor:
+        print(x)
 
+mycursor.execute("SELECT * FROM Airport")
+for x in mycursor:
+        print(x)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+mycursor.execute("SELECT * FROM Route")
+for x in mycursor:
+        print(x)
 
+mycursor.execute("SELECT * FROM Flight")
+for x in mycursor:
+        print(x)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+print("PyCharm")
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
