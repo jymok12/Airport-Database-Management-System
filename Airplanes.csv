@@ -1,781 +1,643 @@
-,Standard,Max Pax,Pilots,Crew,Turnaround,Speed,Range,Fuel,Available,Delivery,Runway,Size class,Conversion into,Noise Chapter Compatibility
-,(Eco/Bus/Fir),(Eco HD),,,(min),(kts),(nm),(kg/hr),(year +-18m),(year +-18m),(m),,,
-,,,,,,,,,,,,,,
-PROP AIRCRAFT,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-Aérospatiale N262A,29,29,2,1,20,210,330,360,August-1961,July-1963,790,Medium,,
-Aérospatiale N262C Frègate,29,29,2,1,20,210,430,300,August-1970,January-1972,800,Medium,,
-,,,,,,,,,,,,,,
-Agusta AZ-8L,26,26,2,1,30,200,680,1030,October 1956,June 1960,800,       Medium,,
-,,,,,,,,,,,,,,
-Airspeed Ambassador,48,48,3,1,25,225,900,780,March 1946,December 1951,1440,Medium,,
-,,,,,,,,,,,,,,
-Antonow An-10,78,85,4,2,40,350,1170,3500,January 1955,January 1958,1820,Large,,
-Antonow An-10A,114,130,4,3,40,350,960,3330,January 1958,September 1960,1820,Large,,
-,,,,,,,,,,,,,,
-Antonov An-24,52,52,3,2,25,240,350,1710,July 1958,January 1962,1160,Medium,,2
-Antonov An-26,44,44,3,1,25,240,470,1660,July 1965,February 1968,1440,Medium,,3
-Antonov An-28,18,18,2,0,15,180,310,680,October 1970,June 1980,790,          Small,,3
-Antonov An-38-100,26,26,2,1,15,180,440,350,December 1990,September 1996,880,          Small,,4
-Antonov An-38-120,26,26,2,1,15,180,440,350,June 1997,April 1998,880,          Small,,4
-Antonov An-38-200,27,27,2,1,15,180,480,380,November 1998,May 2002,1030,Small,,4
-,,,,,,,,,,,,,,
-Antonov An-140,52,52,2,2,25,280,1220-1260,570-680,May 1994,March 2003,1500,Medium,,3
-,,,,,,,,,,,,,,
-Armstrong Whitw. AW.55 Apollo,32,32,2,1,25,240,600,930,March 1946,March 1951,960,Medium,,
-Armstrong Whitw. AW.650 Mk 100,66,77,2,2,30,240,1350,1110,April 1958,March 1962,1330,Large,,
-Armstrong Whitw. AW.650 Mk 200,66,77,2,2,30,240,1400,1110,June 1960,October 1962,1330,Large,,
-Armstrong Whitw. AW.650 Mk 220,66,77,2,2,30,240,1590,1080,April 1963,April 1964,1330,Large,,
-Armstrong Whitw. AW.671,102,120,2,3,30,240,920,1110,June 1964,June 1967,1330,Large,,
-,,,,,,,,,,,,,,
-ATR 42-300,48,48,2,1,25,275,440-610,510-520,Feburary 1983,January 1987,1060,Medium,ATR42-320F,3
-ATR 42-320,48,48,2,1,25,275,450-610,500-510,April 1984,February 1987,1030,Medium,ATR42-320F,3
-ATR 42-320F,5300kg,5300kg,2,0,25,275,390,500,April 2002,April 2002,1040,Medium,,3
-ATR 42-500,50,50,2,1,25,275,700-740,520-530,February 1993,June 1995,1120,Medium,,4
-ATR 42-600,50,50,2,1,25,275,700-750,510-520,March 2008,March 2011,1120,Medium,,4
-ATR 72-200,64,74,2,2,25,275,670-750,580-590,March 1985,July 1989,1510,Medium,ATR72-210F,4
-ATR 72-210,64,74,2,2,25,275,670-760,590-600,January 1987,May 1990,1360,Medium,ATR72-210F,4
-ATR 72-210F,8050kg,8050kg,2,0,25,275,390,600,April 2002,April 2002,1360,Medium,,4
-ATR 72-500,64,74,2,2,25,275,780-970,600-620,November 1992,January 1997,1350,Medium,,4
-ATR 72-600,68,78,2,2,25,275,760-900,590-610,March 2008,March 2011,1400,Medium,ATR72-600F,4
-ATR 72-600F,Cargo,7790,2,0,25,275,500,580,August-16,Sep-2020,1410,Medium,,4
-,,,,,,,,,,,,,,
-Aviation Traders Mk l,28,28,2,1,25,240,830,720,February-55,Jan 1957,940,Medium,,
-Aviation Traders Mk ll,40,40,2,1,25,240,770,820,February-55,Jan 1957,1050,Medium,,
-,,,,,,,,,,,,,,
-BAe ATP,68,68,2,2,30,266,790,520,March 1984,March 1988,1250,Medium,,4
-,,,,,,,,,,,,,,
-BAe Jetstream 31,19,19,2,0,15,250,300,330,April 1980,April 1983,720,Small,,4
-BAe Jetstream 32,19,19,2,0,15,250,460,330,July 1988,Nov 1989,710,Small,,4
-BAe Jetstream 41,29,29,2,1,15,250,710,430,Jan 1989,Sep 1992,800,Small,,4
-,,,,,,,,,,,,,,
-Beechcraft 1900C,19,19,2,0,15,240,570,340,Jan 1982,Sep 1984,1060,Small,,4
-Beechcraft 1900CF,2205kg,2205kg,2,0,15,240,430,340,January 1990,January 1990,1060,Small,,4
-Beechcraft 1900D,19,19,2,0,15,240,610,320,August 1989,March 1991,1100,Small,B1900DF,4
-Beechcraft 1900DF,1895kg,1895kg,2,0,15,240,330,320,January 1994,January 1994,1110,Small,,4
-Beechcraft 99,15,15,2,0,15,240,360,190,Jan 1966,May 1968,780,Small,,4
-Beechcraft A99,15,15,2,0,15,240,440,190,Oct 1966,Feb 1969,780,Small,,4
-Beechcraft B99,17,17,2,0,15,240,530,190,Apr 1968,Sep 1969,750,Small,,4
-Beechcraft C99,17,17,2,0,15,240,550,200,August 1978,December 1979,750,Small,,4
-,,,,,,,,,,,,,,
-Boeing 247,10,10,3,0,25,160,350,690,,1932,,Small,,
-,,,,,,,,,,,,,,
-Boeing 307,33,33,5,1,30,190,1030,1150,January 1937,May 1939,1070,Medium,,
-,,,,,,,,,,,,,,
-Boeing 377,100,114,4,3,60,250,2090,2320,January 1944,October 1946,1670,Large,377F,
-Boeing 377 Freighter,17100kg,17100kg,4,0,60,250,1050,2670,January 1944,October 1946,2310,Large,,
-,,,,,,,,,,,,,,
-Bombardier Dash 8-Q400,68,78,2,2,25,343,950-1400,760-810,June 1996,May 2000,1460,Medium,Dash8-Q400PF,
-Bombardier Dash 8-Q400NextGen,76,86,2,2,25,343,880-1410,750-800,April 2008,February 2009,1450,Medium,Dash8-Q400PF,
-Bombardier Dash 8-Q400PF,8980kg,8980kg,2,2,25,343,800,760,January 2009,January 2009,1560,Medium,,
-,,,,,,,,,,,,,,
-Breguet 763 Provence,92,107,4,3,45,200,1330,1640,August 1947,September 1953,1550,Large,,
-Breguet 763 Sahara,17000kg,17000g,4,0,45,200,700,1560,August 1947,September 1953,1630,Large,,
-,,,,,,,,,,,,,,
-Bristol Type 170 Mk 1 Wayfarer,34,34,2,1,25,180,810,720,September 1944,August 1946,960,Medium,Mk 32 Super Freighter,
-Bristol Type 170 Mk 31 Freighter,6531kg,6531kg,2,0,25,180,300,720,August 1948,November 1949,950,Medium,Mk 32 Super Freighter,
-Bristol Type 170 Mk 31E (Combi version),16,4180kg,2,0,25,180,890,720,September 1949,March 1951,940,Medium,Mk 32 Super Freighter,
-Bristol Type 170 Mk 32 Super Freighter (Combi version),22,6123kg,2,1,25,180,860,730,March 1950,October 1951,920,Medium,,
-,,,,,,,,,,,,,,
-Bristol Type 175 Britannia Srs 102,78,96,3,2,50,310,3030,3030,June 1949,August 1956,1640,Large,,
-Bristol Type 175 Britannia Srs 253F,Cargo,16964,3,0,50,310,2950,2850,November 1959,November 1959,1750,Large,,
-Bristol Type 175 Britannia Srs 302,120,139,3,3,50,310,3210,2880,January 1955,March 1957,1900,Large,,
-Bristol Type 175 Britannia Srs 305,120,139,3,3,50,310,3710,2880,October 1955,December 1957,1900,Large,,
-Bristol Type 175 Britannia Srs 310,120,139,3,3,50,310,3710,2910,February 1956,October 1958,1900,Large,,
-Bristol Type 175 Britannia Srs 320,120,139,3,3,50,310,3900,2850,July 1958,July 1959,1900,Large,,
-,,,,,,,,,,,,,,
-Britten-Norman BN-2 Islander,8,8,2,0,15,145,200,190,(Apr 1963),(Oct 1967),680,Small,,
-Britten-Norman BN-2A Islander,8,8,2,0,15,145,200,180,(Jul 1967),(Jul 1968),680,Small,,
-Britten-Norman BN-2A Mk.3 Trislander,16,16,2,0,15,145,260,240,1970,1970,690,Small,,
-Britten-Norman BN-2B,8,8,2,0,15,145,               180-200,180-190,Sep 1977,Sep 1979,680,Small,,
-Britten-Norman BN-2T,8,8,2,0,15,145,310,170,Jan 1979,Dec 1979,680,Small,,
-,,,,,,,,,,,,,,
-CASA C-212-100,22,22,2,1,20,170,290,230,Jan 1970,Sep 1973,500,Small,,
-CASA C-212-200,26,26,2,1,20,170,280,260,July 1978,April 1980,580,Small,,
-CASA C-212-300,26,26,2,1,20,170,370,250,Dec 1985,Jan 1989,570,Small,,
-CASA C-212-400,26,26,2,1,20,170,540,240,Mar 1995,Apr 1996,590,Small,,
-CASA CN 235-10,44,44,2,1,25,260,490,610,Jun 1980,May 1986,920,Medium,,
-CASA CN 235-100,44,44,2,1,25,260,530,580,Apr 1986,Jul 1987,920,Medium,,
-CASA CN 235-200,44,44,2,1,25,260,560,570,Aug 1991,Dec 1992,950,Medium,,
-,,,,,,,,,,,,,,
-Cessna 208A Caravan,9,9,2,0,15,160,590,160,February 1982,December 1983,450,Small,C208A Caravan,
-Cessna 208A Cargomaster,1360kg,1360kg,2,0,15,160,110,160,February 1982,December 1983,450,Small,,
-Cessna 208B Grand Caravan,12,12,2,0,15,160,530,210,January 1989,April 1991,450,Small,C208B Super Cargomaster,
-Cessna 208B Grand Caravan EX,14,14,2,0,15,160,690,200,December 2011,December 2012,430,Small,,
-Cessna 208B Super Cargomaster,1672kg,1672kg,2,0,15,160,200,210,September 1984,May 1985,450,Small,,
-Cessna 208B Super Cargomaster EX,1618kg,1618kg,2,0,15,160,220,200,December 2011,December 2012,430,Small,,
-,,,,,,,,,,,,,,
-Convair CV-240,40,40,3,1,25,240,830,850,October 1946,November 1948,1280,Medium,,
-Convair CV-340,52,52,3,2,25,240,600,870,March 1950,October 1951,1410,Medium,,
-Convair CV-440,52,52,3,2,25,240,770,850,November 1951,October 1953,1480,Medium,,
-,,,,,,,,,,,,,,
-Curtiss-Wright C-46 Commando,36,36,2,1,25,150,640,860,May 1938,May 1941,1130,Medium,C-46A,
-Curtiss-Wright C-46A (Cargo),6350kg,6350kg,2,0,25,150,300,950,January 1941,January 1941,1200,Medium,,
-,,,,,,,,,,,,,,
-de Havilland Canada DHC-3 Otter,10,10,2,0,15,105,440,150,November 1949,September 1951,480,Small,,
-,,,,,,,,,,,,,,
-de Havilland Canada DHC-4 Caribou,30,30,2,1,20,170,340,370,June 1956,September 1959,350,Medium,,
-,,,,,,,,,,,,,,
-de Havilland Canada DHC-5E,40,40,2,1,25,230,570,440,March 1978,July 1981,840,Medium,,
-,,,,,,,,,,,,,,
-de Havilland Canada DHC-6-300 Twin Otter,20,20,2,1,20,160,430,320,December 1968,January 1970,390,Small,,
-,,,,,,,,,,,,,,
-de Havilland Canada DHC-7,54,54,2,2,25,220,520,800,September 1972,June 1976,890,Medium,,
-,,,,,,,,,,,,,,
-de Havilland Canada DHC-8-100,40,40,2,1,25,250,810,560,May 1980,June 1984,940,Medium,,
-de Havilland Canada DHC-8-100A,40,40,2,1,25,250,820,560,August 1990,April 1991,940,Medium,DHC-8-100CC,
-de Havilland Canada DHC-8-100B,40,40,2,1,25,250,870,540,November 1990,October 1991,970,Medium,DHC-8-100CC,
-de Havilland Canada DHC-8-100CC,29,4082kg,2,1,25,250,1010,540,November 1990,October 1991,970,Medium,DHC-8-100B,
-de Havilland Canada DHC-8-200A,40,40,2,1,25,250,930,520,April 1991,November 1993,970,Medium,DHC-8-200CC,
-de Havilland Canada DHC-8-200B,40,40,2,1,25,250,940,510,July 1992,February 1995,970,Medium,DHC-8-200CC,
-de Havilland Canada DHC-8-200CC,21,2690kg,2,1,25,250,1210,510,July 1992,February 1995,970,Medium,,
-de Havilland Canada DHC-8-300,53,53,2,2,25,250,830,550,August 1986,February 1989,1060,Medium,,
-de Havilland Canada DHC-8-300A,53,53,2,2,25,250,630-990,550-580,July 1989,May 1990,1060,Medium,,
-de Havilland Canada DHC-8-300B,53,53,2,2,25,250,630-990,550-570,August 1989,February 1991,1060,Medium,,
-de Havilland Canada DHC-8-300E,53,53,2,2,25,250,610-960,530-550,January 1993,October 1993,1060,Medium,,
-,,,,,,,,,,,,,,
-de Havilland DH.84 Dragon,8,8,2,0,15,120,190,140,February-31,May 1933,680,Small,,
-de Havilland DH.89 Dragon Rapide,10,10,2,0,15,120,230,190,August-32,March 1934,680,Small,,
-,,,,,,,,,,,,,,
-de Havilland DH.104 Dove,10,10,2,0,15,150,350,160,December 1944,December 1946,740,Small,,
-,,,,,,,,,,,,,,
-de Havilland DH.114 Heron 1,16,16,2,0,15,150,770,260,July 1948,September 1950,750,Small,,
-de Havilland DH.114 Heron 2,16,16,2,0,15,150,800,240,June-52,Jan 1953,750,Small,,
-,,,,,,,,,,,,,,
-Dornier 328-110,36,36,2,1,25,317,620,590,April 1988,February 1993,890,Medium,,
-,,,,,,,,,,,,,,
-Dornier Do 228-100,16,16,2,0,20,210,610,260,September 1980,February 1983,690,Small,,
-Dornier Do 228-200,19,19,2,0,20,210,340,260,May 1981,November 1983,710,Small,,
-Dornier Do 228-212,19,19,2,0,20,210,400,260,January 1990,February 1991,710,Small,,
-Dornier Do 228NG,19,19,2,0,20,210,400,250,December 2006,August 2009,730,Small,,
-,,,,,,,,,,,,,,
-Douglas DC-2,14,14,2,0,25,150,340,770,January 1932,October 1933,750,Medium,,
-Douglas DC-3,31,32,2,1,25,150,250,670,August 1935,August 1936,850,Medium,DC3 Freighter,
-Douglas DC-3 Freighter,2900kg,2900kg,2,0,25,150,250,670,December 1945,December 1945,850,Medium,,
-,,,,,,,,,,,,,,
-Douglas DC-4,86,86,3,2,40,200,1450,1620,July 1938,October 1945,1500,Large,DC-4F,
-Douglas DC-4F,14514kg,14514kg,3,0,40,200,410,1620,January 1949,January 1949,1500,Large,,
-,,,,,,,,,,,,,,
-Douglas DC-6,85,85,3,2,50,270,2390,1750,February 1947,July 1948,1810,Large,DC-6A,
-Douglas DC-6A,12785kg,12785kg,3,0,50,270,2540,1880,March 1948,September 1949,1850,Large,,
-Douglas DC-6B,102,102,3,3,50,270,2540,1890,April 1949,September 1951,1850,Large,DC-6BF,
-Douglas DC-6BF,12995kg,12995kg,3,0,50,270,2500,1890,December 1952,December 1952,1850,Large,,
-,,,,,,,,,,,,,,
-Douglas DC-7,85,99,3,2,50,300,1630,2220,Nov 1950,May 1954,1730,Large,,
-Douglas DC-7B,85,99,3,2,50,300,2410,2190,Mar 1953,April 1955,1710,Large,,
-Douglas DC-7BF,16283,16283,3,0,50,300,1060,2190,(Jan 1959),(Jan 1959),1710,Large,,
-Douglas DC-7C,90,102,3,3,50,300,3130,2110,Aug 1953,October 1955,1820,Large,,
-Douglas DC-7CF,18279,18279,3,0,50,300,1390,2110,(May 1959),(May 1959),1820,Large,,
-,,,,,,,,,,,,,,
-Embraer EMB-110C,15,15,2,0,20,190,630,240,Jul 1969,Dec 1973,690,Small,,
-Embraer EMB-110P,17,17,2,0,20,190,590,250,May 1977,January 1979,690,Small,,
-Embraer EMB-110P2/41,20,20,2,1,20,190,560,260,June 1984,August 1985,700,Small,,
-Embraer EMB-110P2A,21,21,2,1,20,190,550,250,April 1984,June 1985,670,Small,,
-Embraer EMB-110PA,17,17,2,0,20,190,590,240,August 1982,October 1983,670,Small,,
-,,,,,,,,,,,,,,
-Embraer EMB-120,30,30,2,1,20,266,590-610,410-430,August 1979,May 1984,810,Small,,
-Embraer EMB-120ER,30,30,2,1,20,266,660-690,370-430,February 1986,January 1987,830,Small,,
-,,,,,,,,,,,,,,
-Fairchild SA226-TC Metro,19,19,2,0,15,275,300,360,1967,1970,710,Small,,
-Fairchild SA226-TC Metro II,19,19,2,0,15,275,300,350,(Oct 1974),(Dec 1975),710,Small,,
-Fairchild SA227-AC Metro III,19,19,2,0,15,275,700-1010,360,January 1981,May 1982,720,Small,"SA227-DC Metro 25, SA227-AT Expediter",
-Fairchild SA227-AC Metro IIIA,19,19,2,0,15,275,690-990,320-330,March 1984,October 1984,720,Small,SA227-DC Metro 25,
-Fairchild SA227-AT Expediter,2268kg,2268kg,2,0,15,275,370,370,January 1981,May 1982,730,Small,,
-Fairchild SA227-AT Expediter 23,2325kg,2325kg,2,0,15,275,500,350,November 1990,April 1993,730,Small,,
-Fairchild SA227-DC Metro 23,19,19,2,0,15,275,1210,350,November 1990,April 1993,730,Small,SA227-AT Expediter 23,
-Fairchild SA227-DC Metro 25,21,21,2,1,15,275,660,350,March 1991,March 1991,730,Small,SA227-AT Expediter 23,
-,,,,,,,,,,,,,,
-Fokker F.27 Mk 100,48,48,2,1,25,240,700,750,May 1952,May 1957,1040,Medium,,
-Fokker F.27 Mk 200,48,48,2,1,25,240,1010,730,October 1957,August 1960,1100,Medium,,
-Fokker F.27 Mk 300 Combiplane,30,6390kg,2,1,25,240,1150,750,May 1952,May 1957,1040,Medium,,
-Fokker F.27 Mk 400 Combiplane,30,6157kg,2,1,25,240,1200,730,October 1957,August 1960,1100,Medium,,
-Fokker F.27 Mk 500 Cargo,6148kg,6148kg,2,0,25,240,600,640,January 1973,January 1973,1130,Medium,,3
-Fokker F.27 Mk 500 Friendship,52,52,2,2,25,240,870,640,July 1965,January 1968,1130,Medium,F.27 Mk 500 Cargo,3
-Fokker F.27 Mk 600 Cargo,5687kg,5687kg,2,0,25,240,620,640,January 1973,January 1973,1130,Medium,,3
-Fokker F.27 Mk 600,48,48,2,1,25,240,970,640,April 1967,April 1969,1130,Medium,F.27 Mk 600 Cargo,3
-,,,,,,,,,,,,,,
-Fokker 50 Mk 100,58,58,2,2,25,240,580-1050,570-600,July 1983,December 1986,1170,Medium,,
-Fokker 50 Mk 300,58,58,2,2,25,240,600-1070,630-660,August 1990,October 1992,1110,Medium,,
-,,,,,,,,,,,,,,
-GAF Nomad N24A,16,16,2,0,15,150,420,220,April 1979,October 1980,570,Small,,
-,,,,,,,,,,,,,,
-Handley Page Herald Mk.100,47,47,2,1,30,235,580,680,August 1955,December 1959,800,Medium,,
-Handley Page Herald Mk.200,53,53,2,2,30,235,640,700,(Apr 1961),1961,840,Medium,,
-Handley Page Herald Mk.600,68,68,2,2,30,235,480,730,(Feb 1967),(Oct 1968),910,Medium,,
-,,,,,,,,,,,,,,
-Hawker Siddeley HS 748 Srs.1,55,55,2,2,25,220,730,730,April 1957,June 1960,1050,Medium,,
-Hawker Siddeley HS 748 Srs.2,55,55,2,2,25,220,740,690,(Jan 1963),1963,1050,Medium,,
-Hawker Siddeley HS 748 Srs.2A,55,55,2,2,25,220,750,690,(Apr 1970),(Jan 1971),1050,Medium,,
-Hawker Siddeley HS 748 Srs.2B,55,55,2,2,25,220,840,680,July 1976,March 1977,1050,Medium,,3
-Hawker Siddeley HS 748 Super,54,54,2,2,25,220,950,660,May 1982,April 1983,1160,Medium,,3
-,,,,,,,,,,,,,,
-Hunting Percival P.66 President,12,12,2,0,20,170,490,270,December 1950,December 1953,780,Small,,
-,,,,,,,,,,,,,,
-Ilyushin IL-12,21,21,3,1,25,200,410,1000,September 1945,February 1949,1200,Medium,,
-Ilyushin Il-14M,34,34,3,1,25,200,260,960,August 1954,February 1958,1010,Medium,,
-Ilyushin Il-14P,30,30,3,1,25,200,450,960,November 1952,April 1954,1010,Medium,,
-,,,,,,,,,,,,,,
-Ilyushin Il-18A,70,84,4,2,40,320,2220,2890,September 1956,June 1959,1690,Large,,
-Ilyushin Il-18B,75,90,4,2,40,320,2230,2870,January 1957,October 1959,1740,Large,,
-Ilyushin Il-18D,105,122,4,3,40,320,2490,2810,(Sep 1964),1966,1820,Large,Il-18GR,
-Ilyushin Il-18E,105,122,4,3,40,320,1900,2810,January 1961,January 1965,1760,Large,,
-Ilyushin Il-18GR,Cargo,14000,4,0,40,320,1790,2810,(Jan 1968),(Jan 1968),1820,Large,Available Only as Conversion,
-Ilyushin Il-18I,105,122,4,3,40,320,1830,3690,,1966,,Large,,
-Ilyushin Il-18V,95,110,4,3,40,320,2000,2760,July 1959,May 1961,1740,Large,,
-Ilyushin Il-18V,Cargo,14000,4,0,40,320,1790,2810,,1968,1820,Large,,
-,,,,,,,,,,,,,,
-Ilyushin Il-114,64,64,2,2,30,255,480,800,February-91,1998,1380,Medium,,
-Ilyushin Il-114-100,64,64,2,2,30,255,1160,640,March 1994,May 1999,1220,Medium,,
-Ilyushin Il-114T,7000kg,7000kg,2,0,30,255,300,800,November 1995,November 2001,1380,Medium,,
-Ilyushin Il-114-300,52,52,2,2,30,255,980,770,November-99,2006,1550,Medium,,
-,,,,,,,,,,,,,,
-Let L-410A,19,19,2,0,15,200,250,290,(Sep 1968),(Jul 1971),690,Small,,
-Let L-410M,19,19,2,0,15,200,230,290,(Nov 1970),(Apr 1972),700,Small,,
-Let L-410MA,19,19,2,0,15,200,250,280,(Dec 1974),(Jan 1976),690,Small,,
-Let L-410UVP,15,15,2,0,15,200,320,270,January 1977,December 1978,550,Small,"Let L-410UVP-E, Let L-410UVP-E9, Let L-410UVP-E20, Let L-410UVP Cargo, Let L-410UVP-E Cargo, Let L-410UVP-E20 Cargo",
-Let L-410UVP Cargo,1430kg,1430kg,2,0,15,200,300,270,January 1977,December 1978,550,Small,,
-Let L-410UVP-E,19,19,2,0,15,200,490,250,August 1982,September 1984,540,Small,"Let L-410UVP-E9, Let L-410UVP-E20, Let L-410UVP-E Cargo, Let L-410UVP-E20 Cargo",
-Let L-410UVP-E Cargo,1800kg,1800kg,2,0,15,200,440,250,August 1982,September 1984,540,Small,,
-Let L-410UVP-E20,19,19,2,0,15,200,530,250,September 1988,February 1990,510,Small,,
-Let L-410UVP-E20 Cargo,1800kg,1800kg,2,0,15,200,480,250,September 1988,February 1990,510,Small,,
-Let L-410UVP-E9,19,19,2,0,15,200,510,260,May 1986,December 1987,530,Small,"Let L-410UVP-E20, Let L-410UVP-E20 Cargo",
-,,,,,,,,,,,,,,
-Lockheed L-049 Constellation,81,81,4,2,50,290,1050,2390,January 1944,February 1945,1570,Large,,
-Lockheed L-649 Constellation,81,81,4,2,50,290,1520,2350,July 1947,July 1948,1580,Large,,
-Lockheed L-649A Constellation,81,81,4,2,50,290,1600,2370,February 1948,January 1949,1580,Large,,
-Lockheed L-749 Constellation,81,81,4,2,50,290,2180,2470,May 1948,January 1949,1590,Large,,
-Lockheed L-749A Constellation,81,81,4,2,50,290,2320,2510,September 1948,May 1949,1610,Large,,
-Lockheed L-1049 Super Constellation,80,92,3,2,50,290,2640,2570,April 1949,July 1950,1650,Large,L-1049F Super Constellation,
-Lockheed L-1049C Super Constellation,80,94,3,2,50,290,2780,2590,June 1951,April 1952,1700,Large,L-1049F Super Constellation,
-Lockheed L-1049D Super Constellation,15195kg,15195kg,3,0,50,290,1510,2590,May 1953,December 1953,1700,Large,L-1049F Super Constellation,
-Lockheed L-1049E Super Constellation,80,94,3,2,50,290,2900,2630,January 1952,July 1952,1710,Large,L-1049F Super Constellation,
-Lockheed L-1049F Super Constellation,16410kg,16410kg,3,0,50,290,1900,2710,January 1957,January 1957,1750,Large,,
-Lockheed L-1049G Super Constellation,80,94,3,2,50,290,2970,2650,July 1952,January 1953,1720,Large,L-1049F Super Constellation,
-Lockheed L-1649A Starliner,85,99,3,2,50,290,4420,2810,October 1956,October 1958,1790,Large,,
-,,,,,,,,,,,,,,
-Lockheed L-188A Electra,90,104,3,3,35,321,1290,2470,February 1955,January 1958,1550,Large,,
-Lockheed L-188C Electra,90,104,3,3,35,321,1790,2510,July 1957,November 1959,1640,Large,,
-,,,,,,,,,,,,,,
-Martin 2-0-2,40,40,3,1,25,220,660,730,July 1944,November 1946,1070,Medium,,
-Martin 4-0-4,40,40,3,1,25,220,1280,810,February 1950,June 1951,1300,Medium,,
-,,,,,,,,,,,,,,
-NAMC-YS-11-100,64,64,2,2,25,240,790,850,(May 1959),1963,1440,Medium,,
-NAMC YS-11A-200,64,64,2,2,25,240,840,850,(Oct 1964),1968,1440,Medium,,
-NAMC YS-11A-500,64,64,2,2,25,240,960,850,(Jan 1970),1973,1440,Medium,,
-,,,,,,,,,,,,,,
-Nord 2501 Noratlas,45,45,2,1,30,180,550,910,March 1949,February 1955,700,Medium,,
-,,,,,,,,,,,,,,
-Pilatus PC-12,9,9,2,0,15,250,1070,190,November 1988,April 1993,690,Small,,
-Pilatus PC-12/45,9,9,2,0,15,250,1120,190,October 1995,May 1996,690,Small,,
-Pilatus PC-12/47,9,9,2,0,15,250,1150,180,September 1998,March 2000,690,Small,,
-Pilatus PC-12/47E,9,9,2,0,15,250,1230,170,December 2006,December 2007,690,Small,,
-Pilatus PC-12NG,9,9,2,0,15,250,1250,160,July 2007,June 2008,690,Small,,
-,,,,,,,,,,,,,,
-Piper PA-31-310 Navajo,8,8,2,0,15,210,550,140,November 1965,September 1968,680,Small,,
-Piper PA-31-325 Navajo,8,8,2,0,15,210,550,150,September 1972,July 1973,680,Small,,
-Piper PA-31-350 Chieftain,10,10,2,0,15,210,440,170,November 1972,October 1974,680,Small,,
-Piper PA-31T Cheyenne,8,8,2,0,15,210,570,190,(Oct 1968),(Apr 1973),690,Small,,
-Piper PA-42 Cheyenne III,8,8,2,0,15,270,1120,220,December 1978,June 1981,700,Small,,
-Piper PA-42 Cheyenne IIIA,8,8,2,0,15,270,1120,230,July 1980,December 1981,700,Small,,
-Piper PA-42 Cheyenne IV,8,8,2,0,15,270,1230,230,May 1983,February 1985,700,Small,,
-,,,,,,,,,,,,,,
-Saab 90 Scandia,36,36,3,1,25,220,550,770,February 1943,October 1949,910,Medium,,
-,,,,,,,,,,,,,,
-Saab 340A,32,32,2,1,20,250,500,540,December 1979,February 1985,840,Medium,Saab 340AF,
-Saab 340AF,3860kg,3860kg,2,0,20,250,400,540,June 2002,June 2002,840,Medium,,
-Saab 340B,34,34,2,1,20,250,530,490,November 1985,April 1988,860,Medium,Saab 340BF,
-Saab 340BF,4230kg,4230kg,2,0,20,250,380,490,June 2002,June 2002,860,Medium,,
-,,,,,,,,,,,,,,
-Saab 2000,58,58,2,2,25,365,880,900,July 1989,January 1995,1220,Medium,,
-,,,,,,,,,,,,,,
-Scottish Aviation Twin Pioneer Srs.1,16,16,2,0,15,130,440,250,September 1950,November 1954,360,Small,,
-Scottish Aviation Twin Pioneer Srs.2,16,16,2,0,15,130,440,240,November 1950,November 1954,360,Small,,
-Scottish Aviation Twin Pioneer Srs.3,16,16,2,0,15,130,440,230,December 1955,July 1956,360,Small,,
-,,,,,,,,,,,,,,
-Short 330-100,30,30,2,1,20,210,360-380,370-380,May 1974,October 1976,770,Medium,,
-Short 330-200,30,30,2,1,20,210,390,360,November 1982,April 1984,770,Medium,,
-Short 360-100,36,36,2,1,20,210,280,410,January 1979,April 1981,820,Medium,Short 360-300F,
-Short 360-200,36,36,2,1,20,210,310,420,April 1985,November 1985,820,Medium,Short 360-300F,
-Short 360-300,36,36,2,1,20,210,350,430,(Dec 1968),(Jul 1988),840,Medium,,
-Short 360-300F,3420kg,3420kg,2,0,20,210,340,430,January 1999,January 1999,840,Medium,,
-Short SC.7 Skyliner,19,19,2,0,20,170,230,210,December 1963,August 1968,670,Small,Short SC.7 Skyvan,
-Short SC.7 Skyvan,2086kg,2086kg,2,0,20,170,110-200,210,December 1963,August 1968,670,Small,,
-,,,,,,,,,,,,,,
-Vickers Viscount 700,59,59,3,2,30,280,1110,980,September 1946,July 1952,1310,Medium,,
-Vickers Viscount 700D,59,59,3,2,30,280,1310,950,February 1955,February 1956,1270,Medium,,
-Vickers Viscount 800,74,74,3,2,30,280,770,1000,January 1956,November 1956,1320,Medium,,
-Vickers Viscount 800F,Cargo,7302,3,0,30,280,760,940,63,63,1170,Medium,,
-Vickers Viscount 810,74,74,3,2,30,280,870,980,March 1957,April 1958,1190,Medium,,
-Vickers Viscount 840,74,74,3,2,30,280,950,940,August 1957,October 1958,1160,Medium,,
-,,,,,,,,,,,,,,
-Vickers Vanguard 951,95,110,3,3,40,356,1520,2140,September 1956,January 1962,1750,Large,,
-Vickers Vanguard 952,120,139,3,3,40,356,1800,2270,(Nov 1959),1960,1600,Large,,
-Vickers Vanguard 953,115,135,3,3,40,356,1930,2230,(Mar 1960),1960,1800,Large,,
-,,,,,,,,,,,,,,
-Vickers VC.1 Viking 1A,24,24,2,1,20,180,430,720,March 1944,August 1946,1020,Medium,VC.1 Viking 1B Freighter,
-Vickers VC.1 Viking 1B,32,32,2,1,20,180,370,760,April 1947,September 1948,1020,Medium,VC.1 Viking 1B Freighter,
-Vickers VC.1 Viking 1B Freighter,4523kg,4523kg,2,0,20,180,170,770,January 1949,January 1949,1030,Medium,,
-Vickers VC.1 Viking Eagle,38,38,2,1,20,180,480,800,March 1950,January 1951,1030,Medium,VC.1 Viking 1B Freighter,
-,,,,,,,,,,,,,,
-Viking Air DHC-6-400 Twin Otter,20,20,2,1,20,160,430,290,August 2005,March 2007,390,Small,,
-,,,,,,,,,,,,,,
-Xian MA60,60,60,2,2,25,260,670,650,June 1996,February 1999,1100,Medium,,
-Xian MA600,60,60,2,2,25,260,700,640,November 2006,May 2008,1100,Medium,,
-,,,,,,,,,,,,,,
-JET AIRCRAFT,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-Aerospitale Concorde,108,128,3,3,120,1150,3240,23800,(Dec 1962),1/21/1976,3600,Very large,,Exempt from noise restrictions
-,,,,,,,,,,,,Very large,,
-Airbus A300B2-100,252/28,336,3,7,70,453,1630,5350-6120,February 1969,January 1974,2410,Very large,"A300BF-200F, A300F4-200, A300CF-200",3
-Airbus A300B2-200,252/28,336,3,7,70,453,1610-1680,5870-6440,April 1970,January 1979,2730,Very large,"A300BF-200F, A300F4-200, A300CF-200",3
-Airbus A300B4-100,252/28,336,3,7,70,453,2080-2400,6130-6850,October 1975,January 1977,2730,Very large,"A300BF-200F, A300F4-200, A300CF-200",3
-Airbus A300B4-200,252/28,336,3,7,70,453,2330-2400,6380-6890,July 1976,September 1977,2740,Very large,"A300BF-200F, A300F4-200, A300CF-200",3
-Airbus A300B4-200FF,252/28,336,2,7,70,453,2330-2400,6380-6890,May 1980,October 1981,2740,Very large,"A300BF-200F, A300F4-200, A300CF-200",3
-Airbus A300CF-200 (Combi version),126,39700kg,2,3,70,453,3080,6380,September 1981,February 1983,2740,Very large,,3
-Airbus A300F4-200 (Cargo version),45000kg,45000kg,2,0,70,453,1680,6380,December 1985,April 1987,2740,Very large,,3
-Airbus A300-600,279/28,375,2,8,70,453,3150-3260,5210-5570,March 1982,April 1984,2330,Very large,,3
-Airbus A300-600R,279/28,375,2,8,70,453,3650-3960,5110-5420,October 1986,September 1988,2340,Very large,A300-600RF,3
-Airbus A300-600RF,54500kg,54500kg,2,0,70,453,2550,5110-5370,October 1993,January 1995,2340,Very large,,3
-Airbus A310-200,207/21,275,2,6,70,453,2300-2360,4790-5310,May 1977,January 1983,2360,Very large,,3
-Airbus A310-300,207/21,275,2,6,70,453,3910-5020,5130-5680,May 1981,October 1984,2730,Very large,,3
-,,,,,,,,,,,,,,
-Airbus A318-100,114,132,2,3,40,447,1370-2730,1890-2030,June 1999,December 2002,1690,Large,,4
-Airbus A319-100,132,156,2,4,40,447,1400-2910,2030-2240,July 1992,May 1995,1730,Large,,4
-Airbus A319neo,132,156,2,4,40,447,1560-3930,1820-1990,September 2009,October 2014,1730,Large,,4
-Airbus A320-100,156,180,2,4,40,447,1480,2450,July 1982,July 1988,1760,Large,,4
-Airbus A320-200,156,180,2,4,40,447,2280-2710,2260-2420,January 1987,August 1989,1810,Large,,4
-Airbus A320-200F,Cargo,21000,2,0,40,447,2030-2050,2260-2280,January 2014,January 2014,1850,Large,,4
-Airbus A320neo,162,194,2,4,40,447,2320-3300,2000-2160,September 2009,October 2014,1810,Large,,4
-Airbus A321-100,192,220,2,5,40,447,2110-2300,2750-2870,September 1989,October 1993,1890,Large,,4
-Airbus A321-200,192,220,2,5,40,447,2700-2880,2660-2800,October 1994,February 1996,1950,Large,A321-200F,4
-Airbus A321-200F,Cargo,27505,2,0,40,447,2100-2130,2660-2700,January 2014,January 2014,1990,Large,,4
-Airbus A321neo,186/15,244,2,5,40,447,2750-3310,2420-2550,September 2009,October 2014,1950,Large,,4
-,,,,,,,,,,,,,,
-Airbus A330-200,234/16/8,380,2,8,90,470,6540-7110,5340-5580,February 1997,September 1999,2740,Very large,A300-200F,4
-Airbus A330-200F,69988kg,69988kg,2,0,90,470,4000,5390-5450,January 2008,November 2010,2740,Very large,,4
-Airbus A330-300,252/20/8,420,2,9,90,470,5270-5440,5390-5610,March 1988,November 1993,2750,Very large,,4
-Airbus A330-300E,252/20/8,420,2,9,90,470,5690-6080,5640-5890,November 2011,April 2014,2770,Very large,,4
-Airbus A330-300X,252/20/8,420,2,9,90,470,5490-5660,5450-5610,December 1996,April 1998,2770,Very large,,4
-Airbus A330-800neo,243/20/8,406,2,9,90,470,7550,4830,June-15,3/1/2019,2670,Very large,,4
-Airbus A330-900neo,270/20/8,440,2,9,90,470,6330,5020,June-15,3/1/2019,2750,Very large,,4
-Airbus A340-200,252/20/8,420,2,9,90,470,7300-7430,6770-7010,March 1988,November 1993,2980,Very large,,4
-Airbus A340-200X,252/20/8,420,2,9,90,470,7730,6780,February 1997,November 1998,3000,Very large,,4
-Airbus A340-300,270/20/8,440,2,9,90,470,6660-6720,6780-6920,March 1988,November 1993,3100,Very large,,4
-Airbus A340-300E,270/20/8,440,2,9,90,470,7280,6550,February 2003,February 2005,3110,Very large,,4
-Airbus A340-300X,270/20/8,440,2,9,90,470,6840-6920,6680-6790,August 1994,June 1995,3110,Very large,,4
-Airbus A340-500,261/16/0,375,2,8,90,470,8630-8720,6500-6550,August 1998,December 2004,3050,Very large,,4
-Airbus A340-500HGW,252/16/8,400,2,8,90,470,9080,6650,May 2005,September 2006,3050,Very large,,4
-Airbus A340-600,297/20/8,475,2,10,90,470,7410-7510,6620,March 1997,November 2001,3090,Very large,,4
-Airbus A340-600HGW,297/20/8,475,2,10,90,470,7770,6610,December 2004,August 2006,3100,Very large,,4
-,,,,,,,,,,,,,,
-Airbus A350-800,240/20/10,400,2,8,90,487,8200,4850,December 2006,January 2016,2610,Very large,,4
-Airbus A350-900,250/25/10,440,2,9,90,487,8130-8630,5340,December 2006,January 2016,2660,Very large,,4
-Airbus A350-1000,320/25/10,520,2,11,90,487,7950-8050,5820,December 2006,January 2016,2720,Very large,,4
-,,,,,,,,,,,,,,
-Airbus A380-800,480/25/20,853,2,18,120,488,8050-8240,9190-9270,June 2001,March 2008,3380,Very large,,4
-,,,,,,,,,,,,,,
-Antonov An-148-100A,70,85,2,2,30,445,1140,1580,July 2002,February 2008,1570,Medium,,3
-Antonov An-148-100B,70,85,2,2,30,445,1810,1620,July 2002,February 2008,1810,Medium,,3
-Antonov An-148-100E,70,85,2,2,30,445,2160,1690,July 2002,February 2008,1870,Medium,,3
-Antonov An-148T,Cargo,18000,2,0,30,445,540,2110,June-15,Jun-2017,2000,Medium,,3
-Antonov An-158,85,99,2,2,30,445,1350,1760,Septeber 2008,September 2010,1890,Medium,,3
-,,,,,,,,,,,,,,
-Avro C102 Jetliner,50,50,3,1,30,365,770,3110,1947,1953,950,Medium,,
-Avro RJ-70,78,94,2,2,30,400,1310-1480,2170-2240,August 1991,July 1992,1210,Medium,,4
-Avro RJ-85,96,112,2,3,30,400,1240-1500,2280-2340,August 1991,July 1992,1330,Medium,,4
-Avro RJ-100,102,116,2,3,30,400,1140-1360,2410-2470,August 1991,July 1992,1480,Medium,,4
-Avro RJ-115,108,128,2,3,30,400,1070-1280,2430-2490,August 1991,July 1992,1510,Medium,,4
-Avro RJX-70,78,94,2,2,30,400,1360,2130,April 1998,October 2001,1230,Medium,,4
-Avro RJX-85,96,112,2,3,30,400,1290,2060,April 1998,October 2001,1340,Medium,,4
-Avro RJX-100,102,116,2,3,30,400,1190,2190,April 1998,October 2001,1500,Medium,,4
-,,,,,,,,,,,,,,
-BAC One-Eleven 200,70,85,2,2,35,409,990,2750,(Apr 1961),4/9/1965,2080,Large,,
-BAC One-Eleven 300,75,89,2,2,35,409,1350,2920,(Aug 1962),1/1/1966,2450,Large,,
-BAC One-Eleven 400,75,89,2,2,35,409,1350,2890,(Oct 1961),3/6/1966,2320,Large,,
-BAC One-Eleven 475,75,89,2,2,35,409,1575,3010,January 1969,June 1970,1800,Large,,3 (Hushkit)
-BAC One-Eleven 500,100,119,2,3,35,409,1480,3150,May 1968,December 1969,2220,Large,,3 (Hushkit)
-,,,,,,,,,,,,,,
-BAe 146-100,72,94,2,2,30,400,1080,2370,February 1979,September 1983,1230,Medium,,3
-BAe 146-200,90,112,2,3,30,400,1260,2470,February 1979,September 1983,1340,Medium,,3
-BAe 146-300,96,116,2,3,30,400,1140,2580,August 1979,January 1990,1500,Medium,,3
-,,,,,,,,,,,,,,
-Boeing 707-120,150,174,4,4,55,472,2730,8630,September 1953,December 1957,3150,Very large,,
-Boeing 707-120B,150,174,4,4,55,472,3060-3100,7050-7190,(Jul 1961),(June 1962),3000,Very large,,
-Boeing 707-220,150,174,4,4,55,472,3060,8770,October 1957,June 1960,2850,Very large,,
-Boeing 707-320,192,219,4,5,55,472,2850-2870,9280-9350,June 1958,December 1960,3550,Very large,707-320CF,
-Boeing 707-320B,180,210,4,5,55,472,3750-4350,8120-8340,(Jun 1959),1962,3100,Very large,707-320CF,
-Boeing 707-320B Adv.,180,210,4,5,55,472,3750-4370,7980-8270,(May 1962),1962,3050,Very large,707-320CF,
-Boeing 707-320C,180,210,4,5,55,472,4370-4390,8020-8090,(Aug 1961),1963,3250,Very large,707-320CF,
-Boeing 707-320CF,42900kg,42900kg,4,0,55,472,2640,8090,May 1965,May 1965,3250,Very large,,3 (Hushkit)
-Boeing 707-420,180,210,4,5,55,472,2910,8480,May 1959,September 1961,3150,Very large,,
-Boeing 720,114,156,4,4,55,472,2790,8120,September 1959,November 1961,2800,Very large,,
-Boeing 720B,132,156,4,4,55,472,3320,6540-6690,(Dec 1959),1961,2050,Very large,,
-,,,,,,,,,,,,,,
-Boeing 717-200,110,134,2,3,35,435,1330-2100,2140-2270,May 1994,April 1998,1780,Large,,4
-Boeing 717-200HGW,115,134,2,3,35,435,2000,2330,May 1994,April 1998,1790,Large,,4
-,,,,,,,,,,,,,,
-Boeing 727-100,114,131,3,3,45,459,1910-2230,4970-5350,59,62,2070,Large,727-100F,
-Boeing 727-100C,52,52,3,2,45,459,2260-2520,4970-5160,62,63,2070,Large,727-100F,
-Boeing 727-100F,Cargo,21230,3,0,45,459,1580,5180,1970,1970,2110,Large,,
-Boeing 727-200,156,183,3,4,45,459,1350-1480,4980-5250,(Dec 1965),7/11/1967,2370,Large,,
-Boeing 727-200Adv.,162,189,3,4,45,459,1830-2520,4280-5090,July 1970,February 1972,2240,Large,727-200AF,3 (Hushkit)
-Boeing 727-200AF,27909kg,27909kg,3,0,45,459,2150,4230,July 1987,July 1987,2280,Large,,3
-Boeing 727-200F Adv.,28855kg,28855kg,3,0,45,459,1700,4620,March 1980,August 1982,2330,Large,727-200AF,3 (Hushkit)
-,,,,,,,,,,,,,,
-Boeing 737-100,96,124,2,3,35,413,970-1310,3410-3540,(Jul 1966),12/15/1967,1570,Large,,
-Boeing 737-200,102,136,2,3,35,413,530-1980,3160-3370,(Jan 1967),1/1/1968,1580,Large,"737-200C adv, 737-200F",
-Boeing 737-200Adv,120,136,2,3,35,413,1440-2050,2730-3210,April 1966,May 1971,1640,Large,"737-200C adv, 737-200F",3 (Hushkit)
-Boeing 737-200CAdv,15105kg,15105kg,2,0,35,413,1340,2890,April 1971,May 1973,1650,Large,737-200F,3 (Hushkit)
-Boeing 737-200F,17315kg,17315kg,2,0,35,413,1340,2890,January 1986,January 1986,1640,Large,,3 (Hushkit)
-,,,,,,,,,,,,,,
-Boeing 737-300,126,149,2,3,40,424,1860-2740,2490-2630,June 1981,February 1985,1830,Large,"737-300F, 737-300C",
-Boeing 737-300C,54,14224kg,2,2,40,424,2770,2540,May 2002,May 2002,1830,Large,737-300F,
-Boeing 737-300F,19250kg,19250kg,2,0,40,424,1600,2540,May 2002,May 2002,1830,Large,737-300C,
-Boeing 737-400,162,189,2,4,40,424,1730-2530,2830-3020,April 1985,July 1987,2000,Large,"737-400F, 737-400C",
-Boeing 737-400C,60,15422kg,2,2,40,424,2640,3020,May 2002,May 2002,1990,Large,737-400F,
-Boeing 737-400F,20412kg,20412kg,2,0,40,424,1350,3020,May 2002,May 2002,1990,Large,737-400C,
-Boeing 737-500,114,132,2,3,40,424,1600-2730,2350-2550,April 1986,February 1989,1640,Large,,
-,,,,,,,,,,,,,,
-Boeing 737-600,114,132,2,3,40,447,1530-3070,2380-2510,February 1994,September 1997,1580,Large,,
-Boeing 737-700,126,149,2,3,40,447,1750-3400,2440-2570,August 1993,August 1997,1620,Large,"737-700C, 737-700F",
-Boeing 737-700C,60,17554kg,2,2,40,447,3650,2570,August 1996,September 1998,1690,Large,737-700F,
-Boeing 737-700ER,120,140,2,3,40,447,4450,2580,August 2005,May 2006,1750,Large,,
-Boeing 737-700F,Cargo,19050,2,0,40,447,2780,2570,,2016,1690,Large,,
-Boeing 737-800,162,189,2,4,40,447,1830-3000,2490-2600,November 1992,October 1996,1980,Large,737-800BFC,
-Boeing 737-800BFC,23950kg,23950kg,2,0,40,447,2000,2600,November 2017,November 2017,2060,Large,,
-Boeing 737-900,180,189,2,4,40,447,2140-2460,2500-2570,October 1996,March 2000,2420,Large,,
-Boeing 737-900ER,186,215,2,5,40,447,1430-3210,2500-2570,November 2004,April 2007,2090,Large,,
-Boeing 737 Max 7,150,172,2,4,40,447,3490,2150,April-11,Dec-2016,2340,Large,,
-Boeing 737 Max 8,180,210,2,5,40,447,3280,2170,April-11,Dec-2016,2580,Large,,
-Boeing 737 Max 9,192,220,2,5,40,447,3270,2200,April-11,Dec-2016,2750,Large,,
-Boeing 737 Max 10,180/15,230,2,5,40,447,3040,2310,March-16,Apr-2019,2900,Large,,
-,,,,,,,,,,,,,,
-Boeing 747-100,290/25/10,480,3,10,110,470,4620-4940,13070-14570,September 1965,February 1969,2870,Very large,"747-100SF, 747-100C, 747-100F, 747-100B/SR/SUD",2
-Boeing 747-100B,290/25/10,480,3,10,110,470,4960-5180,12880-13440,(Dec 1969),10/2/1970,3090,Very large,"B747-100C, B747-100F, B747-100B/SUD",
-Boeing 747-100B/SR,390/20,535,3,11,110,470,1010-2130,10720-11470,December 1972,September 1974,1970,Very large,747-100B/SR/SUD,2
-Boeing 747-100B/SR/SUD,290/25/10,565,3,12,110,470,1590-2630,10900-11660,March 1980,March 1980,2030,Very large,,2
-Boeing 747-100B/SUD,320/25/10,515,3,11,110,470,4610-4850,13070-13630,(May 1980),(May 1980),3150,Very large,Aircraft Only Available as Conversion,
-Boeing 747-100C,170/24/0,238,3,5,110,470,5570-5830,12880-13440,(Jan 1982),(Jan 1982),3090,Very large,Aircraft Only Available as Conversion,
-Boeing 747-100F,Cargo,76280,3,0,110,470,2700-2750,12880-13440,(Jan 1982),1982,3090,Very large,,
-Boeing 747-100SF,76280kg,76280kg,3,0,110,470,2500-2550,13070-14570,November 1971,November 1971,2880,Very large,,2
-Boeing 747-200,290/25/10,480,3,10,110,470,4360-4720,13020-13330-13540,June-68,5/5/1971,2890,Very large,,
-Boeing 747-200B,290/25/10,480,3,10,110,470,4950-5890,12550-13540,September 1970,October 1971,3270,Very large,"747-200M, 747-200C, 747-200F, 747-200B/SUD",2
-Boeing 747-100B/SUD,320/25/10,515,3,11,110,470,4750-5720,12740-13720,(June 1980),(June 1980),3330,Very large,Aircraft Only Available as Conversion,
-Boeing 747-200C,220/32/0,100875kg,3,7,110,470,5340-6170,12550-13540,December 1971,January 1973,3270,Very large,747-200F,2
-Boeing 747-200F,112390kg,112390kg,3,0,110,470,2200-3420,12550-13540,June 1971,June 1972,3270,Very large,,2
-Boeing 747-200M,170/24/0,72150kg,3,5,110,470,5670-6390,12550-13540,September 1972,September 1974,3270,Very large,747-200F,2
-Boeing 747SP,190/20/10,349,3,7,110,470,5640-6970,8600-10200,October 1973,May 1976,2760,Very large,,2
-Boeing 747-300,360/25/12,608,3,13,110,470,4250-5820,10590-11830,April 1981,December 1983,2890,Very large,,3
-Boeing 747-300SR,410/20/0,624,3,13,110,470,1070-1870,9210-11090,December 1981,April 1984,2800,Very large,,3
-,,,,,,,,,,,,,,
-Boeing 747-400,310/25/12,550,2,11,110,488,6320-7270,8550-9740,June 1986,October 1989,2790,Very large,747-400BCF,3
-Boeing 747-400BCF,107842kg,107842kg,2,0,110,488,4100-4150,9250-9590,May 2004,May 2004,2930,Very large,,3
-Boeing 747-400D,470/20/0,628,2,14,110,488,1620-1800,8930-9270,July 1989,October 1991,1950,Very large,,3
-Boeing 747-400ER,310/25/12,550,2,11,110,488,7990-8040,8590-8930,January 2000,November 2001,3090,Very large,747-400BCF,3
-Boeing 747-400ERF,112763kg,112763kg,2,0,110,488,4700-4750,8590-8930,October 2000,April 2002,3090,Very large,,3
-Boeing 747-400F,111605kg,111605kg,2,0,110,488,3200-4600,8550-8930,September 1988,October 1992,2790,Very large,,3
-Boeing 747-8F,133900kg,133900kg,2,0,110,488,3600-4200,7530-7700,June 2006,July 2012,2970,Very large,,4
-Boeing 747-8,320/25/16,605,2,13,110,488,8160,7700,June 2006,July 2012,2970,Very large,,4
-,,,,,,,,,,,,,,
-Boeing 757-200,174/15,238,2,5,70,459,1980-3940,3820-4260,May 1977,September 1981,2040,Large,"757-200PF, 757-200M",
-Boeing 757-200M,126,27138kg,2,3,70,459,3830,3930,May 1987,February 1990,2130,Large,757-200PF,
-Boeing 757-200PF,38260kg,38260kg,2,0,70,459,2420-2440,4040-4110,May 1987,February 1990,2200,Large,,
-Boeing 757-300,222/15,279,2,6,70,459,3100-3330,3980-4130,April 1996,July 1998,2260,Large,,
-,,,,,,,,,,,,,,
-Boeing 767-200,192/18,255,2,6,80,460,2250-3720,4750-5430,October 1977,November 1981,1810,Very large,767-200SF,
-Boeing 767-200ER,192/18,255,2,6,80,460,4840-6700,4480-5140,February 1984,May 1985,2130,Very large,767-200SF,
-Boeing 767-200SF,44906kg,44906kg,2,0,80,460,2900,4680,January 2006,January 2006,2140,Very large,,
-Boeing 767-300,224/18,290,2,6,80,460,4090-4250,5200-5680,October 1982,October 1985,2460,Very large,767-300F,
-Boeing 767-300ER,224/18,290,2,6,80,460,5240-6180,5050-5430,April 1985,November 1988,2470,Very large,767-300F,
-Boeing 767-300F,54839kg,54839kg,2,0,80,460,3220-3300,5180-5400,January 1993,January 1995,2490,Very large,,
-Boeing 767-400ER,256/20/8,409,2,9,80,460,5190,5330-5380,May 1996,December 1999,2890,Very large,,
-,,,,,,,,,,,,,,
-Boeing 777Freighter,102870kg,102870kg,2,0,90,480,4900,6750,July 2004,April 2008,2920,Very large,,
-Boeing 777-200,250/25/10,440,2,9,90,480,4590-5630,6380-6590,January 1990,April 1994,2260,Very large,777 Freighter,
-Boeing 777-200ER,250/25/10,440,2,9,90,480,5960-7730,6860-7250,November 1990,January 1997,2370,Very large,777 Freighter,
-Boeing 777-200LR,250/25/10,440,2,9,90,480,8860-9840,6740-6750,July 2001,August 2007,3180,Very large,777 Freighter,
-Boeing 777-300,350/25/10,550,2,11,90,480,3940-5940,7160-7440,September 1995,September 1998,2740,Very large,,
-Boeing 777-300ER,350/25/10,550,2,11,90,480,7160-7640,7460-7490,September 1999,October 2003,2890,Very large,,
-,,,,,,,,,,,,,,
-Boeing 787-3,210/20,330,2,7,80,485,3250-3290,4100-4200,November 2009,December 2015,2670,Very large,,
-Boeing 787-8,250/32/10,381,2,8,80,485,7140-7180,4670-4770,January 2004,July 2011,2820,Very large,,
-Boeing 787-9,250/25/10,440,2,9,80,485,7810-7850,5060-5150,April 2005,August 2015,2840,Very large,,
-,,,,,,,,,,,,,,
-Bombardier CRJ100,52,52,2,2,30,445,800,1240,February 1994,February 1995,1180,Medium,,
-Bombardier CRJ100ER,52,52,2,2,30,445,1160,1260,February 1994,February 1995,1430,Medium,,
-Bombardier CRJ100LR,52,52,2,2,30,445,1510,1310,February 1994,February 1995,1440,Medium,,
-Bombardier CRJ200,52,52,2,2,30,445,810,1180,July 1993,February 1995,1180,Medium,,
-Bombardier CRJ200ER,52,52,2,2,30,445,1170,1210,July 1993,February 1995,1430,Medium,,
-Bombardier CRJ200LR,52,52,2,2,30,445,1520,1250,July 1993,February 1995,1440,Medium,,
-Bombardier CRJ700,68,78,2,2,30,445,1250,1440,February 1998,April 2002,1500,Medium,,
-Bombardier CRJ700ER,68,78,2,2,30,445,1550,1510,February 1998,April 2002,1500,Medium,,
-Bombardier CRJ700LR,68,78,2,2,30,445,1820,1570,February 1998,April 2002,1510,Medium,,
-Bombardier CRJ705,64,75,2,2,30,445,1700,1690,August 2001,September 2003,1520,Medium,,
-Bombardier CRJ705ER,64,75,2,2,30,445,1910,1760,August 2001,September 2003,1530,Medium,,
-Bombardier CRJ705R,64,75,2,2,30,445,1970,1810,August 2001,September 2003,1530,Medium,,
-Bombardier CRJ900,80,90,2,2,30,445,1370,1710,February 1999,March 2002,1520,Medium,,
-Bombardier CRJ900ER,80,90,2,2,30,445,1610,1770,February 1999,March 2002,1530,Medium,,
-Bombardier CRJ900LR,80,90,2,2,30,445,1840,1840,February 1999,March 2002,1530,Medium,,
-Bombardier CRJ1000,88,104,2,2,30,445,1430,1710,November 2008,August 2011,1990,Medium,,
-Bombardier CRJ1000EL,88,104,2,2,30,445,990,1710,November 2008,August 2011,1810,Medium,,
-Bombardier CRJ1000ER,88,104,2,2,30,445,1600,1710,November 2008,August 2011,2070,Medium,,
-,,,,,,,,,,,,,,
-Bombardier CS100/Airbus A220-100,105,125,2,3,30,447,2150,1640,June 2007,June 2015,1520,Large,,4
-Bombardier CS100ER/A220-100ER,105,125,2,3,30,447,2860,1680,June 2007,June 2015,1550,Large,,4
-Bombardier CS300/A220-300,135,160,2,4,30,447,2110,1780,June 2007,June 2015,1900,Large,,4
-Bombardier CS300ER/A220-300ER,135,160,2,4,30,447,2810,1830,December 2008,December 2016,1930,Large,,4
-,,,,,,,,,,,,,,
-COMAC ARJ21-700ER,75,90,2,2,35,459,1880,2050,February 2007,January 2015,1880,Medium,,
-COMAC ARJ21-700STD,75,90,2,2,35,459,1210,2010,February 2007,January 2015,1700,Medium,,
-COMAC ARJ21-900ER,90,105,2,3,35,459,1870,2130,February 2007,January 2015,1920,Medium,,
-COMAC ARJ21-900STD,90,105,2,3,35,459,1220,2070,February 2007,January 2015,1730,Medium,,
-,,,,,,,,,,,,,,
-COMAC C919,150,174,2,4,40,450,2360,2180,August 2010,September 2018,1840,Large,,
-,,,,,,,,,,,,,,
-Convair 880,95,110,3,3,50,495,2260,7510,November 1954,April 1959,2650,Large,,
-Convair 880M,95,110,3,3,50,495,2420,7380,March 1961,October 1961,2300,Large,,
-Convair 990,100,118,3,3,50,495,2950,6920,February 1958,November 1961,2950,Large,,
-Convair 990A,105,121,3,3,50,495,3300,6530,December 1962,September 1963,2800,Large,,
-,,,,,,,,,,,,,,
-Dassault Mercure,138,162,3,4,35,484,720,3160,(Mar 1968),1975,2050,Large,,
-,,,,,,,,,,,,,,
-de Havilland DH.106 Comet 1,60,60,4,2,40,430,800,7750,February 1945,August 1950,1840,Large,,
-de Havilland DH.106 Comet 1A,60,60,4,2,40,430,950,7690,December 1951,December 1952,1860,Large,,
-de Havilland DH.106 Comet 2,60,60,4,2,40,430,1500,6720,June 1953,January 1955,1850,Large,,
-de Havilland DH.106 Comet 3,65,78,4,2,40,430,2310,7110,June 1953,January 1955,1950,Large,,
-de Havilland DH.106 Comet 4,65,80,3,2,40,430,2890,7240,November 1954,August 1958,2060,Large,,
-de Havilland DH.106 Comet 4A,95,109,3,3,40,430,1680,7170,November 1954,August 1958,2000,Large,,
-de Havilland DH.106 Comet 4B,100,120,3,3,40,430,2070,7200,December 1957,March 1961,2010,Large,,
-de Havilland DH.106 Comet 4C,100,120,3,3,40,430,2590,7270,September 1958,July 1961,2060,Large,,
-,,,,,,,,,,,,,,
-Dornier 328JET,39,39,2,1,25,317,580-720,1040-1050,March 1996,July 1998,930,Medium,,
-,,,,,,,,,,,,,,
-Douglas DC-8-11,138,179,3,4,55,459,1970,8590,February 1956,May 1958,3050,Very large,,
-Douglas DC-8-12,138,179,3,4,55,459,2070,8660,April 1958,February 1961,2860,Very large,,
-Douglas DC-8-21,138,179,3,4,55,459,2460,8110,September 1959,February 1961,2510,Very large,,
-Douglas DC-8-31,156,179,3,4,55,459,3180,8240,February 1960,October 1961,3130,Very large,,
-Douglas DC-8-32,156,179,3,4,55,459,3210,8350,February 1960,October 1961,3150,Very large,,
-Douglas DC-8-33,156,179,3,4,55,459,3240,8450,April 1959,January 1961,3150,Very large,,
-Douglas DC-8-41,156,179,3,5,55,459,3230,12110,July 1959,May 1961,2610,Very large,,
-Douglas DC-8-42,156,179,3,5,55,459,3320,12210,July 1959,May 1961,2970,Very large,,
-Douglas DC-8-43,156,179,3,5,55,459,4030,12410,November 1959,October 1961,2970,Very large,,
-Douglas DC-8-51,150,179,3,4,55,459,2480-2490,6660-6800,October 1960,May 1962,2800,Very large,,
-Douglas DC-8-52,156,179,3,4,55,459,3170-3190,6630-6900,October 1960,May 1962,2900,Very large,"DC-8-54AF, DC-8-54CF",
-Douglas DC-8-53,156,179,3,4,55,459,4070-4090,6770-7040,October 1960,May 1962,3000,Very large,"DC-8-54AF, DC-8-54CF",
-Douglas DC-8-54AF,Cargo,43540,3,0,55,459,2250,6770,1961,1963,3000,Very large,,
-Douglas DC-8-54CF,72,84,3,2,55,459,4590,6770,1961,1963,3000,Very large,DC-8-54AF,
-Douglas DC-8-55,144/15,189,3,4,55,459,4390-4410,6800-6940,September 1962,8/1/1964,3050,Very large,"DC-8-55AF, DC-8-55CF",
-Douglas DC-8-55AF,Cargo,43540,3,0,55,459,2650,6800,1963,1966,3050,Very large,,
-Douglas DC-8-55CF,63,63,3,2,55,459,4540,6800,1963,1966,3050,Very large,,
-Douglas DC-8-61,180/15/6,259,3,6,55,459,3510,6940,July 1965,3/1/1967,3050,Very large,"DC-8-61AF, DC-8-61CF, DC-8-71, DC-8-71CF, DC-8-71F",
-Douglas DC-8-61AF,Cargo,40141,3,0,55,459,1900,7010,(Feb 1974),(Feb 1974),3070,Very large,DC-8-71F,
-Douglas DC-8-61CF,102,120,3,3,55,459,4500,7010,1965,1966,3070,Very large,"DC-8-61AF, DC-8-71, DC-8-71CF, DC-8-71F",
-Douglas DC-8-62,144/15,189,3,4,55,459,5150-5170,6530-6870,January 1967,9/1/1968,3250,Very large,"DC-8-62AF, DC-8-62CF, DC-8-72, DC-8-72CF, DC-8-72F",
-Douglas DC-8-62AF,Cargo,41477,3,0,55,459,2650,6560,1966,1967,3250,Very large,DC-8-72F,
-Douglas DC-8-62CF,60,60,3,2,55,459,5610,6560,1966,1967,3250,Very large,"DC-8-62AF, DC-8-72, DC-8-72CF, DC-8-72F",
-Douglas DC-8-63,180/15/6,259,3,6,55,459,4970,6700,September 1967,3/1/1969,3300,Very large,"DC-8-63AF, DC-8-63CF, DC-8-73, DC-8-73CF, DC-8-73F",
-Douglas DC-8-63AF,Cargo,52615,3,0,55,459,2400,6700,1967,1969,3300,Very large,DC-8-73F,
-Douglas DC-8-63CF,102,120,3,3,55,459,5030,6700,1967,1969,3300,Very large,"DC-8-63AF, DC-8-73, DC-8-73CF, DC-8-73F",
-Douglas DC-8-71,204/15,259,3,6,55,459,3920,5600,1981,1981,2750,Very large,Only As Converstion from DC8-60s,
-Douglas DC-8-71CF,102,120,3,3,55,459,5900,5630,1981,1981,2750,Very large,Only As Converstion from DC8-60s,
-Douglas DC-8-71F,Cargo,36878,3,0,55,459,2800,5630,1981,1981,2750,Very large,Only As Converstion from DC8-60s,
-Douglas DC-8-72,162,189,3,4,55,459,5560,5770,1981,1981,2950,Very large,Only As Converstion from DC8-60s,
-Douglas DC-8-72CF,60,60,3,2,55,459,6760,5770,1981,1981,2950,Very large,Only As Converstion from DC8-60s,
-Douglas DC-8-72F,Cargo,40733,3,0,55,459,3400,5770,1981,1981,2950,Very large,Only As Converstion from DC8-60s,
-Douglas DC-8-73,204/15,259,3,6,55,459,4860,5840,1981,1981,3050,Very large,Only As Converstion from DC8-60s,
-Douglas DC-8-73CF,102,120,3,3,55,459,6000,5840,1981,1981,3050,Very large,Only As Converstion from DC8-60s,
-Douglas DC-8-73F,Cargo,50712,3,0,55,459,2800,5840,1981,1981,3050,Very large,Only As Converstion from DC8-60s,
-,,,,,,,,,,,,,,
-Douglas DC-9-10,75,109,2,3,35,440,1190,2940,January 1962,9/1/1964,1940,Large,,
-Douglas DC-9-15,95,109,2,3,35,440,1140-1180,3050-3060,July 1965,August 1967,1910,Large,DC-9-15F,
-Douglas DC-9-15F,Cargo,9435,2,0,35,440,700,3050,67,69,1910,Large,,
-Douglas DC-9-21,95,109,2,3,35,440,1430,3080,November 1966,June 1968,1680,Large,,
-Douglas DC-9-31,110,127,2,3,35,440,1140-1150,3140-3190,November 1964,September 1966,2040,Large,DC-9-33F,Hushkit (3)
-Douglas DC-9-32,110,127,2,3,35,440,1300-1400,3080-3220,July 1965,November 1966,2030,Large,DC-9-33F,Hushkit (3)
-Douglas DC-9-33F,14670kg,14670kg,2,0,35,440,900,3110,May 1968,April 1969,2030,Large,,Hushkit (3)
-Douglas DC-9-34,110,127,2,3,35,440,1300-1950,3020-3110,March 1974,November 1975,2050,Large,,Hushkit (3)
-Douglas DC-9-41,110,127,2,3,35,440,1150-1470,2990-3250,February 1967,March 1968,1990,Large,,Hushkit (3)
-Douglas DC-9-51,120,139,2,3,35,440,1130-1530,2990-3080,July 1972,February 1974,2100,Large,,Hushkit (3)
-,,,,,,,,,,,,,,
-Embraer 170AR,68,80,2,2,30,447,2180,1670,October 2003,February 2006,1640,Medium,,
-Embraer 170LR,68,80,2,2,30,447,2130,1640,May 2000,June 2005,1570,Medium,,
-Embraer 170STD,68,80,2,2,30,447,1870,1600,May 2000,June 2005,1480,Medium,,
-Embraer 175AR,76,88,2,2,30,447,2080,1730,April 2003,March 2005,2170,Medium,,
-Embraer 175LR,76,88,2,2,30,447,2070,1690,December 2002,November 2004,1720,Medium,,
-Embraer 175STD,76,88,2,2,30,447,1870,1650,December 2002,November 2004,1600,Medium,,
-Embraer 175-E2,80,90,2,2,30,447,2110,1450,November 2010,March 2019,1880,Medium,,
-Embraer 190AR,100,114,2,3,30,447,2470,2010,December 2002,November 2004,2090,Medium,,
-Embraer 190LR,100,114,2,3,30,447,2330,1970,December 2002,November 2004,1830,Medium,,
-Embraer 190STD,100,114,2,3,30,447,1960,1880,December 2002,November 2004,1600,Medium,,
-Embraer 195AR,104,122,2,3,30,447,2360,2030,November 2002,February 2006,2180,Medium,,
-Embraer 195LR,104,122,2,3,30,447,2090,1980,November 2002,February 2006,1980,Medium,,
-Embraer 195STD,104,122,2,3,30,447,1660,1920,November 2002,February 2006,1740,Medium,,
-,,,,,,,,,,,,,,
-Embraer ERJ-135ER,37,37,2,1,25,440,1400,950,February 1998,November 1999,1650,Medium,,
-Embraer ERJ-135LR,37,37,2,1,25,440,1800,970,February 1998,November 1999,1750,Medium,,
-Embraer ERJ-140ER,44,44,2,1,25,440,1270,970,December 1999,October 2001,1570,Medium,,
-Embraer ERJ-140LR,44,44,2,1,25,440,1630,990,December 1999,October 2001,1590,Medium,,
-Embraer ERJ-145EP,50,50,2,1,25,440,1220,1060,August 1998,August 1999,2050,Medium,,
-Embraer ERJ-145ER,50,50,2,1,25,440,1060,1040,August 1998,August 1999,1950,Medium,,
-Embraer ERJ-145EU,50,50,2,1,25,440,930,1020,December 1990,December 1995,1800,Medium,,
-Embraer ERJ-145LR,50,50,2,1,25,440,1660,1090,August 1998,August 1999,2150,Medium,,
-Embraer ERJ-145LU,50,50,2,1,25,440,1630,1080,August 1998,August 1999,2140,Medium,,
-Embraer ERJ-145STD,50,50,2,1,25,440,830,1000,December 1990,December 1995,1700,Medium,,
-Embraer ERJ-145XR,50,50,2,1,25,440,1920,1150,October 2000,March 2002,2250,Medium,,
-,,,,,,,,,,,,,,
-Fairchild Dornier 528,65,65,2,2,30,460,1450,1500,September 1998,March 2003,1450,Medium,,
-Fairchild Dornier 728-100,70,85,2,2,30,460,1450,1600,September 1998,March 2003,1540,Medium,,
-Fairchild Dornier 728-200,70,85,2,2,30,460,1830,1700,September 1998,March 2003,1550,Medium,,
-Fairchild Dornier 928,95,110,2,3,30,460,1850,1890,September 1998,March 2003,1630,Medium,,
-,,,,,,,,,,,,,,
-Fokker F.28 Mk 1000,70,70,2,2,30,403,910,2780,(Feb 1962),1969,1470,Medium,,
-Fokker F.28 Mk 2000,65,79,2,2,30,403,700,2930,(Aug 1968),1972,1470,Medium,,
-Fokker F.28 Mk 3000,70,70,2,2,30,403,1390,2730,February 1974,March 1976,1500,Medium,,3 (Hushkit)
-Fokker F.28 Mk 4000,70,85,2,2,30,403,1050,2760,October 1974,November 1976,1500,Medium,,3 (Hushkit)
-,,,,,,,,,,,,,,
-Fokker 70,70,85,2,2,35,421,1110-2020,2220-2350,October 1991,October 1993,1370,Medium,,
-Fokker 100,105,122,2,3,35,421,1400-1660,2220-2440,May 1984,September 1988,1800,Medium,,
-Fokker 120 NG,115,125,2,3,35,421,1700-2090,1980-2030,February 2010,March 2019,1800,Medium,,
-,,,,,,,,,,,,,,
-Hawker Siddeley HS121 Trident 1,90,103,3,3,40,520,780,4460,March 1956,January 1962,1900,Large,,
-Hawker Siddeley HS121 Trident 1A,90,103,3,3,40,520,1140,4560,September 1959,February 1963,1950,Large,,
-Hawker Siddeley HS121 Trident 1C,90,103,3,3,40,520,1230,4600,59,1965,1980,Large,,
-Hawker Siddeley HS121 Trident 1E,102,149,3,3,40,520,1550,4880,61,65,2030,Large,,
-Hawker Siddeley HS121 Trident 2E,114,149,3,3,40,520,1660,5070,65,1966,2000,Large,,
-Hawker Siddeley HS121 Trident 3B,138,180,3,4,40,520,1510,5350,69,1972,1940,Large,,
-Hawker Siddeley HS121 Trident Super 3B,144,180,3,4,40,520,1520,5390,71,74,1970,Large,,
-,,,,,,,,,,,,,,
-Ilyushin Il-62,138/15,186,5,4,65,460,4240,12500,(Apr 1961),1966,3150,Very large,,2
-Ilyushin Il-62M,150,174,5,4,65,460,4770,11910,(Nov 1970),1974,3130,Very large,,2
-Ilyushin Il-62MK,144/15,195,5,4,65,460,4690,11830,February 1973,February 1979,3100,Very large,,2
-,,,,,,,,,,,,,,
-Ilyushin Il-86,252/28,350,4,7,90,470,1490,18480,October 1970,April 1980,2780,Very large,,2
-,,,,,,,,,,,,,,
-Ilyushin Il-96-300,198/21/8,300,3,6,90,476,6520,8930,May 1987,December 1993,2330,Very large,,3
-Ilyushin Il-96-400,270/20/8,436,2,9,90,476,5180,8480,January 2003,March 2007,2680,Very large,,3
-Ilyushin Il-96-400T,92000kg,92000kg,2,0,90,476,2700,8480,January 2003,March 2007,2660,Very large,,3
-Ilyushin Il-96M,252/20/8,420,2,9,90,476,6540,8220,February 1991,February 1998,2890,Very large,,3
-Ilyushin Il-96T,92000kg,92000kg,2,0,90,476,2600,8220-9110,February 1991,February 1998,2690,Very large,,3
-,,,,,,,,,,,,,,
-Lockheed L-1011 TriStar 1,225/28/8,350,3,7,90,493,3010,7660,June 1969,March 1973,2770,Very large,"L-1011 TriStar 200F, L-1011 TriStar 250",3
-Lockheed L-1011 TriStar 100,225/28/8,350,3,7,90,493,3660,7660,July 1972,September 1974,2780,Very large,"L-1011 TriStar 200F, L-1011 TriStar 250",3
-Lockheed L-1011 TriStar 200F,58960kg,58960kg,3,0,90,493,2700,7240,May 1987,May 1987,2780,Very large,,3
-Lockheed L-1011 TriStar 200,216/28/8,350,3,7,90,493,3780,7290,August 1974,November 1976,2780,Very large,"L-1011 TriStar 200F, L-1011 TriStar 250",3
-Lockheed L-1011 TriStar 250,252/28/0,350,3,7,90,493,5120,7240,February 1987,February 1987,2800,Very large,,3
-Lockheed L-1011 TriStar 500,198/28/8,320,3,9,90,493,5270,7130-7200,March 1975,August 1977,2800,Very large,L-1011 TriStar 500F,3
-Lockheed L-1011 TriStar 500F,54500kg,54500kg,3,0,90,493,3310,7130,January 1996,January 1996,2790,Very large,,3
-,,,,,,,,,,,,,,
-Boeing MD-10-10F,65091kg,65091kg,2,0,90,470,2000,6950,January 1999,January 1999,2980,Very large,,3
-Boeing MD-10-30F,81720kg,81720kg,2,0,90,470,3200,6910,January 1999,January 1999,3500,Very large,,3
-McDonnell Douglas DC-10-10,240/20/10,399,3,8,90,470,3350,7270-7310,(Dec 1968),10/5/1971,3070,Very large,"DC-10-10CF, DC-10-10F, Boeing MD-10-10F",3
-McDonnell Douglas DC-10-10CF,150,180,3,4,90,470,3920,7270,(May 1972),(Dec 1973),3080,Very large,Boeing MD-10-10F,3
-McDonnell Douglas DC-10-10F,57539kg,57539kg,3,0,90,470,2200,7270,January 1990,January 1990,3080,Very large,Boeing MD-10-10F,3
-McDonnell Douglas DC-10-15,240/20/10,399,3,8,90,470,3620,7230,(Jun 1976),1/1/1979,2830,Very large,Boeing MD-10-10F,3
-McDonnell Douglas DC-10-30,260/32/10,399,3,8,90,470,4890-4920,7180-7230,February 1972,August 1973,3380,Very large,"DC-10-30CF, DC-10-30F, Boeing MD-10-30F",3
-McDonnell Douglas DC-10-30CF,170/24/0,69683kg,3,5,90,470,5770,7180,October 1972,April 1974,3380,Very large,Boeing MD-10-30F,3
-McDonnell Douglas DC-10-30ER,260/32/10,399,3,8,90,470,5390,7180,July 1979,September 1980,3500,Very large,"DC-10-30CF, DC-10-30F, Boeing MD-10-30F",3
-McDonnell Douglas DC-10-30F,74843kg,74843kg,3,0,90,470,3130,7180,August 1976,August 1978,3380,Very large,Boeing MD-10-30F,3
-McDonnell Douglas DC-10-40,260/32/10,399,3,8,90,470,4510,7200-7350,October 1972,November 1973,3500,Very large,"DC-10-40CF, DC-10-40F",3
-McDonnell Douglas DC-10-40CF,170/24/0,67559kg,3,5,90,470,5710,7200,March 1973,June 1974,3500,Very large,,3
-McDonnell Douglas DC-10-40F,73200kg,73200kg,3,0,90,470,3050,7200,January 1990,January 1990,3500,Very large,,3
-,,,,,,,,,,,,,,
-McDonnell Douglas MD-11,230/25/10,410,2,9,90,470,6250-6350,6790-7070,January 1987,December 1990,2970,Very large,"MD-11ER, MD-11C, MD-11F",
-McDonnell Douglas MD-11C,210/24/0,66549kg,2,6,90,470,6480-6580,6780-7070,January 1987,December 1990,2970,Very large,MD-11F,
-McDonnell Douglas MD-11ER,230/25/10,410,2,9,90,470,6820-6910,6840-7320,January 1995,April 1996,3080,Very large,"MD-11C, MD-11F",
-McDonnell Douglas MD-11F,91962kg,91962kg,2,0,90,470,3500-3600,6790-7070,January 1987,December 1990,2970,Very large,,
-,,,,,,,,,,,,,,
-McDonnell Douglas MD-81,150,172,2,4,40,440,1560-1610,3580-3680,June 1977,June 1980,1730,Large,,3
-McDonnell Douglas MD-82,150,172,2,4,40,440,2080-2110,3470-3580,June 1978,November 1980,1760,Large,,3
-McDonnell Douglas MD-82SF,Cargo,21137,2,0,40,440,1210,3350,,2013,1760,Large,,3
-McDonnell Douglas MD-83,150,172,2,4,40,440,2550-2580,3460-3470,December 1981,May 1984,1800,Large,,3
-McDonnell Douglas MD-83SF,Cargo,20457,2,0,40,440,1830,3340,,2013,1800,Large,,3
-McDonnell Douglas MD-87,120,139,2,3,40,440,2430-2820,3390-3490,April 1984,May 1986,1730,Large,,3
-McDonnell Douglas MD-88,150,172,2,4,40,440,2130-2540,3410-3500,March 1986,May 1988,1760,Large,,3
-McDonnell Douglas MD-88SF,Cargo,21137,2,0,40,440,1100,3290,,2013,1760,Large,,3
-,,,,,,,,,,,,,,
-McDonnell Douglas MD-90-30,160,172,2,4,35,435,1840-1860,2700-2740,March 1988,June 1994,2050,Large,,
-McDonnell Douglas MD-90-30ER,160,172,2,4,35,435,2310-2330,2740-2780,March 1988,June 1994,2110,Large,,
-McDonnell Douglas MD-90-50,160,172,2,4,35,435,2880,2820,March 1988,June 1994,2150,Large,,
-McDonnell Douglas MD-90-55,175,187,2,4,35,435,2620,2850,March 1988,June 1994,2150,Large,,
-,,,,,,,,,,,,,,
-Mitsubishi Regional Jet 70ER,68,80,2,2,30,447,1360,1440,August 2006,April 2019,1530,Medium,,
-Mitsubishi Regional Jet 70LR,68,80,2,2,30,447,1940,1460,August 2006,April 2019,1620,Medium,,
-Mitsubishi Regional Jet 70STD,68,80,2,2,30,447,980,1430,August 2006,April 2019,1420,Medium,,
-Mitsubishi Regional Jet 90ER,80,96,2,2,30,447,1370,1500,August 2006,April 2019,1590,Medium,,
-Mitsubishi Regional Jet 90LR,80,96,2,2,30,447,1790,1520,August 2006,April 2019,1690,Medium,,
-Mitsubishi Regional Jet 90STD,80,96,2,2,30,447,960,1490,August 2006,April 2019,1470,Medium,,
-,,,,,,,,,,,,,,
-Sud Aviation SE-210 Caravelle I,65,80,3,2,35,440,990,4840,September 1951,February 1958,1710,Large,,
-Sud Aviation SE-210 Caravelle IA,65,80,3,2,35,440,1020,4770,April 1958,September 1959,1710,Large,,
-Sud Aviation SE-210 Caravelle III,65,80,3,2,35,440,1120,4670,59,1958,1730,Large,,
-Sud Aviation SE-210 Caravelle VI-N,65,80,2,2,35,440,1420,4600,59,1960,1760,Large,,
-Sud Aviation SE-210 Caravelle VI-R,65,80,2,2,35,440,1450,4530,61,1960,1860,Large,Caravelle 11RF,
-Sud Aviation SE-210 Caravelle 10B,80,95,2,2,35,440,1750,4330,63,1963,1820,Large,Caravelle 11RF,
-Sud Aviation SE-210 Caravelle 10R,65,80,2,2,35,440,1840,4150,65,1964,1780,Large,Caravelle 11RF,
-Sud Aviation SE-210 Caravelle 11R,50,50,2,1,35,440,1800,4080,67,68,1810,Large,,
-Sud Aviation SE-210 Caravelle 11RF,Cargo,9094,2,0,35,440,1450,4080,70,70,1790,Large,Available Only as Conversion,
-Sud Aviation SE-210 Caravelle 12,110,128,2,3,35,440,1210,4220,69,1970,1820,Large,,
-,,,,,,,,,,,,,,
-Sukhoi Superjet 100-75B,75,88,2,2,30,447,1460,1640,May 2004,May 2011,1520,Medium,,
-Sukhoi Superjet 100-75LR,75,88,2,2,30,447,2300,1680,May 2004,May 2011,1550,Medium,,
-Sukhoi Superjet 100-95B,95,108,2,2,30,447,1880,1800,May 2004,May 2011,1770,Medium,,
-Sukhoi Superjet 100-95LR,95,108,2,2,30,447,2610,1850,May 2004,May 2011,1800,Medium,,
-,,,,,,,,,,,,,,
-Tupolev Tu-104,50,50,4,1,40,442,1900,6990,January 1953,October 1956,2150,Large,,
-Tupolev Tu-104A,60,70,4,2,40,442,1750,6990,November 1954,April 1958,2210,Large,,
-Tupolev Tu-104B,100,117,4,3,40,442,1400,6990,April 1959,July 1960,2190,Large,,
-,,,,,,,,,,,,,,
-Tupolev Tu-110A,85,100,4,2,40,480,1450,12300,January 1960,March 1961,1860,Large,,
-,,,,,,,,,,,,,,
-Tupolev Tu-114,192,220,5,5,60,410,3250,8900,December 1956,May 1960,2640,Very large,,
-,,,,,,,,,,,,,,
-Tupolev Tu-124,56,56,3,2,35,470,820,5080,(Dec 1959),1961,1530,Medium,,
-,,,,,,,,,,,,,,
-Tupolev Tu-134,60,72,4,2,35,430,1450,3160,(Feb 1963),1966,2250,Large,,2
-Tupolev Tu-134A,64,76,4,2,35,430,1460,2870,June 1967,January 1970,2180,Large,"TU-134A-1, TU-134A-3, TU-134B, TU-134B-1, TU-134B-3",2
-Tupolev Tu-134A-1,64,76,3,2,35,430,1460,2840,September 1972,January 1974,2180,Large,"TU-134A-3, TU-134B, TU-134B-1, TU-134B-3",2
-Tupolev Tu-134A-3,68,80,3,2,35,430,1510,2730,February 1975,September 1975,2050,Large,"TU-134B, TU-134B-1, TU-134B-3",2
-Tupolev Tu-134B,72,84,3,3,35,430,1380,2900,November 1976,January 1979,2200,Large,"TU-134B-1, TU-134B-3",2
-Tupolev Tu-134B-1,80,90,3,2,35,430,1280,2880,August 1980,February 1981,2200,Large,TU-134B-3,2
-Tupolev Tu-134B-3,80,96,3,2,35,430,1370,2760,October 1982,January 1984,2070,Large,,2
-,,,,,,,,,,,,,,
-Tupolev Tu-144,120,140,3,3,120,1260,2570,35500,(Jun 1964),1977,3500,Very large,,
-,,,,,,,,,,,,,,
-Tupolev Tu-154,132,152,4,4,55,488,1420,6290,(May 1969),1972,2100,Large,,2
-Tupolev Tu-155A,132,152,4,4,55,488,1550,6190,(May 1974),(Jul 1975),2200,Large,,2
-Tupolev Tu-154B,138,160,4,4,55,488,1640,6240,August 1974,June 1975,2280,Large,"Tu-154B-1, Tu-154B-2, Tu-154C",2
-Tupolev Tu-154B-1,138,160,4,4,55,488,1690,6290,September 1977,July 1979,2300,Large,"Tu-154B, Tu-154B-2, Tu-154C",2
-Tupolev Tu-154B-2,156,180,4,4,55,488,1660,6350,October 1979,October 1981,2350,Large,"Tu-154B, Tu-154B-1, Tu-154C",2
-Tupolev Tu-154C,18000kg,18000kg,4,0,55,488,1450,6320,March 1984,March 1984,2350,Large,,2
-Tupolev Tu-154M,156,180,3,4,55,488,2230-2380,5380-5490,August 1981,May 1983,2500,Large,,3 (Hushkit)
-,,,,,,,,,,,,,,
-Tupolev Tu-204,180,210,3,5,60,453,1730,3800,November 1986,May 1995,2030,Large,"Tu-204-100, Tu-204C",
-Tupolev Tu-204-100,180,210,3,5,60,453,2540,3920,June 1990,January 1997,2140,Large,Tu-204-100C,
-Tupolev Tu-204-100C,27000kg,27000kg,3,0,60,453,1900,4000,June 1990,June 1997,2210,Large,,
-Tupolev Tu-204-100E,180,210,3,5,60,453,2630,3910,November 2001,March 2005,2150,Large,,
-Tupolev Tu-204-120,180,210,3,5,60,453,2640,3530,May 1993,July 1999,2100,Large,Tu-204-120C,
-Tupolev Tu-204-120C,27000kg,27000kg,3,0,60,453,1950,3720,May 1993,July 1999,2170,Large,Tu-204-120CE,
-Tupolev Tu-204-120CE,27000kg,27000kg,3,0,60,453,2000,3680,November 2001,March 2005,2170,Large,,
-Tupolev Tu-204-120E,180,210,3,5,60,453,2790,3590,November 2001,March 2005,2110,Large,,
-Tupolev Tu-204-200,180,210,3,5,60,453,3110,4000,January 1995,June 2002,2280,Large,,
-Tupolev Tu-204-220,180,210,3,5,60,453,3200,3840,September 1995,January 2002,2230,Large,,
-Tupolev Tu-204-300,144,166,3,4,60,453,3810,3960,September 1995,January 2004,2200,Large,,
-Tupolev Tu-204C,27000kg,27000kg,3,0,60,453,1000,3800,November 1986,May 1995,2030,Large,,
-Tupolev Tu-204SM,186,215,2,5,60,453,2930,3610,March 2009,April 2020,2160,Large,,
-,,,,,,,,,,,,,,
-Tupolev Tu-334-100,84,102,2,3,40,430,1180,2560,December 1995,July 2008,1600,Medium,,
-,,,,,,,,,,,,,,
-VEB Flugzeugwerke Baade 152,65,72,4,2,35,430,860,7240,August 1957,August 1964,1830,Large,,
-,,,,,,,,,,,,,,
-VFW 614,44,44,2,1,25,390,480,2180,(Aug 1968),(May 1976),1110,Medium,,
-,,,,,,,,,,,,,,
-Vickers VC10,132,151,4,4,60,480,4140,7470,May 1959,1963,2520,Very large,,
-Vickers VC10F,Cargo,18335kg,4,0,60,480,3650,7470,68,68,2760,Very large,,
-Vickers Super VC10,150,174,4,4,60,480,3970,9150,April 1963,1963,2730,Very large,,
-Vickers Super VC10F,Cargo,44565,4,0,60,480,2960,9150,69,69,2740,Very large,,
-,,,,,,,,,,,,,,
-Yakovlev Yak-40,30,32,3,1,20,275,650-670,1720,October 1962,July 1967,1180,Medium,,
-Yakovlev Yak-42,102,120,3,3,35,452,1110,4490,March 1976,November 1981,1670,Large,,
-Yakovlev Yak-42D,108,126,3,3,35,452,1570,4430,June 1987,May 190,1680,Large,,
+,Standard,Max Pax,0,0,0,0,Range,Fuel,Available,Delivery,0,Size class,Conversion into,0
+Aérospatiale N262A,29,29,2,1,20,210,330,360,1961,1963,790,Medium,,0
+Aérospatiale N262C Frègate,29,29,2,1,20,210,430,300,1970,1972,800,Medium,,0
+Aerospitale Concorde,108,128,3,3,120,1150,3240,23800,1962,21,3600,Very large,,0
+Agusta AZ-8L,26,26,2,1,30,200,680,1030,1956,1960,800,       Medium,,0
+Airbus A300-600,279/28,375,2,8,70,453,3260,5570,1982,1984,2330,Very large,,3
+Airbus A300-600R,279/28,375,2,8,70,453,3960,5420,1986,1988,2340,Very large,A300-600RF,3
+Airbus A300-600RF,0,0,2,0,70,453,2550,5370,1993,1995,2340,Very large,,3
+Airbus A300B2-100,252/28,336,3,7,70,453,1630,6120,1969,1974,2410,Very large,A300BF-200F,0
+Airbus A300B2-200,252/28,336,3,7,70,453,1680,6440,1970,1979,2730,Very large,A300BF-200F,0
+Airbus A300B4-100,252/28,336,3,7,70,453,2400,6850,1975,1977,2730,Very large,A300BF-200F,0
+Airbus A300B4-200,252/28,336,3,7,70,453,2400,6890,1976,1977,2740,Very large,A300BF-200F,0
+Airbus A300B4-200FF,252/28,336,2,7,70,453,2400,6890,1980,1981,2740,Very large,A300BF-200F,0
+Airbus A300CF-200 (Combi version),126,0,2,3,70,453,3080,6380,1981,1983,2740,Very large,,3
+Airbus A300F4-200 (Cargo version),0,0,2,0,70,453,1680,6380,1985,1987,2740,Very large,,3
+Airbus A310-200,207/21,275,2,6,70,453,2360,5310,1977,1983,2360,Very large,,3
+Airbus A310-300,207/21,275,2,6,70,453,5020,5680,1981,1984,2730,Very large,,3
+Airbus A318-100,114,132,2,3,40,447,2730,2030,1999,2002,1690,Large,,4
+Airbus A319-100,132,156,2,4,40,447,2910,2240,1992,1995,1730,Large,,4
+Airbus A319neo,132,156,2,4,40,447,3930,1990,2009,2014,1730,Large,,4
+Airbus A320-100,156,180,2,4,40,447,1480,2450,1982,1988,1760,Large,,4
+Airbus A320-200,156,180,2,4,40,447,2710,2420,1987,1989,1810,Large,,4
+Airbus A320-200F,0,0,2,0,40,447,2050,2280,2014,2014,1850,Large,,4
+Airbus A320neo,162,194,2,4,40,447,3300,2160,2009,2014,1810,Large,,4
+Airbus A321-100,192,220,2,5,40,447,2300,2870,1989,1993,1890,Large,,4
+Airbus A321-200,192,220,2,5,40,447,2880,2800,1994,1996,1950,Large,A321-200F,4
+Airbus A321-200F,0,0,2,0,40,447,2130,2700,2014,2014,1990,Large,,4
+Airbus A321neo,186/15,244,2,5,40,447,3310,2550,2009,2014,1950,Large,,4
+Airbus A330-200,234/16/8,380,2,8,90,470,7110,5580,1997,1999,2740,Very large,A300-200F,4
+Airbus A330-200F,0,0,2,0,90,470,4000,5450,2008,2010,2740,Very large,,4
+Airbus A330-300,252/20/8,420,2,9,90,470,5440,5610,1988,1993,2750,Very large,,4
+Airbus A330-300E,252/20/8,420,2,9,90,470,6080,5890,2011,2014,2770,Very large,,4
+Airbus A330-300X,252/20/8,420,2,9,90,470,5660,5610,1996,1998,2770,Very large,,4
+Airbus A330-800neo,243/20/8,406,2,9,90,470,7550,4830,15,1,2670,Very large,,4
+Airbus A330-900neo,270/20/8,440,2,9,90,470,6330,5020,15,1,2750,Very large,,4
+Airbus A340-200,252/20/8,420,2,9,90,470,7430,7010,1988,1993,2980,Very large,,4
+Airbus A340-200X,252/20/8,420,2,9,90,470,7730,6780,1997,1998,3000,Very large,,4
+Airbus A340-300,270/20/8,440,2,9,90,470,6720,6920,1988,1993,3100,Very large,,4
+Airbus A340-300E,270/20/8,440,2,9,90,470,7280,6550,2003,2005,3110,Very large,,4
+Airbus A340-300X,270/20/8,440,2,9,90,470,6920,6790,1994,1995,3110,Very large,,4
+Airbus A340-500,261/16/0,375,2,8,90,470,8720,6550,1998,2004,3050,Very large,,4
+Airbus A340-500HGW,252/16/8,400,2,8,90,470,9080,6650,2005,2006,3050,Very large,,4
+Airbus A340-600,297/20/8,475,2,10,90,470,7510,6620,1997,2001,3090,Very large,,4
+Airbus A340-600HGW,297/20/8,475,2,10,90,470,7770,6610,2004,2006,3100,Very large,,4
+Airbus A350-1000,320/25/10,520,2,11,90,487,8050,5820,2006,2016,2720,Very large,,4
+Airbus A350-800,240/20/10,400,2,8,90,487,8200,4850,2006,2016,2610,Very large,,4
+Airbus A350-900,250/25/10,440,2,9,90,487,8630,5340,2006,2016,2660,Very large,,4
+Airbus A380-800,480/25/20,853,2,18,120,488,8240,9270,2001,2008,3380,Very large,,4
+Airspeed Ambassador,48,48,3,1,25,225,900,780,1946,1951,1440,Medium,,0
+Antonov An-140,52,52,2,2,25,280,1260,680,1994,2003,1500,Medium,,3
+Antonov An-148-100A,70,85,2,2,30,445,1140,1580,2002,2008,1570,Medium,,3
+Antonov An-148-100B,70,85,2,2,30,445,1810,1620,2002,2008,1810,Medium,,3
+Antonov An-148-100E,70,85,2,2,30,445,2160,1690,2002,2008,1870,Medium,,3
+Antonov An-148T,0,0,2,0,30,445,540,2110,15,2017,2000,Medium,,3
+Antonov An-158,85,99,2,2,30,445,1350,1760,2008,2010,1890,Medium,,3
+Antonov An-24,52,52,3,2,25,240,350,1710,1958,1962,1160,Medium,,2
+Antonov An-26,44,44,3,1,25,240,470,1660,1965,1968,1440,Medium,,3
+Antonov An-28,18,18,2,0,15,180,310,680,1970,1980,790,          Small,,3
+Antonov An-38-100,26,26,2,1,15,180,440,350,1990,1996,880,          Small,,4
+Antonov An-38-120,26,26,2,1,15,180,440,350,1997,1998,880,          Small,,4
+Antonov An-38-200,27,27,2,1,15,180,480,380,1998,2002,1030,Small,,4
+Antonow An-10,78,85,4,2,40,350,1170,3500,1955,1958,1820,Large,,0
+Antonow An-10A,114,130,4,3,40,350,960,3330,1958,1960,1820,Large,,0
+Armstrong Whitw. AW.55 Apollo,32,32,2,1,25,240,600,930,1946,1951,960,Medium,,0
+Armstrong Whitw. AW.650 Mk 100,66,77,2,2,30,240,1350,1110,1958,1962,1330,Large,,0
+Armstrong Whitw. AW.650 Mk 200,66,77,2,2,30,240,1400,1110,1960,1962,1330,Large,,0
+Armstrong Whitw. AW.650 Mk 220,66,77,2,2,30,240,1590,1080,1963,1964,1330,Large,,0
+Armstrong Whitw. AW.671,102,120,2,3,30,240,920,1110,1964,1967,1330,Large,,0
+ATR 42-300,48,48,2,1,25,275,610,520,1983,1987,1060,Medium,ATR42-320F,3
+ATR 42-320,48,48,2,1,25,275,610,510,1984,1987,1030,Medium,ATR42-320F,3
+ATR 42-320F,0,0,2,0,25,275,390,500,2002,2002,1040,Medium,,3
+ATR 42-500,50,50,2,1,25,275,740,530,1993,1995,1120,Medium,,4
+ATR 42-600,50,50,2,1,25,275,750,520,2008,2011,1120,Medium,,4
+ATR 72-200,64,74,2,2,25,275,750,590,1985,1989,1510,Medium,ATR72-210F,4
+ATR 72-210,64,74,2,2,25,275,760,600,1987,1990,1360,Medium,ATR72-210F,4
+ATR 72-210F,0,0,2,0,25,275,390,600,2002,2002,1360,Medium,,4
+ATR 72-500,64,74,2,2,25,275,970,620,1992,1997,1350,Medium,,4
+ATR 72-600,68,78,2,2,25,275,900,610,2008,2011,1400,Medium,ATR72-600F,4
+ATR 72-600F,0,0,2,0,25,275,500,580,16,2020,1410,Medium,,4
+Aviation Traders Mk l,28,28,2,1,25,240,830,720,55,1957,940,Medium,,0
+Aviation Traders Mk ll,40,40,2,1,25,240,770,820,55,1957,1050,Medium,,0
+Avro C102 Jetliner,50,50,3,1,30,365,770,3110,1947,1953,950,Medium,,0
+Avro RJ-100,102,116,2,3,30,400,1360,2470,1991,1992,1480,Medium,,4
+Avro RJ-115,108,128,2,3,30,400,1280,2490,1991,1992,1510,Medium,,4
+Avro RJ-70,78,94,2,2,30,400,1480,2240,1991,1992,1210,Medium,,4
+Avro RJ-85,96,112,2,3,30,400,1500,2340,1991,1992,1330,Medium,,4
+Avro RJX-100,102,116,2,3,30,400,1190,2190,1998,2001,1500,Medium,,4
+Avro RJX-70,78,94,2,2,30,400,1360,2130,1998,2001,1230,Medium,,4
+Avro RJX-85,96,112,2,3,30,400,1290,2060,1998,2001,1340,Medium,,4
+BAC One-Eleven 200,70,85,2,2,35,409,990,2750,1961,9,2080,Large,,0
+BAC One-Eleven 300,75,89,2,2,35,409,1350,2920,1962,1,2450,Large,,0
+BAC One-Eleven 400,75,89,2,2,35,409,1350,2890,1961,6,2320,Large,,0
+BAC One-Eleven 475,75,89,2,2,35,409,1575,3010,1969,1970,1800,Large,,3
+BAC One-Eleven 500,100,119,2,3,35,409,1480,3150,1968,1969,2220,Large,,3
+BAe 146-100,72,94,2,2,30,400,1080,2370,1979,1983,1230,Medium,,3
+BAe 146-200,90,112,2,3,30,400,1260,2470,1979,1983,1340,Medium,,3
+BAe 146-300,96,116,2,3,30,400,1140,2580,1979,1990,1500,Medium,,3
+BAe ATP,68,68,2,2,30,266,790,520,1984,1988,1250,Medium,,4
+BAe Jetstream 31,19,19,2,0,15,250,300,330,1980,1983,720,Small,,4
+BAe Jetstream 32,19,19,2,0,15,250,460,330,1988,1989,710,Small,,4
+BAe Jetstream 41,29,29,2,1,15,250,710,430,1989,1992,800,Small,,4
+Beechcraft 1900C,19,19,2,0,15,240,570,340,1982,1984,1060,Small,,4
+Beechcraft 1900CF,0,0,2,0,15,240,430,340,1990,1990,1060,Small,,4
+Beechcraft 1900D,19,19,2,0,15,240,610,320,1989,1991,1100,Small,B1900DF,4
+Beechcraft 1900DF,0,0,2,0,15,240,330,320,1994,1994,1110,Small,,4
+Beechcraft 99,15,15,2,0,15,240,360,190,1966,1968,780,Small,,4
+Beechcraft A99,15,15,2,0,15,240,440,190,1966,1969,780,Small,,4
+Beechcraft B99,17,17,2,0,15,240,530,190,1968,1969,750,Small,,4
+Beechcraft C99,17,17,2,0,15,240,550,200,1978,1979,750,Small,,4
+Boeing 247,10,10,3,0,25,160,350,690,,1932,0,Small,,0
+Boeing 307,33,33,5,1,30,190,1030,1150,1937,1939,1070,Medium,,0
+Boeing 377,100,114,4,3,60,250,2090,2320,1944,1946,1670,Large,377F,0
+Boeing 377 Freighter,0,0,4,0,60,250,1050,2670,1944,1946,2310,Large,,0
+Boeing 707-120,150,174,4,4,55,472,2730,8630,1953,1957,3150,Very large,,0
+Boeing 707-120B,150,174,4,4,55,472,3100,7190,1961,1962,3000,Very large,,0
+Boeing 707-220,150,174,4,4,55,472,3060,8770,1957,1960,2850,Very large,,0
+Boeing 707-320,192,219,4,5,55,472,2870,9350,1958,1960,3550,Very large,707-320CF,0
+Boeing 707-320B,180,210,4,5,55,472,4350,8340,1959,1962,3100,Very large,707-320CF,0
+Boeing 707-320B Adv.,180,210,4,5,55,472,4370,8270,1962,1962,3050,Very large,707-320CF,0
+Boeing 707-320C,180,210,4,5,55,472,4390,8090,1961,1963,3250,Very large,707-320CF,0
+Boeing 707-320CF,0,0,4,0,55,472,2640,8090,1965,1965,3250,Very large,,3
+Boeing 707-420,180,210,4,5,55,472,2910,8480,1959,1961,3150,Very large,,0
+Boeing 717-200,110,134,2,3,35,435,2100,2270,1994,1998,1780,Large,,4
+Boeing 717-200HGW,115,134,2,3,35,435,2000,2330,1994,1998,1790,Large,,4
+Boeing 720,114,156,4,4,55,472,2790,8120,1959,1961,2800,Very large,,0
+Boeing 720B,132,156,4,4,55,472,3320,6690,1959,1961,2050,Very large,,0
+Boeing 727-100,114,131,3,3,45,459,2230,5350,59,62,2070,Large,727-100F,0
+Boeing 727-100C,52,52,3,2,45,459,2520,5160,62,63,2070,Large,727-100F,0
+Boeing 727-100F,0,0,3,0,45,459,1580,5180,1970,1970,2110,Large,,0
+Boeing 727-200,156,183,3,4,45,459,1480,5250,1965,11,2370,Large,,0
+Boeing 727-200Adv.,162,189,3,4,45,459,2520,5090,1970,1972,2240,Large,727-200AF,3
+Boeing 727-200AF,0,0,3,0,45,459,2150,4230,1987,1987,2280,Large,,3
+Boeing 727-200F Adv.,0,0,3,0,45,459,1700,4620,1980,1982,2330,Large,727-200AF,3
+Boeing 737 Max 10,180/15,230,2,5,40,447,3040,2310,16,2019,2900,Large,,0
+Boeing 737 Max 7,150,172,2,4,40,447,3490,2150,11,2016,2340,Large,,0
+Boeing 737 Max 8,180,210,2,5,40,447,3280,2170,11,2016,2580,Large,,0
+Boeing 737 Max 9,192,220,2,5,40,447,3270,2200,11,2016,2750,Large,,0
+Boeing 737-100,96,124,2,3,35,413,1310,3540,1966,15,1570,Large,,0
+Boeing 737-200,102,136,2,3,35,413,1980,3370,1967,1,1580,Large,737-200C adv,73
+Boeing 737-200Adv,120,136,2,3,35,413,2050,3210,1966,1971,1640,Large,737-200C adv,73
+Boeing 737-200CAdv,0,0,2,0,35,413,1340,2890,1971,1973,1650,Large,737-200F,3
+Boeing 737-200F,0,0,2,0,35,413,1340,2890,1986,1986,1640,Large,,3
+Boeing 737-300,126,149,2,3,40,424,2740,2630,1981,1985,1830,Large,737-300F,737
+Boeing 737-300C,54,0,2,2,40,424,2770,2540,2002,2002,1830,Large,737-300F,0
+Boeing 737-300F,0,0,2,0,40,424,1600,2540,2002,2002,1830,Large,737-300C,0
+Boeing 737-400,162,189,2,4,40,424,2530,3020,1985,1987,2000,Large,737-400F,737
+Boeing 737-400C,60,0,2,2,40,424,2640,3020,2002,2002,1990,Large,737-400F,0
+Boeing 737-400F,0,0,2,0,40,424,1350,3020,2002,2002,1990,Large,737-400C,0
+Boeing 737-500,114,132,2,3,40,424,2730,2550,1986,1989,1640,Large,,0
+Boeing 737-600,114,132,2,3,40,447,3070,2510,1994,1997,1580,Large,,0
+Boeing 737-700,126,149,2,3,40,447,3400,2570,1993,1997,1620,Large,737-700C,737
+Boeing 737-700C,60,0,2,2,40,447,3650,2570,1996,1998,1690,Large,737-700F,0
+Boeing 737-700ER,120,140,2,3,40,447,4450,2580,2005,2006,1750,Large,,0
+Boeing 737-700F,0,0,2,0,40,447,2780,2570,,2016,1690,Large,,0
+Boeing 737-800,162,189,2,4,40,447,3000,2600,1992,1996,1980,Large,737-800BFC,0
+Boeing 737-800BFC,0,0,2,0,40,447,2000,2600,2017,2017,2060,Large,,0
+Boeing 737-900,180,189,2,4,40,447,2460,2570,1996,2000,2420,Large,,0
+Boeing 737-900ER,186,215,2,5,40,447,3210,2570,2004,2007,2090,Large,,0
+Boeing 747-100,290/25/10,480,3,10,110,470,4940,14570,1965,1969,2870,Very large,747-100SF,747
+Boeing 747-100B,290/25/10,480,3,10,110,470,5180,13440,1969,2,3090,Very large,B747-100C,0
+Boeing 747-100B/SR,390/20,535,3,11,110,470,2130,11470,1972,1974,1970,Very large,747-100B/SR/SUD,2
+Boeing 747-100B/SR/SUD,290/25/10,565,3,12,110,470,2630,11660,1980,1980,2030,Very large,,2
+Boeing 747-100B/SUD,320/25/10,515,3,11,110,470,4850,13630,1980,1980,3150,Very large,Aircraft Only Av,0
+Boeing 747-100C,170/24/0,238,3,5,110,470,5830,13440,1982,1982,3090,Very large,Aircraft Only Av,0
+Boeing 747-100F,0,0,3,0,110,470,2750,13440,1982,1982,3090,Very large,,0
+Boeing 747-100SF,0,0,3,0,110,470,2550,14570,1971,1971,2880,Very large,,2
+Boeing 747-200,290/25/10,480,3,10,110,470,4720,13330,68,5,2890,Very large,,0
+Boeing 747-200B,290/25/10,480,3,10,110,470,5890,13540,1970,1971,3270,Very large,747-200M,747
+Boeing 747-200C,220/32/0,0,3,7,110,470,6170,13540,1971,1973,3270,Very large,747-200F,2
+Boeing 747-200F,0,0,3,0,110,470,3420,13540,1971,1972,3270,Very large,,2
+Boeing 747-200M,170/24/0,0,3,5,110,470,6390,13540,1972,1974,3270,Very large,747-200F,2
+Boeing 747-300,360/25/12,608,3,13,110,470,5820,11830,1981,1983,2890,Very large,,3
+Boeing 747-300SR,410/20/0,624,3,13,110,470,1870,11090,1981,1984,2800,Very large,,3
+Boeing 747-400,310/25/12,550,2,11,110,488,7270,9740,1986,1989,2790,Very large,747-400BCF,3
+Boeing 747-400BCF,0,0,2,0,110,488,4150,9590,2004,2004,2930,Very large,,3
+Boeing 747-400D,470/20/0,628,2,14,110,488,1800,9270,1989,1991,1950,Very large,,3
+Boeing 747-400ER,310/25/12,550,2,11,110,488,8040,8930,2000,2001,3090,Very large,747-400BCF,3
+Boeing 747-400ERF,0,0,2,0,110,488,4750,8930,2000,2002,3090,Very large,,3
+Boeing 747-400F,0,0,2,0,110,488,4600,8930,1988,1992,2790,Very large,,3
+Boeing 747-8,320/25/16,605,2,13,110,488,8160,7700,2006,2012,2970,Very large,,4
+Boeing 747-8F,0,0,2,0,110,488,4200,7700,2006,2012,2970,Very large,,4
+Boeing 747SP,190/20/10,349,3,7,110,470,6970,10200,1973,1976,2760,Very large,,2
+Boeing 757-200,174/15,238,2,5,70,459,3940,4260,1977,1981,2040,Large,757-200PF,757
+Boeing 757-200M,126,0,2,3,70,459,3830,3930,1987,1990,2130,Large,757-200PF,0
+Boeing 757-200PF,0,0,2,0,70,459,2440,4110,1987,1990,2200,Large,,0
+Boeing 757-300,222/15,279,2,6,70,459,3330,4130,1996,1998,2260,Large,,0
+Boeing 767-200,192/18,255,2,6,80,460,3720,5430,1977,1981,1810,Very large,767-200SF,0
+Boeing 767-200ER,192/18,255,2,6,80,460,6700,5140,1984,1985,2130,Very large,767-200SF,0
+Boeing 767-200SF,0,0,2,0,80,460,2900,4680,2006,2006,2140,Very large,,0
+Boeing 767-300,224/18,290,2,6,80,460,4250,5680,1982,1985,2460,Very large,767-300F,0
+Boeing 767-300ER,224/18,290,2,6,80,460,6180,5430,1985,1988,2470,Very large,767-300F,0
+Boeing 767-300F,0,0,2,0,80,460,3300,5400,1993,1995,2490,Very large,,0
+Boeing 767-400ER,256/20/8,409,2,9,80,460,5190,5380,1996,1999,2890,Very large,,0
+Boeing 777-200,250/25/10,440,2,9,90,480,5630,6590,1990,1994,2260,Very large,777 Freighter,0
+Boeing 777-200ER,250/25/10,440,2,9,90,480,7730,7250,1990,1997,2370,Very large,777 Freighter,0
+Boeing 777-200LR,250/25/10,440,2,9,90,480,9840,6750,2001,2007,3180,Very large,777 Freighter,0
+Boeing 777-300,350/25/10,550,2,11,90,480,5940,7440,1995,1998,2740,Very large,,0
+Boeing 777-300ER,350/25/10,550,2,11,90,480,7640,7490,1999,2003,2890,Very large,,0
+Boeing 777Freighter,0,0,2,0,90,480,4900,6750,2004,2008,2920,Very large,,0
+Boeing 787-3,210/20,330,2,7,80,485,3290,4200,2009,2015,2670,Very large,,0
+Boeing 787-8,250/32/10,381,2,8,80,485,7180,4770,2004,2011,2820,Very large,,0
+Boeing 787-9,250/25/10,440,2,9,80,485,7850,5150,2005,2015,2840,Very large,,0
+Boeing MD-10-10F,0,0,2,0,90,470,2000,6950,1999,1999,2980,Very large,,3
+Boeing MD-10-30F,0,0,2,0,90,470,3200,6910,1999,1999,3500,Very large,,3
+Bombardier CRJ100,52,52,2,2,30,445,800,1240,1994,1995,1180,Medium,,0
+Bombardier CRJ1000,88,104,2,2,30,445,1430,1710,2008,2011,1990,Medium,,0
+Bombardier CRJ1000EL,88,104,2,2,30,445,990,1710,2008,2011,1810,Medium,,0
+Bombardier CRJ1000ER,88,104,2,2,30,445,1600,1710,2008,2011,2070,Medium,,0
+Bombardier CRJ100ER,52,52,2,2,30,445,1160,1260,1994,1995,1430,Medium,,0
+Bombardier CRJ100LR,52,52,2,2,30,445,1510,1310,1994,1995,1440,Medium,,0
+Bombardier CRJ200,52,52,2,2,30,445,810,1180,1993,1995,1180,Medium,,0
+Bombardier CRJ200ER,52,52,2,2,30,445,1170,1210,1993,1995,1430,Medium,,0
+Bombardier CRJ200LR,52,52,2,2,30,445,1520,1250,1993,1995,1440,Medium,,0
+Bombardier CRJ700,68,78,2,2,30,445,1250,1440,1998,2002,1500,Medium,,0
+Bombardier CRJ700ER,68,78,2,2,30,445,1550,1510,1998,2002,1500,Medium,,0
+Bombardier CRJ700LR,68,78,2,2,30,445,1820,1570,1998,2002,1510,Medium,,0
+Bombardier CRJ705,64,75,2,2,30,445,1700,1690,2001,2003,1520,Medium,,0
+Bombardier CRJ705ER,64,75,2,2,30,445,1910,1760,2001,2003,1530,Medium,,0
+Bombardier CRJ705R,64,75,2,2,30,445,1970,1810,2001,2003,1530,Medium,,0
+Bombardier CRJ900,80,90,2,2,30,445,1370,1710,1999,2002,1520,Medium,,0
+Bombardier CRJ900ER,80,90,2,2,30,445,1610,1770,1999,2002,1530,Medium,,0
+Bombardier CRJ900LR,80,90,2,2,30,445,1840,1840,1999,2002,1530,Medium,,0
+Bombardier CS100/Airbus A220-100,105,125,2,3,30,447,2150,1640,2007,2015,1520,Large,,4
+Bombardier CS100ER/A220-100ER,105,125,2,3,30,447,2860,1680,2007,2015,1550,Large,,4
+Bombardier CS300/A220-300,135,160,2,4,30,447,2110,1780,2007,2015,1900,Large,,4
+Bombardier CS300ER/A220-300ER,135,160,2,4,30,447,2810,1830,2008,2016,1930,Large,,4
+Bombardier Dash 8-Q400,68,78,2,2,25,343,1400,810,1996,2000,1460,Medium,Dash8-Q400PF,0
+Bombardier Dash 8-Q400NextGen,76,86,2,2,25,343,1410,800,2008,2009,1450,Medium,Dash8-Q400PF,0
+Bombardier Dash 8-Q400PF,0,0,2,2,25,343,800,760,2009,2009,1560,Medium,,0
+Breguet 763 Provence,92,107,4,3,45,200,1330,1640,1947,1953,1550,Large,,0
+Breguet 763 Sahara,0,0,4,0,45,200,700,1560,1947,1953,1630,Large,,0
+Bristol Type 170 Mk 1 Wayfarer,34,34,2,1,25,180,810,720,1944,1946,960,Medium,Mk 32 Super Frei,0
+Bristol Type 170 Mk 31 Freighter,0,0,2,0,25,180,300,720,1948,1949,950,Medium,Mk 32 Super Frei,0
+Bristol Type 170 Mk 31E (Combi version),16,0,2,0,25,180,890,720,1949,1951,940,Medium,Mk 32 Super Frei,0
+Bristol Type 170 Mk 32 Super Freighter (Combi version),22,0,2,1,25,180,860,730,1950,1951,920,Medium,,0
+Bristol Type 175 Britannia Srs 102,78,96,3,2,50,310,3030,3030,1949,1956,1640,Large,,0
+Bristol Type 175 Britannia Srs 253F,0,0,3,0,50,310,2950,2850,1959,1959,1750,Large,,0
+Bristol Type 175 Britannia Srs 302,120,139,3,3,50,310,3210,2880,1955,1957,1900,Large,,0
+Bristol Type 175 Britannia Srs 305,120,139,3,3,50,310,3710,2880,1955,1957,1900,Large,,0
+Bristol Type 175 Britannia Srs 310,120,139,3,3,50,310,3710,2910,1956,1958,1900,Large,,0
+Bristol Type 175 Britannia Srs 320,120,139,3,3,50,310,3900,2850,1958,1959,1900,Large,,0
+Britten-Norman BN-2 Islander,8,8,2,0,15,145,200,190,1963,1967,680,Small,,0
+Britten-Norman BN-2A Islander,8,8,2,0,15,145,200,180,1967,1968,680,Small,,0
+Britten-Norman BN-2A Mk.3 Trislander,16,16,2,0,15,145,260,240,1970,1970,690,Small,,0
+Britten-Norman BN-2B,8,8,2,0,15,145,               1,190,1977,1979,680,Small,,0
+Britten-Norman BN-2T,8,8,2,0,15,145,310,170,1979,1979,680,Small,,0
+CASA C-212-100,22,22,2,1,20,170,290,230,1970,1973,500,Small,,0
+CASA C-212-200,26,26,2,1,20,170,280,260,1978,1980,580,Small,,0
+CASA C-212-300,26,26,2,1,20,170,370,250,1985,1989,570,Small,,0
+CASA C-212-400,26,26,2,1,20,170,540,240,1995,1996,590,Small,,0
+CASA CN 235-10,44,44,2,1,25,260,490,610,1980,1986,920,Medium,,0
+CASA CN 235-100,44,44,2,1,25,260,530,580,1986,1987,920,Medium,,0
+CASA CN 235-200,44,44,2,1,25,260,560,570,1991,1992,950,Medium,,0
+Cessna 208A Caravan,9,9,2,0,15,160,590,160,1982,1983,450,Small,C208A Caravan,0
+Cessna 208A Cargomaster,0,0,2,0,15,160,110,160,1982,1983,450,Small,,0
+Cessna 208B Grand Caravan,12,12,2,0,15,160,530,210,1989,1991,450,Small,C208B Super Carg,0
+Cessna 208B Grand Caravan EX,14,14,2,0,15,160,690,200,2011,2012,430,Small,,0
+Cessna 208B Super Cargomaster,0,0,2,0,15,160,200,210,1984,1985,450,Small,,0
+Cessna 208B Super Cargomaster EX,0,0,2,0,15,160,220,200,2011,2012,430,Small,,0
+COMAC ARJ21-700ER,75,90,2,2,35,459,1880,2050,2007,2015,1880,Medium,,0
+COMAC ARJ21-700STD,75,90,2,2,35,459,1210,2010,2007,2015,1700,Medium,,0
+COMAC ARJ21-900ER,90,105,2,3,35,459,1870,2130,2007,2015,1920,Medium,,0
+COMAC ARJ21-900STD,90,105,2,3,35,459,1220,2070,2007,2015,1730,Medium,,0
+COMAC C919,150,174,2,4,40,450,2360,2180,2010,2018,1840,Large,,0
+Convair 880,95,110,3,3,50,495,2260,7510,1954,1959,2650,Large,,0
+Convair 880M,95,110,3,3,50,495,2420,7380,1961,1961,2300,Large,,0
+Convair 990,100,118,3,3,50,495,2950,6920,1958,1961,2950,Large,,0
+Convair 990A,105,121,3,3,50,495,3300,6530,1962,1963,2800,Large,,0
+Convair CV-240,40,40,3,1,25,240,830,850,1946,1948,1280,Medium,,0
+Convair CV-340,52,52,3,2,25,240,600,870,1950,1951,1410,Medium,,0
+Convair CV-440,52,52,3,2,25,240,770,850,1951,1953,1480,Medium,,0
+Curtiss-Wright C-46 Commando,36,36,2,1,25,150,640,860,1938,1941,1130,Medium,C-46A,0
+Curtiss-Wright C-46A (Cargo),0,0,2,0,25,150,300,950,1941,1941,1200,Medium,,0
+Dassault Mercure,138,162,3,4,35,484,720,3160,1968,1975,2050,Large,,0
+de Havilland Canada DHC-3 Otter,10,10,2,0,15,105,440,150,1949,1951,480,Small,,0
+de Havilland Canada DHC-4 Caribou,30,30,2,1,20,170,340,370,1956,1959,350,Medium,,0
+de Havilland Canada DHC-5E,40,40,2,1,25,230,570,440,1978,1981,840,Medium,,0
+de Havilland Canada DHC-6-300 Twin Otter,20,20,2,1,20,160,430,320,1968,1970,390,Small,,0
+de Havilland Canada DHC-7,54,54,2,2,25,220,520,800,1972,1976,890,Medium,,0
+de Havilland Canada DHC-8-100,40,40,2,1,25,250,810,560,1980,1984,940,Medium,,0
+de Havilland Canada DHC-8-100A,40,40,2,1,25,250,820,560,1990,1991,940,Medium,DHC-8-100CC,0
+de Havilland Canada DHC-8-100B,40,40,2,1,25,250,870,540,1990,1991,970,Medium,DHC-8-100CC,0
+de Havilland Canada DHC-8-100CC,29,0,2,1,25,250,1010,540,1990,1991,970,Medium,DHC-8-100B,0
+de Havilland Canada DHC-8-200A,40,40,2,1,25,250,930,520,1991,1993,970,Medium,DHC-8-200CC,0
+de Havilland Canada DHC-8-200B,40,40,2,1,25,250,940,510,1992,1995,970,Medium,DHC-8-200CC,0
+de Havilland Canada DHC-8-200CC,21,0,2,1,25,250,1210,510,1992,1995,970,Medium,,0
+de Havilland Canada DHC-8-300,53,53,2,2,25,250,830,550,1986,1989,1060,Medium,,0
+de Havilland Canada DHC-8-300A,53,53,2,2,25,250,990,580,1989,1990,1060,Medium,,0
+de Havilland Canada DHC-8-300B,53,53,2,2,25,250,990,570,1989,1991,1060,Medium,,0
+de Havilland Canada DHC-8-300E,53,53,2,2,25,250,960,550,1993,1993,1060,Medium,,0
+de Havilland DH.104 Dove,10,10,2,0,15,150,350,160,1944,1946,740,Small,,0
+de Havilland DH.106 Comet 1,60,60,4,2,40,430,800,7750,1945,1950,1840,Large,,0
+de Havilland DH.106 Comet 1A,60,60,4,2,40,430,950,7690,1951,1952,1860,Large,,0
+de Havilland DH.106 Comet 2,60,60,4,2,40,430,1500,6720,1953,1955,1850,Large,,0
+de Havilland DH.106 Comet 3,65,78,4,2,40,430,2310,7110,1953,1955,1950,Large,,0
+de Havilland DH.106 Comet 4,65,80,3,2,40,430,2890,7240,1954,1958,2060,Large,,0
+de Havilland DH.106 Comet 4A,95,109,3,3,40,430,1680,7170,1954,1958,2000,Large,,0
+de Havilland DH.106 Comet 4B,100,120,3,3,40,430,2070,7200,1957,1961,2010,Large,,0
+de Havilland DH.106 Comet 4C,100,120,3,3,40,430,2590,7270,1958,1961,2060,Large,,0
+de Havilland DH.114 Heron 1,16,16,2,0,15,150,770,260,1948,1950,750,Small,,0
+de Havilland DH.114 Heron 2,16,16,2,0,15,150,800,240,52,1953,750,Small,,0
+de Havilland DH.84 Dragon,8,8,2,0,15,120,190,140,31,1933,680,Small,,0
+de Havilland DH.89 Dragon Rapide,10,10,2,0,15,120,230,190,32,1934,680,Small,,0
+Dornier 328-110,36,36,2,1,25,317,620,590,1988,1993,890,Medium,,0
+Dornier 328JET,39,39,2,1,25,317,720,1050,1996,1998,930,Medium,,0
+Dornier Do 228-100,16,16,2,0,20,210,610,260,1980,1983,690,Small,,0
+Dornier Do 228-200,19,19,2,0,20,210,340,260,1981,1983,710,Small,,0
+Dornier Do 228-212,19,19,2,0,20,210,400,260,1990,1991,710,Small,,0
+Dornier Do 228NG,19,19,2,0,20,210,400,250,2006,2009,730,Small,,0
+Douglas DC-2,14,14,2,0,25,150,340,770,1932,1933,750,Medium,,0
+Douglas DC-3,31,32,2,1,25,150,250,670,1935,1936,850,Medium,DC3 Freighter,0
+Douglas DC-3 Freighter,0,0,2,0,25,150,250,670,1945,1945,850,Medium,,0
+Douglas DC-4,86,86,3,2,40,200,1450,1620,1938,1945,1500,Large,DC-4F,0
+Douglas DC-4F,0,0,3,0,40,200,410,1620,1949,1949,1500,Large,,0
+Douglas DC-6,85,85,3,2,50,270,2390,1750,1947,1948,1810,Large,DC-6A,0
+Douglas DC-6A,0,0,3,0,50,270,2540,1880,1948,1949,1850,Large,,0
+Douglas DC-6B,102,102,3,3,50,270,2540,1890,1949,1951,1850,Large,DC-6BF,0
+Douglas DC-6BF,0,0,3,0,50,270,2500,1890,1952,1952,1850,Large,,0
+Douglas DC-7,85,99,3,2,50,300,1630,2220,1950,1954,1730,Large,,0
+Douglas DC-7B,85,99,3,2,50,300,2410,2190,1953,1955,1710,Large,,0
+Douglas DC-7BF,16283,16283,3,0,50,300,1060,2190,1959,1959,1710,Large,,0
+Douglas DC-7C,90,102,3,3,50,300,3130,2110,1953,1955,1820,Large,,0
+Douglas DC-7CF,18279,18279,3,0,50,300,1390,2110,1959,1959,1820,Large,,0
+Douglas DC-8-11,138,179,3,4,55,459,1970,8590,1956,1958,3050,Very large,,0
+Douglas DC-8-12,138,179,3,4,55,459,2070,8660,1958,1961,2860,Very large,,0
+Douglas DC-8-21,138,179,3,4,55,459,2460,8110,1959,1961,2510,Very large,,0
+Douglas DC-8-31,156,179,3,4,55,459,3180,8240,1960,1961,3130,Very large,,0
+Douglas DC-8-32,156,179,3,4,55,459,3210,8350,1960,1961,3150,Very large,,0
+Douglas DC-8-33,156,179,3,4,55,459,3240,8450,1959,1961,3150,Very large,,0
+Douglas DC-8-41,156,179,3,5,55,459,3230,12110,1959,1961,2610,Very large,,0
+Douglas DC-8-42,156,179,3,5,55,459,3320,12210,1959,1961,2970,Very large,,0
+Douglas DC-8-43,156,179,3,5,55,459,4030,12410,1959,1961,2970,Very large,,0
+Douglas DC-8-51,150,179,3,4,55,459,2490,6800,1960,1962,2800,Very large,,0
+Douglas DC-8-52,156,179,3,4,55,459,3190,6900,1960,1962,2900,Very large,DC-8-54AF,0
+Douglas DC-8-53,156,179,3,4,55,459,4090,7040,1960,1962,3000,Very large,DC-8-54AF,0
+Douglas DC-8-54AF,0,0,3,0,55,459,2250,6770,1961,1963,3000,Very large,,0
+Douglas DC-8-54CF,72,84,3,2,55,459,4590,6770,1961,1963,3000,Very large,DC-8-54AF,0
+Douglas DC-8-55,144/15,189,3,4,55,459,4410,6940,1962,1,3050,Very large,DC-8-55AF,0
+Douglas DC-8-55AF,0,0,3,0,55,459,2650,6800,1963,1966,3050,Very large,,0
+Douglas DC-8-55CF,63,63,3,2,55,459,4540,6800,1963,1966,3050,Very large,,0
+Douglas DC-8-61,180/15/6,259,3,6,55,459,3510,6940,1965,1,3050,Very large,DC-8-61AF,0
+Douglas DC-8-61AF,0,0,3,0,55,459,1900,7010,1974,1974,3070,Very large,DC-8-71F,0
+Douglas DC-8-61CF,102,120,3,3,55,459,4500,7010,1965,1966,3070,Very large,DC-8-61AF,0
+Douglas DC-8-62,144/15,189,3,4,55,459,5170,6870,1967,1,3250,Very large,DC-8-62AF,0
+Douglas DC-8-62AF,0,0,3,0,55,459,2650,6560,1966,1967,3250,Very large,DC-8-72F,0
+Douglas DC-8-62CF,60,60,3,2,55,459,5610,6560,1966,1967,3250,Very large,DC-8-62AF,0
+Douglas DC-8-63,180/15/6,259,3,6,55,459,4970,6700,1967,1,3300,Very large,DC-8-63AF,0
+Douglas DC-8-63AF,0,0,3,0,55,459,2400,6700,1967,1969,3300,Very large,DC-8-73F,0
+Douglas DC-8-63CF,102,120,3,3,55,459,5030,6700,1967,1969,3300,Very large,DC-8-63AF,0
+Douglas DC-8-71,204/15,259,3,6,55,459,3920,5600,1981,1981,2750,Very large,Only As Converst,0
+Douglas DC-8-71CF,102,120,3,3,55,459,5900,5630,1981,1981,2750,Very large,Only As Converst,0
+Douglas DC-8-71F,0,0,3,0,55,459,2800,5630,1981,1981,2750,Very large,Only As Converst,0
+Douglas DC-8-72,162,189,3,4,55,459,5560,5770,1981,1981,2950,Very large,Only As Converst,0
+Douglas DC-8-72CF,60,60,3,2,55,459,6760,5770,1981,1981,2950,Very large,Only As Converst,0
+Douglas DC-8-72F,0,0,3,0,55,459,3400,5770,1981,1981,2950,Very large,Only As Converst,0
+Douglas DC-8-73,204/15,259,3,6,55,459,4860,5840,1981,1981,3050,Very large,Only As Converst,0
+Douglas DC-8-73CF,102,120,3,3,55,459,6000,5840,1981,1981,3050,Very large,Only As Converst,0
+Douglas DC-8-73F,0,0,3,0,55,459,2800,5840,1981,1981,3050,Very large,Only As Converst,0
+Douglas DC-9-10,75,109,2,3,35,440,1190,2940,1962,1,1940,Large,,0
+Douglas DC-9-15,95,109,2,3,35,440,1180,3060,1965,1967,1910,Large,DC-9-15F,0
+Douglas DC-9-15F,0,0,2,0,35,440,700,3050,67,69,1910,Large,,0
+Douglas DC-9-21,95,109,2,3,35,440,1430,3080,1966,1968,1680,Large,,0
+Douglas DC-9-31,110,127,2,3,35,440,1150,3190,1964,1966,2040,Large,DC-9-33F,0
+Douglas DC-9-32,110,127,2,3,35,440,1400,3220,1965,1966,2030,Large,DC-9-33F,0
+Douglas DC-9-33F,0,0,2,0,35,440,900,3110,1968,1969,2030,Large,,0
+Douglas DC-9-34,110,127,2,3,35,440,1950,3110,1974,1975,2050,Large,,0
+Douglas DC-9-41,110,127,2,3,35,440,1470,3250,1967,1968,1990,Large,,0
+Douglas DC-9-51,120,139,2,3,35,440,1530,3080,1972,1974,2100,Large,,0
+Embraer 170AR,68,80,2,2,30,447,2180,1670,2003,2006,1640,Medium,,0
+Embraer 170LR,68,80,2,2,30,447,2130,1640,2000,2005,1570,Medium,,0
+Embraer 170STD,68,80,2,2,30,447,1870,1600,2000,2005,1480,Medium,,0
+Embraer 175-E2,80,90,2,2,30,447,2110,1450,2010,2019,1880,Medium,,0
+Embraer 175AR,76,88,2,2,30,447,2080,1730,2003,2005,2170,Medium,,0
+Embraer 175LR,76,88,2,2,30,447,2070,1690,2002,2004,1720,Medium,,0
+Embraer 175STD,76,88,2,2,30,447,1870,1650,2002,2004,1600,Medium,,0
+Embraer 190AR,100,114,2,3,30,447,2470,2010,2002,2004,2090,Medium,,0
+Embraer 190LR,100,114,2,3,30,447,2330,1970,2002,2004,1830,Medium,,0
+Embraer 190STD,100,114,2,3,30,447,1960,1880,2002,2004,1600,Medium,,0
+Embraer 195AR,104,122,2,3,30,447,2360,2030,2002,2006,2180,Medium,,0
+Embraer 195LR,104,122,2,3,30,447,2090,1980,2002,2006,1980,Medium,,0
+Embraer 195STD,104,122,2,3,30,447,1660,1920,2002,2006,1740,Medium,,0
+Embraer EMB-110C,15,15,2,0,20,190,630,240,1969,1973,690,Small,,0
+Embraer EMB-110P,17,17,2,0,20,190,590,250,1977,1979,690,Small,,0
+Embraer EMB-110P2/41,20,20,2,1,20,190,560,260,1984,1985,700,Small,,0
+Embraer EMB-110P2A,21,21,2,1,20,190,550,250,1984,1985,670,Small,,0
+Embraer EMB-110PA,17,17,2,0,20,190,590,240,1982,1983,670,Small,,0
+Embraer EMB-120,30,30,2,1,20,266,610,430,1979,1984,810,Small,,0
+Embraer EMB-120ER,30,30,2,1,20,266,690,430,1986,1987,830,Small,,0
+Embraer ERJ-135ER,37,37,2,1,25,440,1400,950,1998,1999,1650,Medium,,0
+Embraer ERJ-135LR,37,37,2,1,25,440,1800,970,1998,1999,1750,Medium,,0
+Embraer ERJ-140ER,44,44,2,1,25,440,1270,970,1999,2001,1570,Medium,,0
+Embraer ERJ-140LR,44,44,2,1,25,440,1630,990,1999,2001,1590,Medium,,0
+Embraer ERJ-145EP,50,50,2,1,25,440,1220,1060,1998,1999,2050,Medium,,0
+Embraer ERJ-145ER,50,50,2,1,25,440,1060,1040,1998,1999,1950,Medium,,0
+Embraer ERJ-145EU,50,50,2,1,25,440,930,1020,1990,1995,1800,Medium,,0
+Embraer ERJ-145LR,50,50,2,1,25,440,1660,1090,1998,1999,2150,Medium,,0
+Embraer ERJ-145LU,50,50,2,1,25,440,1630,1080,1998,1999,2140,Medium,,0
+Embraer ERJ-145STD,50,50,2,1,25,440,830,1000,1990,1995,1700,Medium,,0
+Embraer ERJ-145XR,50,50,2,1,25,440,1920,1150,2000,2002,2250,Medium,,0
+Fairchild Dornier 528,65,65,2,2,30,460,1450,1500,1998,2003,1450,Medium,,0
+Fairchild Dornier 728-100,70,85,2,2,30,460,1450,1600,1998,2003,1540,Medium,,0
+Fairchild Dornier 728-200,70,85,2,2,30,460,1830,1700,1998,2003,1550,Medium,,0
+Fairchild Dornier 928,95,110,2,3,30,460,1850,1890,1998,2003,1630,Medium,,0
+Fairchild SA226-TC Metro,19,19,2,0,15,275,300,360,1967,1970,710,Small,,0
+Fairchild SA226-TC Metro II,19,19,2,0,15,275,300,350,1974,1975,710,Small,,0
+Fairchild SA227-AC Metro III,19,19,2,0,15,275,1010,360,1981,1982,720,Small,SA227-DC Metro 2,0
+Fairchild SA227-AC Metro IIIA,19,19,2,0,15,275,990,330,1984,1984,720,Small,SA227-DC Metro 2,0
+Fairchild SA227-AT Expediter,0,0,2,0,15,275,370,370,1981,1982,730,Small,,0
+Fairchild SA227-AT Expediter 23,0,0,2,0,15,275,500,350,1990,1993,730,Small,,0
+Fairchild SA227-DC Metro 23,19,19,2,0,15,275,1210,350,1990,1993,730,Small,SA227-AT Expedit,0
+Fairchild SA227-DC Metro 25,21,21,2,1,15,275,660,350,1991,1991,730,Small,SA227-AT Expedit,0
+Fokker 100,105,122,2,3,35,421,1660,2440,1984,1988,1800,Medium,,0
+Fokker 120 NG,115,125,2,3,35,421,2090,2030,2010,2019,1800,Medium,,0
+Fokker 50 Mk 100,58,58,2,2,25,240,1050,600,1983,1986,1170,Medium,,0
+Fokker 50 Mk 300,58,58,2,2,25,240,1070,660,1990,1992,1110,Medium,,0
+Fokker 70,70,85,2,2,35,421,2020,2350,1991,1993,1370,Medium,,0
+Fokker F.27 Mk 100,48,48,2,1,25,240,700,750,1952,1957,1040,Medium,,0
+Fokker F.27 Mk 200,48,48,2,1,25,240,1010,730,1957,1960,1100,Medium,,0
+Fokker F.27 Mk 300 Combiplane,30,0,2,1,25,240,1150,750,1952,1957,1040,Medium,,0
+Fokker F.27 Mk 400 Combiplane,30,0,2,1,25,240,1200,730,1957,1960,1100,Medium,,0
+Fokker F.27 Mk 500 Cargo,0,0,2,0,25,240,600,640,1973,1973,1130,Medium,,3
+Fokker F.27 Mk 500 Friendship,52,52,2,2,25,240,870,640,1965,1968,1130,Medium,F.27 Mk 500 Carg,3
+Fokker F.27 Mk 600,48,48,2,1,25,240,970,640,1967,1969,1130,Medium,F.27 Mk 600 Carg,3
+Fokker F.27 Mk 600 Cargo,0,0,2,0,25,240,620,640,1973,1973,1130,Medium,,3
+Fokker F.28 Mk 1000,70,70,2,2,30,403,910,2780,1962,1969,1470,Medium,,0
+Fokker F.28 Mk 2000,65,79,2,2,30,403,700,2930,1968,1972,1470,Medium,,0
+Fokker F.28 Mk 3000,70,70,2,2,30,403,1390,2730,1974,1976,1500,Medium,,3
+Fokker F.28 Mk 4000,70,85,2,2,30,403,1050,2760,1974,1976,1500,Medium,,3
+GAF Nomad N24A,16,16,2,0,15,150,420,220,1979,1980,570,Small,,0
+Handley Page Herald Mk.100,47,47,2,1,30,235,580,680,1955,1959,800,Medium,,0
+Handley Page Herald Mk.200,53,53,2,2,30,235,640,700,1961,1961,840,Medium,,0
+Handley Page Herald Mk.600,68,68,2,2,30,235,480,730,1967,1968,910,Medium,,0
+Hawker Siddeley HS 748 Srs.1,55,55,2,2,25,220,730,730,1957,1960,1050,Medium,,0
+Hawker Siddeley HS 748 Srs.2,55,55,2,2,25,220,740,690,1963,1963,1050,Medium,,0
+Hawker Siddeley HS 748 Srs.2A,55,55,2,2,25,220,750,690,1970,1971,1050,Medium,,0
+Hawker Siddeley HS 748 Srs.2B,55,55,2,2,25,220,840,680,1976,1977,1050,Medium,,3
+Hawker Siddeley HS 748 Super,54,54,2,2,25,220,950,660,1982,1983,1160,Medium,,3
+Hawker Siddeley HS121 Trident 1,90,103,3,3,40,520,780,4460,1956,1962,1900,Large,,0
+Hawker Siddeley HS121 Trident 1A,90,103,3,3,40,520,1140,4560,1959,1963,1950,Large,,0
+Hawker Siddeley HS121 Trident 1C,90,103,3,3,40,520,1230,4600,59,1965,1980,Large,,0
+Hawker Siddeley HS121 Trident 1E,102,149,3,3,40,520,1550,4880,61,65,2030,Large,,0
+Hawker Siddeley HS121 Trident 2E,114,149,3,3,40,520,1660,5070,65,1966,2000,Large,,0
+Hawker Siddeley HS121 Trident 3B,138,180,3,4,40,520,1510,5350,69,1972,1940,Large,,0
+Hawker Siddeley HS121 Trident Super 3B,144,180,3,4,40,520,1520,5390,71,74,1970,Large,,0
+Hunting Percival P.66 President,12,12,2,0,20,170,490,270,1950,1953,780,Small,,0
+Ilyushin Il-114,64,64,2,2,30,255,480,800,91,1998,1380,Medium,,0
+Ilyushin Il-114-100,64,64,2,2,30,255,1160,640,1994,1999,1220,Medium,,0
+Ilyushin Il-114-300,52,52,2,2,30,255,980,770,99,2006,1550,Medium,,0
+Ilyushin Il-114T,0,0,2,0,30,255,300,800,1995,2001,1380,Medium,,0
+Ilyushin IL-12,21,21,3,1,25,200,410,1000,1945,1949,1200,Medium,,0
+Ilyushin Il-14M,34,34,3,1,25,200,260,960,1954,1958,1010,Medium,,0
+Ilyushin Il-14P,30,30,3,1,25,200,450,960,1952,1954,1010,Medium,,0
+Ilyushin Il-18A,70,84,4,2,40,320,2220,2890,1956,1959,1690,Large,,0
+Ilyushin Il-18B,75,90,4,2,40,320,2230,2870,1957,1959,1740,Large,,0
+Ilyushin Il-18D,105,122,4,3,40,320,2490,2810,1964,1966,1820,Large,Il-18GR,0
+Ilyushin Il-18E,105,122,4,3,40,320,1900,2810,1961,1965,1760,Large,,0
+Ilyushin Il-18GR,0,0,4,0,40,320,1790,2810,1968,1968,1820,Large,Available Only a,0
+Ilyushin Il-18I,105,122,4,3,40,320,1830,3690,,1966,0,Large,,0
+Ilyushin Il-18V,95,110,4,3,40,320,2000,2760,1959,1961,1740,Large,,0
+Ilyushin Il-62,138/15,186,5,4,65,460,4240,12500,1961,1966,3150,Very large,,2
+Ilyushin Il-62M,150,174,5,4,65,460,4770,11910,1970,1974,3130,Very large,,2
+Ilyushin Il-62MK,144/15,195,5,4,65,460,4690,11830,1973,1979,3100,Very large,,2
+Ilyushin Il-86,252/28,350,4,7,90,470,1490,18480,1970,1980,2780,Very large,,2
+Ilyushin Il-96-300,198/21/8,300,3,6,90,476,6520,8930,1987,1993,2330,Very large,,3
+Ilyushin Il-96-400,270/20/8,436,2,9,90,476,5180,8480,2003,2007,2680,Very large,,3
+Ilyushin Il-96-400T,0,0,2,0,90,476,2700,8480,2003,2007,2660,Very large,,3
+Ilyushin Il-96M,252/20/8,420,2,9,90,476,6540,8220,1991,1998,2890,Very large,,3
+Ilyushin Il-96T,0,0,2,0,90,476,2600,9110,1991,1998,2690,Very large,,3
+JET AIRCRAFT,,,0,0,0,0,,,,,0,,,0
+Let L-410A,19,19,2,0,15,200,250,290,1968,1971,690,Small,,0
+Let L-410M,19,19,2,0,15,200,230,290,1970,1972,700,Small,,0
+Let L-410MA,19,19,2,0,15,200,250,280,1974,1976,690,Small,,0
+Let L-410UVP,15,15,2,0,15,200,320,270,1977,1978,550,Small,Let L-410UVP-E,0
+Let L-410UVP Cargo,0,0,2,0,15,200,300,270,1977,1978,550,Small,,0
+Let L-410UVP-E,19,19,2,0,15,200,490,250,1982,1984,540,Small,Let L-410UVP-E9,0
+Let L-410UVP-E Cargo,0,0,2,0,15,200,440,250,1982,1984,540,Small,,0
+Let L-410UVP-E20,19,19,2,0,15,200,530,250,1988,1990,510,Small,,0
+Let L-410UVP-E20 Cargo,0,0,2,0,15,200,480,250,1988,1990,510,Small,,0
+Let L-410UVP-E9,19,19,2,0,15,200,510,260,1986,1987,530,Small,Let L-410UVP-E20,0
+Lockheed L-049 Constellation,81,81,4,2,50,290,1050,2390,1944,1945,1570,Large,,0
+Lockheed L-1011 TriStar 1,225/28/8,350,3,7,90,493,3010,7660,1969,1973,2770,Very large,L-1011 TriStar 2,3
+Lockheed L-1011 TriStar 100,225/28/8,350,3,7,90,493,3660,7660,1972,1974,2780,Very large,L-1011 TriStar 2,3
+Lockheed L-1011 TriStar 200,216/28/8,350,3,7,90,493,3780,7290,1974,1976,2780,Very large,L-1011 TriStar 2,3
+Lockheed L-1011 TriStar 200F,0,0,3,0,90,493,2700,7240,1987,1987,2780,Very large,,3
+Lockheed L-1011 TriStar 250,252/28/0,350,3,7,90,493,5120,7240,1987,1987,2800,Very large,,3
+Lockheed L-1011 TriStar 500,198/28/8,320,3,9,90,493,5270,7200,1975,1977,2800,Very large,L-1011 TriStar 5,3
+Lockheed L-1011 TriStar 500F,0,0,3,0,90,493,3310,7130,1996,1996,2790,Very large,,3
+Lockheed L-1049 Super Constellation,80,92,3,2,50,290,2640,2570,1949,1950,1650,Large,L-1049F Super Co,0
+Lockheed L-1049C Super Constellation,80,94,3,2,50,290,2780,2590,1951,1952,1700,Large,L-1049F Super Co,0
+Lockheed L-1049D Super Constellation,0,0,3,0,50,290,1510,2590,1953,1953,1700,Large,L-1049F Super Co,0
+Lockheed L-1049E Super Constellation,80,94,3,2,50,290,2900,2630,1952,1952,1710,Large,L-1049F Super Co,0
+Lockheed L-1049F Super Constellation,0,0,3,0,50,290,1900,2710,1957,1957,1750,Large,,0
+Lockheed L-1049G Super Constellation,80,94,3,2,50,290,2970,2650,1952,1953,1720,Large,L-1049F Super Co,0
+Lockheed L-1649A Starliner,85,99,3,2,50,290,4420,2810,1956,1958,1790,Large,,0
+Lockheed L-188A Electra,90,104,3,3,35,321,1290,2470,1955,1958,1550,Large,,0
+Lockheed L-188C Electra,90,104,3,3,35,321,1790,2510,1957,1959,1640,Large,,0
+Lockheed L-649 Constellation,81,81,4,2,50,290,1520,2350,1947,1948,1580,Large,,0
+Lockheed L-649A Constellation,81,81,4,2,50,290,1600,2370,1948,1949,1580,Large,,0
+Lockheed L-749 Constellation,81,81,4,2,50,290,2180,2470,1948,1949,1590,Large,,0
+Lockheed L-749A Constellation,81,81,4,2,50,290,2320,2510,1948,1949,1610,Large,,0
+Martin 2-0-2,40,40,3,1,25,220,660,730,1944,1946,1070,Medium,,0
+Martin 4-0-4,40,40,3,1,25,220,1280,810,1950,1951,1300,Medium,,0
+McDonnell Douglas DC-10-10,240/20/10,399,3,8,90,470,3350,7310,1968,5,3070,Very large,DC-10-10CF,0
+McDonnell Douglas DC-10-10CF,150,180,3,4,90,470,3920,7270,1972,1973,3080,Very large,Boeing MD-10-10F,3
+McDonnell Douglas DC-10-10F,0,0,3,0,90,470,2200,7270,1990,1990,3080,Very large,Boeing MD-10-10F,3
+McDonnell Douglas DC-10-15,240/20/10,399,3,8,90,470,3620,7230,1976,1,2830,Very large,Boeing MD-10-10F,3
+McDonnell Douglas DC-10-30,260/32/10,399,3,8,90,470,4920,7230,1972,1973,3380,Very large,DC-10-30CF,0
+McDonnell Douglas DC-10-30CF,170/24/0,0,3,5,90,470,5770,7180,1972,1974,3380,Very large,Boeing MD-10-30F,3
+McDonnell Douglas DC-10-30ER,260/32/10,399,3,8,90,470,5390,7180,1979,1980,3500,Very large,DC-10-30CF,0
+McDonnell Douglas DC-10-30F,0,0,3,0,90,470,3130,7180,1976,1978,3380,Very large,Boeing MD-10-30F,3
+McDonnell Douglas DC-10-40,260/32/10,399,3,8,90,470,4510,7350,1972,1973,3500,Very large,DC-10-40CF,0
+McDonnell Douglas DC-10-40CF,170/24/0,0,3,5,90,470,5710,7200,1973,1974,3500,Very large,,3
+McDonnell Douglas DC-10-40F,0,0,3,0,90,470,3050,7200,1990,1990,3500,Very large,,3
+McDonnell Douglas MD-11,230/25/10,410,2,9,90,470,6350,7070,1987,1990,2970,Very large,MD-11ER,0
+McDonnell Douglas MD-11C,210/24/0,0,2,6,90,470,6580,7070,1987,1990,2970,Very large,MD-11F,0
+McDonnell Douglas MD-11ER,230/25/10,410,2,9,90,470,6910,7320,1995,1996,3080,Very large,MD-11C,0
+McDonnell Douglas MD-11F,0,0,2,0,90,470,3600,7070,1987,1990,2970,Very large,,0
+McDonnell Douglas MD-81,150,172,2,4,40,440,1610,3680,1977,1980,1730,Large,,3
+McDonnell Douglas MD-82,150,172,2,4,40,440,2110,3580,1978,1980,1760,Large,,3
+McDonnell Douglas MD-82SF,0,0,2,0,40,440,1210,3350,,2013,1760,Large,,3
+McDonnell Douglas MD-83,150,172,2,4,40,440,2580,3470,1981,1984,1800,Large,,3
+McDonnell Douglas MD-83SF,0,0,2,0,40,440,1830,3340,,2013,1800,Large,,3
+McDonnell Douglas MD-87,120,139,2,3,40,440,2820,3490,1984,1986,1730,Large,,3
+McDonnell Douglas MD-88,150,172,2,4,40,440,2540,3500,1986,1988,1760,Large,,3
+McDonnell Douglas MD-88SF,0,0,2,0,40,440,1100,3290,,2013,1760,Large,,3
+McDonnell Douglas MD-90-30,160,172,2,4,35,435,1860,2740,1988,1994,2050,Large,,0
+McDonnell Douglas MD-90-30ER,160,172,2,4,35,435,2330,2780,1988,1994,2110,Large,,0
+McDonnell Douglas MD-90-50,160,172,2,4,35,435,2880,2820,1988,1994,2150,Large,,0
+McDonnell Douglas MD-90-55,175,187,2,4,35,435,2620,2850,1988,1994,2150,Large,,0
+Mitsubishi Regional Jet 70ER,68,80,2,2,30,447,1360,1440,2006,2019,1530,Medium,,0
+Mitsubishi Regional Jet 70LR,68,80,2,2,30,447,1940,1460,2006,2019,1620,Medium,,0
+Mitsubishi Regional Jet 70STD,68,80,2,2,30,447,980,1430,2006,2019,1420,Medium,,0
+Mitsubishi Regional Jet 90ER,80,96,2,2,30,447,1370,1500,2006,2019,1590,Medium,,0
+Mitsubishi Regional Jet 90LR,80,96,2,2,30,447,1790,1520,2006,2019,1690,Medium,,0
+Mitsubishi Regional Jet 90STD,80,96,2,2,30,447,960,1490,2006,2019,1470,Medium,,0
+NAMC YS-11A-200,64,64,2,2,25,240,840,850,1964,1968,1440,Medium,,0
+NAMC YS-11A-500,64,64,2,2,25,240,960,850,1970,1973,1440,Medium,,0
+NAMC-YS-11-100,64,64,2,2,25,240,790,850,1959,1963,1440,Medium,,0
+Nord 2501 Noratlas,45,45,2,1,30,180,550,910,1949,1955,700,Medium,,0
+Pilatus PC-12,9,9,2,0,15,250,1070,190,1988,1993,690,Small,,0
+Pilatus PC-12/45,9,9,2,0,15,250,1120,190,1995,1996,690,Small,,0
+Pilatus PC-12/47,9,9,2,0,15,250,1150,180,1998,2000,690,Small,,0
+Pilatus PC-12/47E,9,9,2,0,15,250,1230,170,2006,2007,690,Small,,0
+Pilatus PC-12NG,9,9,2,0,15,250,1250,160,2007,2008,690,Small,,0
+Piper PA-31-310 Navajo,8,8,2,0,15,210,550,140,1965,1968,680,Small,,0
+Piper PA-31-325 Navajo,8,8,2,0,15,210,550,150,1972,1973,680,Small,,0
+Piper PA-31-350 Chieftain,10,10,2,0,15,210,440,170,1972,1974,680,Small,,0
+Piper PA-31T Cheyenne,8,8,2,0,15,210,570,190,1968,1973,690,Small,,0
+Piper PA-42 Cheyenne III,8,8,2,0,15,270,1120,220,1978,1981,700,Small,,0
+Piper PA-42 Cheyenne IIIA,8,8,2,0,15,270,1120,230,1980,1981,700,Small,,0
+Piper PA-42 Cheyenne IV,8,8,2,0,15,270,1230,230,1983,1985,700,Small,,0
+PROP AIRCRAFT,,,0,0,0,0,,,,,0,,,0
+Saab 2000,58,58,2,2,25,365,880,900,1989,1995,1220,Medium,,0
+Saab 340A,32,32,2,1,20,250,500,540,1979,1985,840,Medium,Saab 340AF,0
+Saab 340AF,0,0,2,0,20,250,400,540,2002,2002,840,Medium,,0
+Saab 340B,34,34,2,1,20,250,530,490,1985,1988,860,Medium,Saab 340BF,0
+Saab 340BF,0,0,2,0,20,250,380,490,2002,2002,860,Medium,,0
+Saab 90 Scandia,36,36,3,1,25,220,550,770,1943,1949,910,Medium,,0
+Scottish Aviation Twin Pioneer Srs.1,16,16,2,0,15,130,440,250,1950,1954,360,Small,,0
+Scottish Aviation Twin Pioneer Srs.2,16,16,2,0,15,130,440,240,1950,1954,360,Small,,0
+Scottish Aviation Twin Pioneer Srs.3,16,16,2,0,15,130,440,230,1955,1956,360,Small,,0
+Short 330-100,30,30,2,1,20,210,380,380,1974,1976,770,Medium,,0
+Short 330-200,30,30,2,1,20,210,390,360,1982,1984,770,Medium,,0
+Short 360-100,36,36,2,1,20,210,280,410,1979,1981,820,Medium,Short 360-300F,0
+Short 360-200,36,36,2,1,20,210,310,420,1985,1985,820,Medium,Short 360-300F,0
+Short 360-300,36,36,2,1,20,210,350,430,1968,1988,840,Medium,,0
+Short 360-300F,0,0,2,0,20,210,340,430,1999,1999,840,Medium,,0
+Short SC.7 Skyliner,19,19,2,0,20,170,230,210,1963,1968,670,Small,Short SC.7 Skyva,0
+Short SC.7 Skyvan,0,0,2,0,20,170,200,210,1963,1968,670,Small,,0
+Sud Aviation SE-210 Caravelle 10B,80,95,2,2,35,440,1750,4330,63,1963,1820,Large,Caravelle 11RF,0
+Sud Aviation SE-210 Caravelle 10R,65,80,2,2,35,440,1840,4150,65,1964,1780,Large,Caravelle 11RF,0
+Sud Aviation SE-210 Caravelle 11R,50,50,2,1,35,440,1800,4080,67,68,1810,Large,,0
+Sud Aviation SE-210 Caravelle 11RF,0,0,2,0,35,440,1450,4080,70,70,1790,Large,Available Only a,0
+Sud Aviation SE-210 Caravelle 12,110,128,2,3,35,440,1210,4220,69,1970,1820,Large,,0
+Sud Aviation SE-210 Caravelle I,65,80,3,2,35,440,990,4840,1951,1958,1710,Large,,0
+Sud Aviation SE-210 Caravelle IA,65,80,3,2,35,440,1020,4770,1958,1959,1710,Large,,0
+Sud Aviation SE-210 Caravelle III,65,80,3,2,35,440,1120,4670,59,1958,1730,Large,,0
+Sud Aviation SE-210 Caravelle VI-N,65,80,2,2,35,440,1420,4600,59,1960,1760,Large,,0
+Sud Aviation SE-210 Caravelle VI-R,65,80,2,2,35,440,1450,4530,61,1960,1860,Large,Caravelle 11RF,0
+Sukhoi Superjet 100-75B,75,88,2,2,30,447,1460,1640,2004,2011,1520,Medium,,0
+Sukhoi Superjet 100-75LR,75,88,2,2,30,447,2300,1680,2004,2011,1550,Medium,,0
+Sukhoi Superjet 100-95B,95,108,2,2,30,447,1880,1800,2004,2011,1770,Medium,,0
+Sukhoi Superjet 100-95LR,95,108,2,2,30,447,2610,1850,2004,2011,1800,Medium,,0
+Tupolev Tu-104,50,50,4,1,40,442,1900,6990,1953,1956,2150,Large,,0
+Tupolev Tu-104A,60,70,4,2,40,442,1750,6990,1954,1958,2210,Large,,0
+Tupolev Tu-104B,100,117,4,3,40,442,1400,6990,1959,1960,2190,Large,,0
+Tupolev Tu-110A,85,100,4,2,40,480,1450,12300,1960,1961,1860,Large,,0
+Tupolev Tu-114,192,220,5,5,60,410,3250,8900,1956,1960,2640,Very large,,0
+Tupolev Tu-124,56,56,3,2,35,470,820,5080,1959,1961,1530,Medium,,0
+Tupolev Tu-134,60,72,4,2,35,430,1450,3160,1963,1966,2250,Large,,2
+Tupolev Tu-134A,64,76,4,2,35,430,1460,2870,1967,1970,2180,Large,TU-134A-1,0
+Tupolev Tu-134A-1,64,76,3,2,35,430,1460,2840,1972,1974,2180,Large,TU-134A-3,0
+Tupolev Tu-134A-3,68,80,3,2,35,430,1510,2730,1975,1975,2050,Large,TU-134B,0
+Tupolev Tu-134B,72,84,3,3,35,430,1380,2900,1976,1979,2200,Large,TU-134B-1,0
+Tupolev Tu-134B-1,80,90,3,2,35,430,1280,2880,1980,1981,2200,Large,TU-134B-3,2
+Tupolev Tu-134B-3,80,96,3,2,35,430,1370,2760,1982,1984,2070,Large,,2
+Tupolev Tu-144,120,140,3,3,120,1260,2570,35500,1964,1977,3500,Very large,,0
+Tupolev Tu-154,132,152,4,4,55,488,1420,6290,1969,1972,2100,Large,,2
+Tupolev Tu-154B,138,160,4,4,55,488,1640,6240,1974,1975,2280,Large,Tu-154B-1,0
+Tupolev Tu-154B-1,138,160,4,4,55,488,1690,6290,1977,1979,2300,Large,Tu-154B,0
+Tupolev Tu-154B-2,156,180,4,4,55,488,1660,6350,1979,1981,2350,Large,Tu-154B,0
+Tupolev Tu-154C,0,0,4,0,55,488,1450,6320,1984,1984,2350,Large,,2
+Tupolev Tu-154M,156,180,3,4,55,488,2380,5490,1981,1983,2500,Large,,3
+Tupolev Tu-155A,132,152,4,4,55,488,1550,6190,1974,1975,2200,Large,,2
+Tupolev Tu-204,180,210,3,5,60,453,1730,3800,1986,1995,2030,Large,Tu-204-100,0
+Tupolev Tu-204-100,180,210,3,5,60,453,2540,3920,1990,1997,2140,Large,Tu-204-100C,0
+Tupolev Tu-204-100C,0,0,3,0,60,453,1900,4000,1990,1997,2210,Large,,0
+Tupolev Tu-204-100E,180,210,3,5,60,453,2630,3910,2001,2005,2150,Large,,0
+Tupolev Tu-204-120,180,210,3,5,60,453,2640,3530,1993,1999,2100,Large,Tu-204-120C,0
+Tupolev Tu-204-120C,0,0,3,0,60,453,1950,3720,1993,1999,2170,Large,Tu-204-120CE,0
+Tupolev Tu-204-120CE,0,0,3,0,60,453,2000,3680,2001,2005,2170,Large,,0
+Tupolev Tu-204-120E,180,210,3,5,60,453,2790,3590,2001,2005,2110,Large,,0
+Tupolev Tu-204-200,180,210,3,5,60,453,3110,4000,1995,2002,2280,Large,,0
+Tupolev Tu-204-220,180,210,3,5,60,453,3200,3840,1995,2002,2230,Large,,0
+Tupolev Tu-204-300,144,166,3,4,60,453,3810,3960,1995,2004,2200,Large,,0
+Tupolev Tu-204C,0,0,3,0,60,453,1000,3800,1986,1995,2030,Large,,0
+Tupolev Tu-204SM,186,215,2,5,60,453,2930,3610,2009,2020,2160,Large,,0
+Tupolev Tu-334-100,84,102,2,3,40,430,1180,2560,1995,2008,1600,Medium,,0
+VEB Flugzeugwerke Baade 152,65,72,4,2,35,430,860,7240,1957,1964,1830,Large,,0
+VFW 614,44,44,2,1,25,390,480,2180,1968,1976,1110,Medium,,0
+Vickers Super VC10,150,174,4,4,60,480,3970,9150,1963,1963,2730,Very large,,0
+Vickers Super VC10F,0,0,4,0,60,480,2960,9150,69,69,2740,Very large,,0
+Vickers Vanguard 951,95,110,3,3,40,356,1520,2140,1956,1962,1750,Large,,0
+Vickers Vanguard 952,120,139,3,3,40,356,1800,2270,1959,1960,1600,Large,,0
+Vickers Vanguard 953,115,135,3,3,40,356,1930,2230,1960,1960,1800,Large,,0
+Vickers VC.1 Viking 1A,24,24,2,1,20,180,430,720,1944,1946,1020,Medium,VC.1 Viking 1B F,0
+Vickers VC.1 Viking 1B,32,32,2,1,20,180,370,760,1947,1948,1020,Medium,VC.1 Viking 1B F,0
+Vickers VC.1 Viking 1B Freighter,0,0,2,0,20,180,170,770,1949,1949,1030,Medium,,0
+Vickers VC.1 Viking Eagle,38,38,2,1,20,180,480,800,1950,1951,1030,Medium,VC.1 Viking 1B F,0
+Vickers VC10,132,151,4,4,60,480,4140,7470,1959,1963,2520,Very large,,0
+Vickers VC10F,0,0,4,0,60,480,3650,7470,68,68,2760,Very large,,0
+Vickers Viscount 700,59,59,3,2,30,280,1110,980,1946,1952,1310,Medium,,0
+Vickers Viscount 700D,59,59,3,2,30,280,1310,950,1955,1956,1270,Medium,,0
+Vickers Viscount 800,74,74,3,2,30,280,770,1000,1956,1956,1320,Medium,,0
+Vickers Viscount 800F,0,0,3,0,30,280,760,940,63,63,1170,Medium,,0
+Vickers Viscount 810,74,74,3,2,30,280,870,980,1957,1958,1190,Medium,,0
+Vickers Viscount 840,74,74,3,2,30,280,950,940,1957,1958,1160,Medium,,0
+Viking Air DHC-6-400 Twin Otter,20,20,2,1,20,160,430,290,2005,2007,390,Small,,0
+Xian MA60,60,60,2,2,25,260,670,650,1996,1999,1100,Medium,,0
+Xian MA600,60,60,2,2,25,260,700,640,2006,2008,1100,Medium,,0
+Yakovlev Yak-40,30,32,3,1,20,275,670,1720,1962,1967,1180,Medium,,0
+Yakovlev Yak-42,102,120,3,3,35,452,1110,4490,1976,1981,1670,Large,,0
+Yakovlev Yak-42D,108,126,3,3,35,452,1570,4430,1987,190,1680,Large,,0
