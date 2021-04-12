@@ -1,6 +1,7 @@
 from functools import partial
 from tkinter import *
 from dbquery import Dbquery
+from moreui import MoreUiSpace
 class UserInterface:
 
     def __init__(self, mycursor, db):
@@ -14,6 +15,7 @@ class UserInterface:
         self.userText = ""
         self.userText2 = ""
         self.db = db
+        self.extraUISpace = MoreUiSpace(self.mycursor,self.db,self.CMPT354)
 
     def displayCode(self,airport, airportDetailWindow):
         sql = "SELECT AirportCode From Airport Where AirportName LIKE " + '"' + airport + '"'
@@ -279,6 +281,7 @@ class UserInterface:
         button.place(x=100, y=500, height=100, width=100)  # Move the button around
         button = Button(self.CMPT354, text="Routes From Airport", command=self.openRoutesFromAirportWindow)
         button.place(x=300, y=500, height=100, width=100)  # Move the button around
+        self.extraUISpace.showButtons()
     def openGetTextMenu(self):
         print("pressed")
     def saveTextSelection(self,textfield,theRoottk):
