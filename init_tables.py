@@ -103,6 +103,86 @@ class Init:
                 "DepartureTime, Price , ArrivalTime, LoadFactor, AirlineName, AirplaneModelType, CodeDeparture," \
                 "CodeArrival)VALUES (5,1,170,2,100,'Air Wayne', 'BOEING 737-800','KORD', 'KJFK'); "
         mycursor.execute(query,multi=True)
+        # Airlines start here
+        query = "CREATE TABLE IF NOT EXISTS Airline(AirlineName VARCHAR(64), CostStructure CHAR(64), Reputation INT, PRIMARY KEY (AirlineName));"
+        mycursor.execute(query)
+        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation) VALUES ('Air Wayne', 'HIGH', 100);"
+        mycursor.execute(query)
+        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation) VALUES ('Air Tim', 'HIGH', 100);"
+        mycursor.execute(query)
+        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation) VALUES ('Air Justin', 'MED', 80);"
+        mycursor.execute(query)
+        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation) VALUES ('Air William', 'LOW', 80);"
+        mycursor.execute(query)
+        db.commit()
+        # BaseOPs start here (Give each airline 100 airports)
+        query = "CREATE TABLE IF NOT EXISTS BasesOps(AirlineName VARCHAR(64), BaseOfOperation VARCHAR(255)" \
+                ",FOREIGN KEY (AirlineName) REFERENCES Airline(AirlineName), FOREIGN KEY (BaseOfOperation) " \
+                "REFERENCES Airport(AirportCode), PRIMARY KEY (AirlineName,BaseOfOperation));"
+        mycursor.execute(query)
+        for i in range(2, 343, 2):
+            sql = "SELECT AirportCode From testAirports"
+            mycursor.execute(sql)
+            code = mycursor.fetchall()
+            codeValue = code[i]
+            query = "INSERT ignore INTO BasesOps (AirlineName, BaseOfOperation) VALUES ('Air Wayne', %s);"
+            mycursor.execute(query, codeValue)
+        for i in range(5, 343, 5):
+            sql = "SELECT AirportCode From testAirports"
+            mycursor.execute(sql)
+            code = mycursor.fetchall()
+            codeValue = code[i]
+            query = "INSERT ignore INTO BasesOps (AirlineName, BaseOfOperation) VALUES ('Air Tim', %s);"
+            mycursor.execute(query, codeValue)
+        for i in range(9, 343, 9):
+            sql = "SELECT AirportCode From testAirports"
+            mycursor.execute(sql)
+            code = mycursor.fetchall()
+            codeValue = code[i]
+            query = "INSERT ignore INTO BasesOps (AirlineName, BaseOfOperation) VALUES ('Air Justin', %s);"
+            mycursor.execute(query, codeValue)
+        for i in range(13, 343, 13):
+            sql = "SELECT AirportCode From testAirports"
+            mycursor.execute(sql)
+            code = mycursor.fetchall()
+            codeValue = code[i]
+            query = "INSERT ignore INTO BasesOps (AirlineName, BaseOfOperation) VALUES ('Air William', %s);"
+            mycursor.execute(query, codeValue)
+        db.commit()
+        # Airplane Models start here (Give each airline Different amounts)
+        query = "CREATE TABLE IF NOT EXISTS AirplaneModels(AirlineName VARCHAR(64),AirplaneOperated VARCHAR(255)" \
+                ",PRIMARY KEY (AirlineName,AirplaneOperated), FOREIGN KEY (AirlineName) " \
+                "REFERENCES Airline(AirlineName), FOREIGN KEY (AirplaneOperated) REFERENCES tempAirplane(ModelName0));"
+        mycursor.execute(query)
+        for i in range(4, 600, 4):
+            sql = "SELECT ModelName0 FROM Airplane"
+            mycursor.execute(sql)
+            code = mycursor.fetchall()
+            codeValue = code[i]
+            query = "INSERT ignore INTO AirplaneModels(AirlineName, AirplaneOperated) VALUES ('Air Wayne', %s);"
+            mycursor.execute(query, codeValue)
+        for i in range(5, 600, 5):
+            sql = "SELECT ModelName0 FROM Airplane"
+            mycursor.execute(sql)
+            code = mycursor.fetchall()
+            codeValue = code[i]
+            query = "INSERT ignore INTO AirplaneModels(AirlineName, AirplaneOperated) VALUES ('Air Tim', %s);"
+            mycursor.execute(query, codeValue)
+        for i in range(7, 600, 7):
+            sql = "SELECT ModelName0 FROM Airplane"
+            mycursor.execute(sql)
+            code = mycursor.fetchall()
+            codeValue = code[i]
+            query = "INSERT ignore INTO AirplaneModels(AirlineName, AirplaneOperated) VALUES ('Air Justin', %s);"
+            mycursor.execute(query, codeValue)
+        for i in range(10, 600, 10):
+            sql = "SELECT ModelName0 FROM Airplane"
+            mycursor.execute(sql)
+            code = mycursor.fetchall()
+            codeValue = code[i]
+            query = "INSERT ignore INTO AirplaneModels(AirlineName, AirplaneOperated) VALUES ('Air William', %s);"
+            mycursor.execute(query, codeValue)
+        db.commit()
 
 
 
