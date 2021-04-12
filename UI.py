@@ -1,13 +1,19 @@
+from functools import partial
 from tkinter import *
+from dbquery import Dbquery
 class UserInterface:
 
-    def __init__(self, mycursor):
+    def __init__(self, mycursor, db):
         self.CMPT354 = Tk()  # Name of root
         self.CMPT354.geometry("750x750")
         self.yLabel = 50  # Inside airportDisplays
         self.Title = Label(self.CMPT354, text="Welcome to the Airplane Project!", fg="red", font="24")
         self.Title.place(x=250, y=0)
         self.mycursor = mycursor
+        self.numFeatures = 0;
+        self.userText = ""
+        self.userText2 = ""
+        self.db = db
 
     def displayCode(self,airport, airportDetailWindow):
         sql = "SELECT AirportCode From Airport Where AirportName LIKE " + '"' + airport + '"'
@@ -169,8 +175,109 @@ class UserInterface:
     def otherFeaturesLabel(self):
         label = Label(text="Other features")
         label.place(x=300, y=390)
+    def runCountryGDPquery(self,editgdpMenu):
+        print("usertext1 = " + self.userText)
+        print("usertext2 = " + self.userText2)
+
+        query = 'Update country set gdpPercapita = '
+        query+=self.userText2
+        query+=" where countryname = '"
+        query+=self.userText
+        query+="'"
+        query = query.replace("\n","")
+
+        print("running query: " + query)
+        self.mycursor.execute(query)
+        self.db.commit()
+        editgdpMenu.destroy()
+    def editCountryGdp(self):
+        editgdpMenu = Tk()
+        editgdpMenu.geometry("650x250")
+        textField = Text(editgdpMenu)
+        textField.place(x=0, y=200)
+        sumbitButton = Button(editgdpMenu, text="save country selection",
+                              command=partial(self.saveTextSelection, textField, editgdpMenu))
+        sumbitButton.place(x=0, y=20)
+        sumbitButtonNum = Button(editgdpMenu, text="save GDP value",
+                                 command=partial(self.saveTextSelection2, textField, editgdpMenu))
+        sumbitButtonNum.place(x=165, y=20)
+        runButton = Button(editgdpMenu, text="run query with selected data",
+                           command=partial(self.runCountryGDPquery, editgdpMenu))
+        runButton.place(x=350, y=20)
+        editgdpMenu.mainloop()
+    def displayFeatureButtons(self):
+        openTextWindowButton = Button(self.CMPT354, text="editAllAirportPopulations", command=self.editAllAirports)
+        openTextWindowButton.place(x=0, y=450)
+        openEditSomeButton = Button(self.CMPT354, text="editAirportsInCountry", command=self.editSomeAirports)
+        openEditSomeButton.place(x = 140, y = 450)
+        openCountryEditMenu = Button(self.CMPT354, text= "editCountryGDP", command = self.editCountryGdp)
+        openCountryEditMenu.place(x = 280, y=450)
+    def openGetTextMenu(self):
+        print("pressed")
+    def saveTextSelection(self,textfield,theRoottk):
+        self.userText = ""
+        text = textfield.get("1.0",END)
+        label = Label(theRoottk,text="savedSelection as: " + text)
+        label.place(x = 0, y = 55)
+        self.userText = text
+        print(text)
+    def saveTextSelection2(self,textfield,theRoottk):
+        self.userText2 = ""
+        text = textfield.get("1.0",END)
+        label = Label(theRoottk,text="savedSelection as: " + text)
+        label.place(x = 0, y = 85)
+        self.userText2 = text
+        print(text)
+
+    def runQuery(self, inmenu):
+        query = "UPDATE airport SET nearbyPopulation = nearbyPopulation *" + self.userText + " where AirportCode = airportCode;"
+        self.mycursor.execute(query)
+        self.db.commit()
+        print("ran the following query: " + query)
+        self.userText = ""
+        self.mycursor.execute(Dbquery.updateRoutesQuery)
+        self.db.commit()
+        inmenu.destroy()
+    def runQuerySome(self, inmenu):
+        print("usertext1 = "+ self.userText)
+        print("usertext2 = " + self.userText2)
+        query = "UPDATE airport a, country c SET a.nearbyPopulation = a.nearbyPopulation*"+ self.userText2+ " where a.AirportCode = a.airportCode AND  a.countryId = c.countryKey AND c.countryName = '"+ self.userText+"' ;"
+        self.mycursor.execute(query)
+        self.db.commit()
+        self.mycursor.execute(Dbquery.updateRoutesQuery)
+        self.db.commit()
+        inmenu.destroy()
+        self.userText = ""
+        self.userText2 = ""
+    def editAllAirports(self):
+        editAllMenu = Tk()
+        editAllMenu.geometry("450x150")
+        textField = Text(editAllMenu)
+        textField.place(x=0, y=100)
+        sumbitButton = Button(editAllMenu, text="save text selection", command=partial(self.saveTextSelection,textField,editAllMenu))
+        sumbitButton.place(x=125, y=20)
+        runButton = Button(editAllMenu, text="run query with selected data",command=partial(self.runQuery, editAllMenu))
+        runButton.place(x=250,y=20)
+        editAllMenu.mainloop()
+    def editSomeAirports(self):
+        editSomeMenu = Tk()
+        editSomeMenu.geometry("650x250")
+        textField = Text(editSomeMenu)
+        textField.place(x=0, y=200)
+        sumbitButton = Button(editSomeMenu, text="save country selection",
+                              command=partial(self.saveTextSelection, textField, editSomeMenu))
+        sumbitButton.place(x=0, y=20)
+        sumbitButtonNum = Button(editSomeMenu, text="save multiplier selection",
+                              command=partial(self.saveTextSelection2, textField, editSomeMenu))
+        sumbitButtonNum.place(x=165, y=20)
+        runButton = Button(editSomeMenu, text="run query with selected data",
+                           command=partial(self.runQuerySome, editSomeMenu))
+        runButton.place(x=350, y=20)
+        editSomeMenu.mainloop()
 
     def StartUI(self):
         self.listBoxCreate()
         self.otherFeaturesLabel()
+        self.displayFeatureButtons()
+        #self.editAllAirportsFromCountry()
         self.CMPT354.mainloop()  # Executes GUI

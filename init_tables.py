@@ -1,5 +1,5 @@
 
-
+from dbquery import Dbquery
 import csv
 
 
@@ -57,13 +57,11 @@ class Init:
                 "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
         mycursor.executemany(query, all_value)
         db.commit()
-        query = "Drop table if exists testAirports;"
+        query = Dbquery.deleteTestAirportsTable()
         mycursor.execute(query)
-        query = "CREATE TABLE IF NOT EXISTS testAirports(AirportCode CHAR(4), AirportName VARCHAR(64),CountryID CHAR(" \
-                "2), NSCoordinates float,EWCoordinates float,NearbyPopulation INT, MaximumRunWayLength INT," \
-                "PRIMARY KEY (AirportCode),FOREIGN KEY (CountryID) REFERENCES Country(CountryKey)); "
+        query = Dbquery.createTestAirportsTable()
         mycursor.execute(query)
-        query = "insert ignore into testairports Select *from airport where NearbyPopulation> 700000;"
+        query = Dbquery.updateTestAirports()
         mycursor.execute(query)
         query = "drop table if exists routes;"
         mycursor.execute(query)
@@ -73,13 +71,7 @@ class Init:
                 "CodeDeparture) REFERENCES airport(AirportCode),FOREIGN KEY (CodeArrival) REFERENCES airport(" \
                 "AirportCode)); "
         mycursor.execute(query)
-        query = "insert ignore into routes SELECT DISTINCT a.AirportCode, b.AirportCode," \
-                "(c.tourismExpend+d.tourismExpend)*1000/(c.population+d.population)*((" \
-                "c.GDPpercapita*a.NearbyPopulation)/1000000000)+(b.NearbyPopulation*d.GDPpercapita)/1000000000, " \
-                "(((c.GDPpercapita*d.GDPpercapita)/50000)^2)/1000*(a.NearbyPopulation+b.nearbyPopulation)/150000*(" \
-                "c.GDPIndustrailRatio*d.GDPIndustrailRatio), null FROM testairports a, testairports b, country c, " \
-                "country d wHERE a.AirportCode <> b.AirportCode AND c.CountryKey = a.CountryID AND d.CountryKey = " \
-                "b.CountryID "
+        query = Dbquery.populateRoutesInnitial()
         mycursor.execute(query)
         db.commit()
 
