@@ -5,7 +5,7 @@ from tkinter import *
 import sys
 import csv
 from functools import partial
-import sqlite3
+
 from init_tables import Init
 from UI import UserInterface
 

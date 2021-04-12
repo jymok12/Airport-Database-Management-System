@@ -175,6 +175,11 @@ class UserInterface:
     def otherFeaturesLabel(self):
         label = Label(text="Other features")
         label.place(x=300, y=390)
+    def updateRoutes(self):
+        self.mycursor.execute(Dbquery.updateRoutesQuery())
+        self.db.commit()
+        self.mycursor.execute(Dbquery.updateRoutesBuisnessQuery())
+        self.db.commit()
     def runCountryGDPquery(self,editgdpMenu):
         print("usertext1 = " + self.userText)
         print("usertext2 = " + self.userText2)
@@ -189,6 +194,7 @@ class UserInterface:
         print("running query: " + query)
         self.mycursor.execute(query)
         self.db.commit()
+        self.updateRoutes()
         editgdpMenu.destroy()
     def editCountryGdp(self):
         editgdpMenu = Tk()
@@ -205,6 +211,61 @@ class UserInterface:
                            command=partial(self.runCountryGDPquery, editgdpMenu))
         runButton.place(x=350, y=20)
         editgdpMenu.mainloop()
+    def AirportRouteDetails(self,event):
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.title("Route Details")
+        newWindow.geometry("1000x500")
+        widget = event.widget
+        selection = widget.curselection()
+        picked = widget.get(selection[0])
+        print(picked)
+
+        scrollbar = Scrollbar(newWindow, orient=VERTICAL)
+        label = Label(newWindow, text="Routes From Airport: " + picked)
+        label.place(x=180, y=20)
+
+        listbox = Listbox(newWindow, width=270, height=15, fg="blue")
+
+        sql = "Select a.airportCode, b.airportCode, r.touristDemand, r.BuisnessDemand from testairports a, routes r, " \
+              "testairports b Where r.codedeparture = a.airportCode AND a.airportName = '"+picked+"' AND b.airportcode = " \
+                                                                                             "r.codeArrival; "
+        print(sql)
+        self.mycursor.execute(sql)
+        # get all airlines
+        airport = self.mycursor.fetchall()
+        i = 0
+        for row in airport:
+            s = row[0]+"-"+row[1]+", Tourist Demand =  "+str(row[2])+ ", Buisness Demand = "+ str(row[3])
+            listbox.insert(i, s)
+            i += 1
+
+        listbox.place(x=20, y=80)
+        scrollbar.config(command=listbox.yview)
+        scrollbar.pack(side=RIGHT, fill=Y)
+    def openRoutesFromAirportWindow(self):
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.title("Select Airport")
+        newWindow.geometry("500x500")
+        scrollbar = Scrollbar(newWindow, orient=VERTICAL)
+        label = Label(newWindow, text="Select an airport to view")
+        label.place(x=180, y=20)
+
+        listbox = Listbox(newWindow, width=70, height=15, fg="blue")
+        sql = "SELECT * FROM testairports"
+        self.mycursor.execute(sql)
+        airport= self.mycursor.fetchall()
+        i = 0
+        for row in airport:
+
+            listbox.insert(i, row[1])
+            i += 1
+
+        listbox.place(x=20, y=80)
+        scrollbar.config(command=listbox.yview)
+        scrollbar.pack(side=RIGHT, fill=Y)
+        # Double click event with mouse
+        listbox.bind('<Double-1>', self.AirportRouteDetails)
+
     def displayFeatureButtons(self):
         openTextWindowButton = Button(self.CMPT354, text="editAllAirportPopulations", command=self.editAllAirports)
         openTextWindowButton.place(x=0, y=450)
@@ -212,40 +273,48 @@ class UserInterface:
         openEditSomeButton.place(x = 140, y = 450)
         openCountryEditMenu = Button(self.CMPT354, text= "editCountryGDP", command = self.editCountryGdp)
         openCountryEditMenu.place(x = 280, y=450)
+        button = Button(self.CMPT354, text="Routes", command=self.openRouteWindow)
+        button.place(x=200, y=500, height=100, width=100)  # Move the button around
+        button = Button(self.CMPT354, text="Airlines", command=self.openAirLineNewWindow)
+        button.place(x=100, y=500, height=100, width=100)  # Move the button around
+        button = Button(self.CMPT354, text="Routes From Airport", command=self.openRoutesFromAirportWindow)
+        button.place(x=300, y=500, height=100, width=100)  # Move the button around
     def openGetTextMenu(self):
         print("pressed")
     def saveTextSelection(self,textfield,theRoottk):
         self.userText = ""
         text = textfield.get("1.0",END)
-        label = Label(theRoottk,text="savedSelection as: " + text)
+        label = Label(theRoottk,text="Multiplier: " + text)
         label.place(x = 0, y = 55)
         self.userText = text
         print(text)
     def saveTextSelection2(self,textfield,theRoottk):
         self.userText2 = ""
         text = textfield.get("1.0",END)
-        label = Label(theRoottk,text="savedSelection as: " + text)
+        label = Label(theRoottk,text="Country:" + text)
         label.place(x = 0, y = 85)
         self.userText2 = text
         print(text)
 
     def runQuery(self, inmenu):
         query = "UPDATE airport SET nearbyPopulation = nearbyPopulation *" + self.userText + " where AirportCode = airportCode;"
+        print(query)
         self.mycursor.execute(query)
         self.db.commit()
         print("ran the following query: " + query)
         self.userText = ""
-        self.mycursor.execute(Dbquery.updateRoutesQuery)
-        self.db.commit()
+        self.updateRoutes()
         inmenu.destroy()
     def runQuerySome(self, inmenu):
         print("usertext1 = "+ self.userText)
         print("usertext2 = " + self.userText2)
-        query = "UPDATE airport a, country c SET a.nearbyPopulation = a.nearbyPopulation*"+ self.userText2+ " where a.AirportCode = a.airportCode AND  a.countryId = c.countryKey AND c.countryName = '"+ self.userText+"' ;"
+
+        query = "UPDATE airport a, country c SET a.nearbyPopulation = a.nearbyPopulation*"+ self.userText+ " where a.AirportCode = a.airportCode AND  a.countryId = c.countryKey AND c.countryName = '"+ self.userText2+"' ;"
+        query = query.replace("\n", "")
+        print(query)
         self.mycursor.execute(query)
         self.db.commit()
-        self.mycursor.execute(Dbquery.updateRoutesQuery)
-        self.db.commit()
+        self.updateRoutes()
         inmenu.destroy()
         self.userText = ""
         self.userText2 = ""
@@ -264,20 +333,133 @@ class UserInterface:
         editSomeMenu.geometry("650x250")
         textField = Text(editSomeMenu)
         textField.place(x=0, y=200)
+        label = Label(editSomeMenu, text="Select a country and a multiplier for 'nearby population' ")
+        label.place(x=10, y=00)
         sumbitButton = Button(editSomeMenu, text="save country selection",
-                              command=partial(self.saveTextSelection, textField, editSomeMenu))
+                              command=partial(self.saveTextSelection2, textField, editSomeMenu))
         sumbitButton.place(x=0, y=20)
         sumbitButtonNum = Button(editSomeMenu, text="save multiplier selection",
-                              command=partial(self.saveTextSelection2, textField, editSomeMenu))
+                              command=partial(self.saveTextSelection, textField, editSomeMenu))
         sumbitButtonNum.place(x=165, y=20)
         runButton = Button(editSomeMenu, text="run query with selected data",
                            command=partial(self.runQuerySome, editSomeMenu))
         runButton.place(x=350, y=20)
         editSomeMenu.mainloop()
 
+    def displayBaseOfOperation(self, airline, detailWindow):
+        my_frame = Frame(detailWindow)
+        scrollbar = Scrollbar(my_frame, orient=VERTICAL)
+        label = Label(detailWindow, text="Airports that Airline contains:")
+        label.place(x=10, y=30)
+        listbox = Listbox(my_frame, width=75, height=10, fg="blue", yscrollcommand=scrollbar)
+
+        sql = "SELECT BaseOfOperation FROM basesops WHERE AirlineName " + '= ' + '"' + airline + '"'
+        # print(sql)
+        self.mycursor.execute(sql)
+        # get all bases
+        airportCode = self.mycursor.fetchall()
+        i = 0
+        for row in airportCode:
+            sql = "SELECT AirportName FROM airport WHERE AirportCode " + '= ' + '"' + row[0] + '"'
+            self.mycursor.execute(sql)
+            airport = self.mycursor.fetchall()
+            for row2 in airport:
+                listbox.insert(i, row2[0])
+                i += 1
+
+        scrollbar.config(command=listbox.yview)
+        scrollbar.pack(side=RIGHT, fill=Y)
+        my_frame.pack()
+
+        listbox.pack(pady=10)
+        my_frame.place(x=10, y=40)
+
+    def displayAirplaneOperation(self, airline, detailWindow):
+
+        my_frame = Frame(detailWindow)
+        scrollbar = Scrollbar(my_frame, orient=VERTICAL)
+        label = Label(detailWindow, text="Airplanes Operated: ")
+        label.place(x=10, y=250)
+        listbox = Listbox(my_frame, width=75, height=10, fg="blue", yscrollcommand=scrollbar)
+
+        sql = "SELECT AirplaneOperated FROM airplanemodels WHERE AirlineName " + '= ' + '"' + airline + '"'
+        # print(sql)
+        self.mycursor.execute(sql)
+        # get all airplanes
+        airports = self.mycursor.fetchall()
+        i = 0
+        for row in airports:
+            listbox.insert(i, row[0])
+            i += 1
+
+        scrollbar.config(command=listbox.yview)
+        scrollbar.pack(side=RIGHT, fill=Y)
+        my_frame.pack()
+
+        listbox.pack(pady=10)
+        my_frame.place(x=10, y=260)
+
+    def AirlineDetails(self, event):
+
+        widget = event.widget
+        selection = widget.curselection()
+        picked = widget.get(selection[0])
+        print(picked)
+        airlineDetailWindow = Toplevel(self.CMPT354)
+        airlineDetailWindow.title("Airline Detail window")
+        airlineDetailWindow.geometry("500x500")
+        Label(airlineDetailWindow, text=picked).pack()
+        self.displayBaseOfOperation(picked, airlineDetailWindow)
+        self.displayAirplaneOperation(picked, airlineDetailWindow)
+
+    def openAirLineNewWindow(self):
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.title("Airlines")
+        newWindow.geometry("500x500")
+        label = Label(newWindow, text="Select an airline to view")
+        label.place(x=180, y=20)
+
+        listbox = Listbox(newWindow, width=70, height=15, fg="blue")
+        sql = "SELECT * FROM airline"
+        self.mycursor.execute(sql)
+        # get all airlines
+        airline = self.mycursor.fetchall()
+        i = 0
+        for row in airline:
+            listbox.insert(i, row[0])
+            i += 1
+
+        listbox.place(x=20, y=80)
+        # Double click event with mouse
+        listbox.bind('<Double-1>', self.AirlineDetails)
+    def openRouteWindow(self):
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.title("Routes")
+        newWindow.geometry("500x500")
+        label = Label(newWindow, text="Select an Route to view")
+        label.place(x=180, y=20)
+
+        listbox = Listbox(newWindow, width=70, height=15, fg="blue")
+        sql = "SELECT * FROM routes"
+        self.mycursor.execute(sql)
+        # get all airlines
+        routes = self.mycursor.fetchall()
+        i = 0
+        for row in routes:
+            s = row[0]+"-"+row[1]+", Tourist Demand =  "+str(row[2])+ ", Buisness Demand = "+ str(row[3])
+            listbox.insert(i, s)
+            i += 1
+
+
+        listbox.place(x=20, y=80)
+        # Double click event with mouse
+        listbox.bind('<Double-1>', self.AirlineDetails)
+
+
     def StartUI(self):
         self.listBoxCreate()
         self.otherFeaturesLabel()
         self.displayFeatureButtons()
+
         #self.editAllAirportsFromCountry()
         self.CMPT354.mainloop()  # Executes GUI
