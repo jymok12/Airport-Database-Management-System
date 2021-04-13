@@ -93,7 +93,7 @@ class UserInterface:
         TourismExpendLabel.place(x=165, y=270)
 
     def displayGDPIndurtialRatio(self,airport, airportDetailWindow):
-        sql = "SELECT GDPIndustrialRatio From Airport , country Where CountryId = CountryKey AND AirportName LIKE " + '"' + airport + '"'
+        sql = "SELECT GDPIndustrailRatio From Airport , country Where CountryId = CountryKey AND AirportName LIKE " + '"' + airport + '"'
         self.mycursor.execute(sql)
         GDPIndustrialRatio = self.mycursor.fetchall()
         GDPIndustrialRatioLabel = Label(airportDetailWindow, text=GDPIndustrialRatio[0])
@@ -242,7 +242,7 @@ class UserInterface:
 
         listbox = Listbox(my_Frame, width=115, height=15, fg="blue", yscrollcommand = scrollbar)
 
-        sql = "Select a.airportCode, b.airportCode, r.touristDemand, r.BusinessDemand, b.airportname from airport a, " \
+        sql = "Select a.airportCode, b.airportCode, r.touristDemand, r.BuisnessDemand, b.airportname from airport a, " \
               "routes r, airport b Where r.codedeparture = a.airportCode AND a.airportName = '"+picked+"' " \
                                                                                 "AND b.airportcode = r.codeArrival; "
         print(sql)
@@ -402,23 +402,23 @@ class UserInterface:
     def displayBaseOfOperation(self, airline, detailWindow):
         my_frame = Frame(detailWindow)
         scrollbar = Scrollbar(my_frame, orient=VERTICAL)
-        label = Label(detailWindow, text="Airports that Airline contains:")
+        label = Label(detailWindow, text="Airports that Airline operates in:")
         label.place(x=10, y=30)
         listbox = Listbox(my_frame, width=75, height=10, fg="blue", yscrollcommand=scrollbar)
 
-        sql = "SELECT BaseOfOperation FROM basesops WHERE AirlineName " + '= ' + '"' + airline + '"'
-        # print(sql)
+
+
+        sql = "Select distinct a.airportName from airport a where a.airportCode in (Select distinct f.CodeDeparture " \
+              "from flight f where f.AirlineName = '"+airline+"') union all Select distinct a.airportName from " \
+                                                              "airport a where a.airportCode in (Select distinct " \
+                                                              "f.codearrival from flight f where f.AirlineName = " \
+                                                              "'"+airline+"') "
         self.mycursor.execute(sql)
-        # get all bases
-        airportCode = self.mycursor.fetchall()
+        airport = self.mycursor.fetchall()
         i = 0
-        for row in airportCode:
-            sql = "SELECT AirportName FROM airport WHERE AirportCode " + '= ' + '"' + row[0] + '"'
-            self.mycursor.execute(sql)
-            airport = self.mycursor.fetchall()
-            for row2 in airport:
-                listbox.insert(i, row2[0])
-                i += 1
+        for row2 in airport:
+            listbox.insert(i, row2[0])
+            i += 1
 
         scrollbar.config(command=listbox.yview)
         scrollbar.pack(side=RIGHT, fill=Y)
@@ -435,7 +435,8 @@ class UserInterface:
         label.place(x=10, y=250)
         listbox = Listbox(my_frame, width=75, height=10, fg="blue", yscrollcommand=scrollbar)
 
-        sql = "SELECT AirplaneOperated FROM airplanemodels WHERE AirlineName " + '= ' + '"' + airline + '"'
+        sql = "Select distinct f.airplanemodeltype from flight f where f.AirlineName = '" + airline + "'"
+
         # print(sql)
         self.mycursor.execute(sql)
         # get all airplanes

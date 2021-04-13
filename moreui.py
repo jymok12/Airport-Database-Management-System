@@ -88,7 +88,8 @@ class MoreUiSpace():
         test = self.mycursor.fetchall()
         flightNumber = test[0]
         flightNumber = flightNumber[0]
-        print(flightNumber)
+        print("flightnumber = ")
+        flightNumber = int(flightNumber)
         if type(flightNumber) == None.__class__:
             print("is triggering this statement")
             flightNumber = 0
@@ -160,8 +161,9 @@ class MoreUiSpace():
         gdp = gdp[0]
         wealthMultipier = gdp/40000
         cost *= wealthMultipier
-        if loadFactor > 1:
-            loadFactor = 1
+        loadFactor *= 100
+        if loadFactor > 100:
+            loadFactor = 100
         landingtime = takeofftime + (range/speed*3600)
 
         query = "insert ignore into flight values ('" + str(flightNumber) + "', '"+ str(takeofftime) + "', '" + str(cost) + "', '" + str(landingtime) + "', '" + str(loadFactor) +"', '" + str(airlinenamefinal) + "', '" + str(airplane) + "', '" + str(airport1) +"', '" + str(airport2) + "')"
