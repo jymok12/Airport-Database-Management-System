@@ -93,7 +93,7 @@ class UserInterface:
         TourismExpendLabel.place(x=165, y=270)
 
     def displayGDPIndurtialRatio(self,airport, airportDetailWindow):
-        sql = "SELECT GDPIndustrailRatio From Airport , country Where CountryId = CountryKey AND AirportName LIKE " + '"' + airport + '"'
+        sql = "SELECT GDPIndustrialRatio From Airport , country Where CountryId = CountryKey AND AirportName LIKE " + '"' + airport + '"'
         self.mycursor.execute(sql)
         GDPIndustrialRatio = self.mycursor.fetchall()
         GDPIndustrialRatioLabel = Label(airportDetailWindow, text=GDPIndustrialRatio[0])
@@ -187,9 +187,9 @@ class UserInterface:
         print("usertext2 = " + self.userText2)
 
         query = 'Update country set gdpPercapita = '
-        query+=self.userText2
-        query+=" where countryname = '"
         query+=self.userText
+        query+=" where countryname = '"
+        query+=self.userText2
         query+="'"
         query = query.replace("\n","")
 
@@ -200,102 +200,128 @@ class UserInterface:
         editgdpMenu.destroy()
     def editCountryGdp(self):
         editgdpMenu = Tk()
-        editgdpMenu.geometry("650x250")
-        textField = Text(editgdpMenu)
-        textField.place(x=0, y=200)
-        sumbitButton = Button(editgdpMenu, text="save country selection",
-                              command=partial(self.saveTextSelection, textField, editgdpMenu))
-        sumbitButton.place(x=0, y=20)
-        sumbitButtonNum = Button(editgdpMenu, text="save GDP value",
-                                 command=partial(self.saveTextSelection2, textField, editgdpMenu))
-        sumbitButtonNum.place(x=165, y=20)
-        runButton = Button(editgdpMenu, text="run query with selected data",
+        editgdpMenu.geometry("400x400")
+
+        titleLabel = Label(editgdpMenu, text="This section takes a number and a valid country " \
+                                              "\n and sets the GDP amount amount to selected country")
+        titleLabel.place(x=25, y=0)
+
+        inputLabelGDP = Label(editgdpMenu, text = "Please enter a GDP number value:")
+        inputLabelGDP.place(x = 0 , y =75)
+        textFieldGDP = Text(editgdpMenu, height = 1, width = 15)
+        textFieldGDP.place(x = 0 , y = 100)
+        submitButtonNum = Button(editgdpMenu, text="Save GDP value",
+                                 command=partial(self.saveTextSelection, textFieldGDP, editgdpMenu))
+        submitButtonNum.place(x=0, y=125)
+
+        inputLabelCountry = Label(editgdpMenu, text="Please enter a valid country:")
+        inputLabelCountry.place(x=0, y=225)
+        textFieldCountry = Text(editgdpMenu, height=1, width=15)
+        textFieldCountry.place(x=0, y=250)
+        submitButton = Button(editgdpMenu, text="Save country selection",
+                              command=partial(self.saveTextSelection2, textFieldCountry, editgdpMenu))
+        submitButton.place(x=0, y=275)
+
+
+        runButton = Button(editgdpMenu, text="Run query with selected data",
                            command=partial(self.runCountryGDPquery, editgdpMenu))
-        runButton.place(x=350, y=20)
+        runButton.place(x=0, y=350)
         editgdpMenu.mainloop()
     def AirportRouteDetails(self,event):
         newWindow = Toplevel(self.CMPT354)
         newWindow.title("Route Details")
-        newWindow.geometry("1000x500")
+        newWindow.geometry("750x500")
         widget = event.widget
         selection = widget.curselection()
         picked = widget.get(selection[0])
         print(picked)
-
-        scrollbar = Scrollbar(newWindow, orient=VERTICAL)
-        label = Label(newWindow, text="Routes From Airport: " + picked)
+        my_Frame = Frame(newWindow)
+        scrollbar = Scrollbar(my_Frame, orient=VERTICAL)
+        label = Label(newWindow, text="Routes From Airport: " + picked + '\n' + "To: ")
         label.place(x=180, y=20)
 
-        listbox = Listbox(newWindow, width=270, height=15, fg="blue")
+        listbox = Listbox(my_Frame, width=115, height=15, fg="blue", yscrollcommand = scrollbar)
 
-        sql = "Select a.airportCode, b.airportCode, r.touristDemand, r.BuisnessDemand from testairports a, routes r, " \
-              "testairports b Where r.codedeparture = a.airportCode AND a.airportName = '"+picked+"' AND b.airportcode = " \
-                                                                                             "r.codeArrival; "
+        sql = "Select a.airportCode, b.airportCode, r.touristDemand, r.BusinessDemand, b.airportname from airport a, " \
+              "routes r, airport b Where r.codedeparture = a.airportCode AND a.airportName = '"+picked+"' " \
+                                                                                "AND b.airportcode = r.codeArrival; "
         print(sql)
         self.mycursor.execute(sql)
         # get all airlines
         airport = self.mycursor.fetchall()
         i = 0
         for row in airport:
-            s = row[0]+"-"+row[1]+", Tourist Demand =  "+str(row[2])+ ", Buisness Demand = "+ str(row[3])
+
+            s = row[0]+"-"+row[1]+", Tourist Demand =  "+str(row[2])+ ", Business Demand = "+ str(row[3]) + ", " + row[4]
             listbox.insert(i, s)
             i += 1
 
-        listbox.place(x=20, y=80)
         scrollbar.config(command=listbox.yview)
         scrollbar.pack(side=RIGHT, fill=Y)
+        my_Frame.pack()
+        listbox.pack(pady = 10)
+        my_Frame.place(x = 20, y = 80)
+        listbox.pack()
     def openRoutesFromAirportWindow(self):
         newWindow = Toplevel(self.CMPT354)
         newWindow.title("Select Airport")
         newWindow.geometry("500x500")
-        scrollbar = Scrollbar(newWindow, orient=VERTICAL)
-        label = Label(newWindow, text="Select an airport to view")
-        label.place(x=180, y=20)
 
-        listbox = Listbox(newWindow, width=70, height=15, fg="blue")
-        sql = "SELECT * FROM testairports"
+        my_frame = Frame(newWindow)
+        scrollbar = Scrollbar(my_frame, orient=VERTICAL)
+        label = Label(newWindow, text="Select an airport to view routes:" + "\n" + "These airports have a nearby population \n greater that 1,000,000")
+        label.place(x=140, y=20)
+
+        listbox = Listbox(my_frame, width=70, height=15, fg="blue", yscrollcommand = scrollbar)
+        sql = "SELECT * FROM airport"
         self.mycursor.execute(sql)
         airport= self.mycursor.fetchall()
         i = 0
         for row in airport:
+            if row[5] > 1000000:
+                listbox.insert(i, row[1])
+                i += 1
 
-            listbox.insert(i, row[1])
-            i += 1
-
-        listbox.place(x=20, y=80)
         scrollbar.config(command=listbox.yview)
         scrollbar.pack(side=RIGHT, fill=Y)
+        my_frame.pack()
+
+        listbox.pack(pady = 10)
+        my_frame.place(x=20, y=80)
+
         # Double click event with mouse
         listbox.bind('<Double-1>', self.AirportRouteDetails)
+        listbox.pack()
 
     def displayFeatureButtons(self):
-        openTextWindowButton = Button(self.CMPT354, text="editAllAirportPopulations", command=self.editAllAirports)
-        openTextWindowButton.place(x=0, y=450)
-        openEditSomeButton = Button(self.CMPT354, text="editAirportsInCountry", command=self.editSomeAirports)
-        openEditSomeButton.place(x = 140, y = 450)
-        openCountryEditMenu = Button(self.CMPT354, text= "editCountryGDP", command = self.editCountryGdp)
-        openCountryEditMenu.place(x = 280, y=450)
-        button = Button(self.CMPT354, text="Routes", command=self.openRouteWindow)
-        button.place(x=200, y=500, height=100, width=100)  # Move the button around
+        openTextWindowButton = Button(self.CMPT354, text="Edit \n Airport population", command=self.editAirportPopulation)
+        openTextWindowButton.place(x=0, y=425, height = 50, width = 125)
+        openEditSomeButton = Button(self.CMPT354, text="Edit \n Airports in Country", command=self.editAirportsInCountry)
+        openEditSomeButton.place(x = 140, y = 425, height = 50, width = 125)
+        openCountryEditMenu = Button(self.CMPT354, text= "Edit \n CountryGDP", command = self.editCountryGdp)
+        openCountryEditMenu.place(x = 280, y=425, height = 50, width = 125)
+
         button = Button(self.CMPT354, text="Airlines", command=self.openAirLineNewWindow)
         button.place(x=100, y=500, height=100, width=100)  # Move the button around
-        button = Button(self.CMPT354, text="Routes From Airport", command=self.openRoutesFromAirportWindow)
-        button.place(x=300, y=500, height=100, width=100)  # Move the button around
+        button = Button(self.CMPT354, text="Routes", command=self.openRoutesFromAirportWindow)
+        button.place(x=200, y=500, height=100, width=100)  # Move the button around
         self.extraUISpace.showButtons()
     def openGetTextMenu(self):
         print("pressed")
     def saveTextSelection(self,textfield,theRoottk):
         self.userText = ""
         text = textfield.get("1.0",END)
+        if text == '\n': #Get rid of empty
+            text = "1"
         label = Label(theRoottk,text="Multiplier: " + text)
-        label.place(x = 0, y = 55)
+        label.place(x = 0, y = 175)
         self.userText = text
         print(text)
     def saveTextSelection2(self,textfield,theRoottk):
         self.userText2 = ""
         text = textfield.get("1.0",END)
         label = Label(theRoottk,text="Country:" + text)
-        label.place(x = 0, y = 85)
+        label.place(x = 0, y = 305)
         self.userText2 = text
         print(text)
 
@@ -307,6 +333,9 @@ class UserInterface:
         print("ran the following query: " + query)
         self.userText = ""
         self.updateRoutes()
+
+        label = Label(inmenu, text= "Success")
+        label.place(x=0, y=250)
         inmenu.destroy()
     def runQuerySome(self, inmenu):
         print("usertext1 = "+ self.userText)
@@ -321,32 +350,53 @@ class UserInterface:
         inmenu.destroy()
         self.userText = ""
         self.userText2 = ""
-    def editAllAirports(self):
+    def editAirportPopulation(self):
         editAllMenu = Tk()
-        editAllMenu.geometry("450x150")
-        textField = Text(editAllMenu)
+        editAllMenu.geometry("400x400")
+
+        titleLabel = Label(editAllMenu,text = "This section takes a number \n and multiplies the nearby population of the airport " \
+                                              "by an \n input number")
+        titleLabel.place(x = 50, y = 0)
+
+        inputLabel = Label(editAllMenu, text = "Please enter a number:")
+        inputLabel.place(x= 0, y = 75)
+        textField = Text(editAllMenu,height = 1, width = 15)
         textField.place(x=0, y=100)
-        sumbitButton = Button(editAllMenu, text="save text selection", command=partial(self.saveTextSelection,textField,editAllMenu))
-        sumbitButton.place(x=125, y=20)
-        runButton = Button(editAllMenu, text="run query with selected data",command=partial(self.runQuery, editAllMenu))
-        runButton.place(x=250,y=20)
+        submitButton = Button(editAllMenu, text="Save text selection", command=partial(self.saveTextSelection,textField,editAllMenu))
+        submitButton.place(x=0, y=125)
+
+        runButton = Button(editAllMenu, text="Run query with selected data",command=partial(self.runQuery, editAllMenu))
+        runButton.place(x=0,y= 220)
         editAllMenu.mainloop()
-    def editSomeAirports(self):
+
+    def editAirportsInCountry(self):
         editSomeMenu = Tk()
-        editSomeMenu.geometry("650x250")
-        textField = Text(editSomeMenu)
-        textField.place(x=0, y=200)
-        label = Label(editSomeMenu, text="Select a country and a multiplier for 'nearby population' ")
-        label.place(x=10, y=00)
-        sumbitButton = Button(editSomeMenu, text="save country selection",
-                              command=partial(self.saveTextSelection2, textField, editSomeMenu))
-        sumbitButton.place(x=0, y=20)
-        sumbitButtonNum = Button(editSomeMenu, text="save multiplier selection",
-                              command=partial(self.saveTextSelection, textField, editSomeMenu))
-        sumbitButtonNum.place(x=165, y=20)
-        runButton = Button(editSomeMenu, text="run query with selected data",
+        editSomeMenu.geometry("400x400")
+
+        titleLabel = Label(editSomeMenu, text= "This section takes a number and a valid country " \
+                                                "\n and multiplies the nearby population of the all airports in country")
+        titleLabel.place(x=25, y=0)
+
+        inputLabelMultipler = Label(editSomeMenu, text="Please enter a number:")
+        inputLabelMultipler.place(x=0, y=75)
+        textFieldNumber = Text(editSomeMenu, height=1, width=15)
+        textFieldNumber.place(x=0, y=100)
+        submitButtonNum = Button(editSomeMenu, text="Save multiplier selection",
+                              command=partial(self.saveTextSelection, textFieldNumber, editSomeMenu))
+        submitButtonNum.place(x=0, y=125)
+
+
+        inputLabelCountry = Label(editSomeMenu, text="Please enter a valid country:")
+        inputLabelCountry.place(x=0, y=225)
+        textFieldCountry = Text(editSomeMenu, height=1, width=15)
+        textFieldCountry.place(x=0, y=250)
+        submitButton = Button(editSomeMenu, text="Save country selection",
+                              command=partial(self.saveTextSelection2, textFieldCountry, editSomeMenu))
+        submitButton.place(x=0, y=275)
+
+        runButton = Button(editSomeMenu, text="Run query with selected data",
                            command=partial(self.runQuerySome, editSomeMenu))
-        runButton.place(x=350, y=20)
+        runButton.place(x=0, y=350)
         editSomeMenu.mainloop()
 
     def displayBaseOfOperation(self, airline, detailWindow):
@@ -431,28 +481,6 @@ class UserInterface:
         for row in airline:
             listbox.insert(i, row[0])
             i += 1
-
-        listbox.place(x=20, y=80)
-        # Double click event with mouse
-        listbox.bind('<Double-1>', self.AirlineDetails)
-    def openRouteWindow(self):
-        newWindow = Toplevel(self.CMPT354)
-        newWindow.title("Routes")
-        newWindow.geometry("500x500")
-        label = Label(newWindow, text="Select an Route to view")
-        label.place(x=180, y=20)
-
-        listbox = Listbox(newWindow, width=70, height=15, fg="blue")
-        sql = "SELECT * FROM routes"
-        self.mycursor.execute(sql)
-        # get all airlines
-        routes = self.mycursor.fetchall()
-        i = 0
-        for row in routes:
-            s = row[0]+"-"+row[1]+", Tourist Demand =  "+str(row[2])+ ", Buisness Demand = "+ str(row[3])
-            listbox.insert(i, s)
-            i += 1
-
 
         listbox.place(x=20, y=80)
         # Double click event with mouse

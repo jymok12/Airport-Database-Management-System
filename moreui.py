@@ -81,7 +81,7 @@ class MoreUiSpace():
         airlinename =airlinename.split(",")
         airlinenamefinal = airlinename[0]
         airlineType = str(airlinename[1])
-        query = "select Max(f.flightNumber) from flight f where f.airlinename = '" +airlinenamefinal + "'"
+        query = "select count(flight.airlinename) from flight where flight.airlinename = '" +airlinenamefinal + "'"
         query = query.replace("\n", "")
         print(query)
         self.mycursor.execute(query)
@@ -151,6 +151,15 @@ class MoreUiSpace():
         reputation += 0.3
         demand *= reputation
         loadFactor = capacity/demand
+        query = "select c.gdpPercapita+d.gdppercapita from country c, country d, airport a, airport b where a.CountryID = c.CountryKey AND b.CountryID = d.CountryKey AND a.AirportCode ='" + airport1 + "' AND b.airportCode = '" + airport2 +"'"
+        query = query.replace("\n", "")
+        self.mycursor.execute(query)
+        print(query)
+        gdp = self.mycursor.fetchall()
+        gdp = gdp[0]
+        gdp = gdp[0]
+        wealthMultipier = gdp/40000
+        cost *= wealthMultipier
         if loadFactor > 1:
             loadFactor = 1
         landingtime = takeofftime + (range/speed*3600)
