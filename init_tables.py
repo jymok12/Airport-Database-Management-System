@@ -73,7 +73,7 @@ class Init:
         query = Dbquery.populateRoutesInnitial()
         mycursor.execute(query)
         db.commit()
-        query = "CREATE TABLE IF NOT EXISTS Airline(AirlineName VARCHAR(64),CostStructure CHAR(64),Reputation INT, PRIMARY KEY (AirlineName));"
+        query = "CREATE TABLE IF NOT EXISTS Airline(AirlineName VARCHAR(64),CostStructure CHAR(64),Reputation INT, callsign char(2), PRIMARY KEY (AirlineName));"
         mycursor.execute(query)
         query = "CREATE TABLE IF NOT EXISTS Flight (FlightNumber VARCHAR(7) NOT NULL,DepartureTime INTEGER NOT NULL," \
                 "Price INTEGER NOT NULL,ArrivalTime INTEGER NOT NULL,LoadFactor INTEGER NOT NULL,AirlineName VARCHAR(" \
@@ -106,13 +106,13 @@ class Init:
         # Airlines start here
         query = "CREATE TABLE IF NOT EXISTS Airline(AirlineName VARCHAR(64), CostStructure CHAR(64), Reputation INT, PRIMARY KEY (AirlineName));"
         mycursor.execute(query)
-        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation) VALUES ('Air Wayne', 'HIGH', 100);"
+        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation, callsign) VALUES ('Air Wayne', 'HIGH', 100, 'AW');"
         mycursor.execute(query)
-        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation) VALUES ('Air Tim', 'HIGH', 100);"
+        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation, callsign) VALUES ('Air Tim', 'HIGH', 100, 'AT');"
         mycursor.execute(query)
-        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation) VALUES ('Air Justin', 'MED', 80);"
+        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation, callsign) VALUES ('Air Justin', 'MED', 80, 'AJ');"
         mycursor.execute(query)
-        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation) VALUES ('Air William', 'LOW', 80);"
+        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation, callsign) VALUES ('Air William', 'LOW', 80, 'WA');"
         mycursor.execute(query)
         db.commit()
         # BaseOPs start here (Give each airline 100 airports)
