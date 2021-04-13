@@ -1,7 +1,9 @@
 from functools import partial
 from tkinter import *
 from dbquery import Dbquery
-
+from greatecirclecaculator import GreatCircle
+import functools
+import operator
 class MoreUiSpace():
     def __init__(self, mycursor, db, CMPT354):
         self.mycursor = mycursor
@@ -30,7 +32,52 @@ class MoreUiSpace():
     def getsqlAirline(self, picked):
         sql = "SELECT * FROM airline"
         return sql
+    def getPlaneSelection(self,savedSelection):
+        routetext = savedSelection[2]
+        routetext = routetext.split(",")
+        departure = routetext[0]
+        arrival = routetext[1]
+        query = "select a.nscoordinates, a.ewcoordinates, b.nscoordinates,b.ewcoordinates from airport a, airport b where a.airportCode = '"+ departure+"' AND b.airportCode = '"+ arrival+"'"
+        query = query.replace("\n", "")
+        print(query)
+        self.mycursor.execute(query)
+        coords = self.mycursor.fetchall()
+        greatCircle = GreatCircle()
+        for row in coords:
+            greatCircle.latitude1_degrees = float(row[0])
+            greatCircle.latitude2_degrees = float(row[2])
+            greatCircle.longitude1_degrees = float(row[1])
+            greatCircle.longitude2_degrees = float(row[3])
+
+        greatCircle.calculate()
+        dist = greatCircle.distance_kilometres
+        dist = dist*0.539957
+        query = "Select a.maximumrunwaylength from airport a where a.AirportCode= '" + departure + "'"
+        query = query.replace("\n", "")
+        self.mycursor.execute(query)
+        max1 = self.mycursor.fetchall()
+        maxlen = 0
+        for row in max1:
+            maxlen = row[0]
+        print(maxlen)
+        query = "Select a.maximumrunwaylength from airport a where a.AirportCode= '" + arrival + "'"
+        query = query.replace("\n", "")
+        self.mycursor.execute(query)
+        max1 = self.mycursor.fetchall()
+        maxlen2 = 0
+        for row in max1:
+            maxlen2 = row[0]
+        print(maxlen2)
+        minlen = min(maxlen,maxlen2)
+        print(maxlen)
+        query = "select * from airplane ap where ap.runway11 <= "+str(minlen)+ " AND ap.planerange7 >= " + str(dist)
+        return query
+    def createFlight(self, savedSelection):
+        print("will eventually create flight")
     def openSelectorMenuWithEvent(self,savedSelection,selectingFrom, depth,event):
+        if depth == 5:
+            self.createFlight(savedSelection)
+
         newWindow = Toplevel(self.CMPT354)
         widget = event.widget
         selection = widget.curselection()
@@ -52,6 +99,10 @@ class MoreUiSpace():
             sql = self.getsqlRoute(picked)
         if depth == 2:
             sql = self.getsqlAirline(picked)
+        if depth == 3:
+            sql = self.getPlaneSelection(savedSelection)
+
+
         print(sql)
         self.mycursor.execute(sql)
         # get all airlines
@@ -61,9 +112,11 @@ class MoreUiSpace():
             s = row[0]+ "," + row[1]
             listbox.insert(i, s)
             i += 1
+
         listbox.bind('<Double-1>', partial(self.openSelectorMenuWithEvent, savedSelection, selectingFrom, depth+1))
 
         listbox.place(x=20, y=80)
+
     def openSelectorMenu(self, savedSelection,selectingFrom):
         depth = 0
         newWindow = Toplevel(self.CMPT354)

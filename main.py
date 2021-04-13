@@ -25,7 +25,7 @@ db = mysql.connector.connect(
     )
 mycursor = db.cursor()
 print("test")
-Init.inittables(db, mycursor)
+#Init.inittables(db, mycursor)
 ui = UserInterface(mycursor, db)
 ui.StartUI()
 
