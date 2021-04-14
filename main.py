@@ -30,8 +30,9 @@ if test == 0:
                 database="354airplaneProject1"
             )
         mycursor = db.cursor()
-        
+        ui = UserInterface(mycursor, db)
         Init.inittables(db, mycursor)
+        ui.Update_With_Trigger()
 else:
         db = mysql.connector.connect(
                 host="localhost",
@@ -40,9 +41,10 @@ else:
                 database="354airplaneProject1"
         )
         mycursor = db.cursor()
-
+        ui = UserInterface(mycursor, db)
         
-ui = UserInterface(mycursor, db)
+
+
 ui.StartUI()
 
 

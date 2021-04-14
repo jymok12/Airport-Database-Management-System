@@ -76,7 +76,7 @@ class MoreUiSpace():
         ul = upper.get()
         ll = lower.get()
         print("button pressed")
-        sql = """SELECT DISTINCT a.AirportCode, r.CodeArrival, r.TouristDemand
+        sql = """SELECT DISTINCT a.AirportCode, r.CodeArrival, r.TouristDemand, r.buisnessdemand
         FROM airport a, Routes r
         WHERE a.AirportCode = r.CodeDeparture AND r.TouristDemand < """ + str(
             ul) + """ AND  r.TouristDemand >""" + str(ll) + """;"""
@@ -88,10 +88,8 @@ class MoreUiSpace():
         i = 0
         for row in templist:
             s = ""
-            k = 0
-            for col in row:
-                s += str(row[k])
-                k=k+1
+            s += str(row[0]) + "  " + str(row[1]) + "  " +  str(row[2]) + "  " + str(row[3])
+
             listbox.insert(i, s)
             i += 1
         listbox.place(x=50, y=270)
@@ -135,16 +133,19 @@ class MoreUiSpace():
 
     def openNewWindowForQ4(self):
         newWindow = Toplevel(self.CMPT354)
-        newWindow.geometry("500x500")
+        newWindow.geometry("1000x500")
         newWindow.title("Query 4")
-        label = Label(newWindow, text="This is Query 4")
+        label = Label(newWindow, text="Showing Stats for Airports With Flights")
         label.place(x=120, y=20)
-        sql1 = """CREATE TABLE IF NOT EXISTS A AS SELECT CodeDeparture AS Airport, COUNT(CodeDeparture) AS NumberOfDepartures
+        sql = "drop view if exists a"
+        self.mycursor.execute(sql)
+        sql1 = """CREATE View A AS SELECT CodeDeparture AS Airport, COUNT(CodeDeparture) AS NumberOfDepartures
         FROM flight
         GROUP BY CodeDeparture  
         ORDER BY COUNT(NumberOfDepartures) DESC;"""
-
-        sql2 = """CREATE TABLE IF NOT EXISTS B AS SELECT CodeDeparture AS Airport, AVG(TouristDemand) AS AverageDemand
+        sql = "drop view if exists b"
+        self.mycursor.execute(sql)
+        sql2 = """CREATE view B AS SELECT CodeDeparture AS Airport, AVG(TouristDemand) AS AverageDemand
         FROM Routes
         GROUP BY CodeDeparture
         ORDER BY COUNT(CodeDeparture) DESC;"""
@@ -156,10 +157,11 @@ class MoreUiSpace():
         self.mycursor.execute(sql2)
         self.mycursor.execute(sql3)
         result = self.mycursor.fetchall();
-        listbox = Listbox(newWindow, width=50, height=10, fg="blue")
+        listbox = Listbox(newWindow, width=150, height=10, fg="blue")
         i = 0
         for row in result:
-            listbox.insert(i, row[1])
+            s = "Airport: " + str(row[0]) + " has " + str(row[1]) + " departure(s) and average tourist demand = " + str(row[2])
+            listbox.insert(i, s)
         listbox.place(x=50, y=270)
 
     def checkboxcheck(self):

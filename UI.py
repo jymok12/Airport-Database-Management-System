@@ -317,6 +317,8 @@ class UserInterface:
         button.place(x=100, y=500, height=100, width=100)  # Move the button around
         button = Button(self.CMPT354, text="Routes", command=self.openRoutesFromAirportWindow)
         button.place(x=200, y=500, height=100, width=100)  # Move the button around
+        button = Button(self.CMPT354, text="Justins slightly broken feature", command=self.openAirLineNewWindow)
+        button.place(x=420, y=425, height=50, width=100)  # Move the button around
         self.extraUISpace.showButtons()
     def openGetTextMenu(self):
         print("pressed")
@@ -500,6 +502,69 @@ class UserInterface:
         # Double click event with mouse
         listbox.bind('<Double-1>', self.AirlineDetails)
 
+        ##THIS FEATURE IS BROKEN
+    def openAirLineNewWindow(self):
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.title("Airlines")
+        newWindow.geometry("500x500")
+        label = Label(newWindow, text="Select an airline to view")
+        label.place(x=180, y=20)
+
+        listbox = Listbox(newWindow, width=70, height=15, fg="blue")
+        sql = "SELECT * FROM airline"
+        self.mycursor.execute(sql)
+        # get all airlines
+        airline = self.mycursor.fetchall()
+        i = 0
+        for row in airline:
+            listbox.insert(i, row[0])
+            i += 1
+
+        listbox.place(x=20, y=80)
+        # Double click event with mouse
+        listbox.bind('<Double-1>', self.AirlineDetails)
+
+        radio0 = Radiobutton(newWindow, text="Air Justin", variable='Justin', value=0)
+        radio0.place(x=100, y=400)
+        radio1 = Radiobutton(newWindow, text="Air Tim", variable='Tim', value=1)
+        radio1.place(x=100, y=425)
+        radio2 = Radiobutton(newWindow, text="Air Wayne", variable='Wayne', value=2)
+        radio2.place(x=100, y=450)
+        radio3 = Radiobutton(newWindow, text="Air William", variable='William', value=3)
+        radio3.place(x=100, y=475)
+
+        label1 = Label(newWindow, text="Update Reputation Data")
+        label1.place(x=180, y=400)
+
+        Reputation_Update = StringVar()
+        label2 = Entry(newWindow, textvariable=Reputation_Update)
+        label2.place(x=180, y=425)
+        label3 = Button(newWindow, text="Submit", command=self.Update_With_Trigger)
+        label3.place(x=180, y=450)
+    def Update_With_Trigger(self):
+
+        print("test")
+        sql1 = "CREATE TRIGGER before_reputation_update \
+                BEFORE UPDATE \
+                ON airline FOR EACH ROW \
+                BEGIN \
+                    DECLARE errorMessage VARCHAR(255); \
+                    DECLARE errorMessage1 VARCHAR(255); \
+                    SET errorMessage = CONCAT('The reputation cannot be a negative number'); \
+                    SET errorMessage1 = CONCAT('The reputation cannot be greater than 100'); \
+                    IF NEW.Reputation < 0 THEN \
+                        SIGNAL SQLSTATE '45000' \
+                            SET MESSAGE_TEXT = errorMessage; \
+                    ELSEIF NEW.REPUTATION > 100 THEN \
+                        SIGNAL SQLSTATE '45000' \
+                            SET MESSAGE_TEXT = errorMessage1; \
+                    END IF;\
+                END"
+        sql = "UPDATE airline SET Reputation = '50' WHERE AirlineName = 'Air Justin'"
+        self.mycursor.execute(sql1)
+        self.db.commit()
+        self.mycursor.execute(sql)
+        self.db.commit()
 
     def StartUI(self):
         self.listBoxCreate()
