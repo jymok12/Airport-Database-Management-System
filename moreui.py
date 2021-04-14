@@ -3,6 +3,7 @@ from tkinter import *
 from dbquery import Dbquery
 from greatecirclecaculator import GreatCircle
 import time
+import random
 import functools
 import operator
 class MoreUiSpace():
@@ -11,12 +12,201 @@ class MoreUiSpace():
         self.db = db
         self.CMPT354 = CMPT354
     def pressedExampleButton(self):
-        print("exampleButtonPressed")
+        print("exampleButtonPressed")\
+
     def showButtons(self):
         button = Button(self.CMPT354, text="this is an example button", command=self.pressedExampleButton)
         button.place(x = 0, y= 650)
         button = Button(self.CMPT354, text="Add Flight", command=self.flightSelector)
         button.place(x=400, y=500, height=100, width=100)  # Move the button around
+        button = Button(self.CMPT354, text="Delete Airline", command=self.deleteAirline)
+        button.place(x=00, y=500, height=100, width=100)  # Move the button around
+        button = Button(self.CMPT354, text="Create Random Airline", command=self.createRandomAirline)
+        button.place(x=300, y=500, height=100, width=100)  # Move the button around
+        button = Button(self.CMPT354, text="View Flights", command=self.viewFlights)
+        button.place(x=500, y=500, height=100, width=100)  # Move the button around
+
+        button = Button(self.CMPT354, text="View Countries", command=self.openViewCountries)
+        button.place(x=600, y=500, height=100, width=100)  # Move the button around
+        button = Button(self.CMPT354, text="Query1 TEST", command=self.openNewWindowForQ1)
+        button.place(x=400, y=650, height=50, width=100)
+        button = Button(self.CMPT354, text="Query2 TEST", command=self.openNewWindowForQ2)
+        button.place(x=500, y=650, height=50, width=100)
+        button = Button(self.CMPT354, text="Query4 TEST", command=self.openNewWindowForQ4)
+        button.place(x=600, y=650, height=50, width=100)
+        # Move the button around
+
+    def doQueryOne(self):
+        print("testing query 1: button works")
+
+    def doQueryTwo(self):
+        print("testing query 2: button works")
+
+    def doQueryFour(self):
+        print("testing query 4: button works")
+
+    def openNewWindowForQ1(self):
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.geometry("500x500")
+        newWindow.title("Query 1")
+        label = Label(newWindow, text="Please input the parameters for running this Query")
+        label.place(x=120, y=20)
+        lowerlimit = Entry(newWindow)
+        lowerlimit.place(x=150, y=120)
+
+        label2 = Label(newWindow, text="Lower Limit:")
+        label2.place(x=10, y=120)
+        upperlimit = Entry(newWindow)
+        upperlimit.place(x=150, y=170)
+
+        label3 = Label(newWindow, text="Upper Limit:")
+        label3.place(x=10, y=170)
+        # limit = Entry(newWindow)
+        # limit.place(x=150, y=220)
+        # l = limit.get()
+        # label4 = Label(newWindow, text="Display Limit (0 for all):")
+        # label4.place(x=10, y=220)
+
+        # Weird issues here
+        button2 = Button(newWindow, text="Display Results", command = partial(self.q1SQL, upperlimit,lowerlimit,newWindow))
+        # The function q1SQL called regardless of whether or not the button is pressed
+        button2.place(x=350, y=200, height=50, width=100)
+
+    def q1SQL(self, upper, lower, window):
+        ul = upper.get()
+        ll = lower.get()
+        print("button pressed")
+        sql = """SELECT DISTINCT a.AirportCode, r.CodeArrival, r.TouristDemand
+        FROM airport a, Routes r
+        WHERE a.AirportCode = r.CodeDeparture AND r.TouristDemand < """ + str(
+            ul) + """ AND  r.TouristDemand >""" + str(ll) + """;"""
+        print(sql)
+        self.mycursor.execute(sql)
+        templist = self.mycursor.fetchall()
+        listbox = Listbox(window, width=50, height=10, fg="blue")
+        # print("listbox applied")
+        i = 0
+        for row in templist:
+            s = ""
+            k = 0
+            for col in row:
+                s += str(row[k])
+                k=k+1
+            listbox.insert(i, s)
+            i += 1
+        listbox.place(x=50, y=270)
+
+    def openNewWindowForQ2(self):
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.geometry("500x500")
+        newWindow.title("Query 2")
+        label = Label(newWindow, text="Please input the parameters for running this Query")
+        label.place(x=120, y=20)
+        var = 0
+        # Weird issue: the button will press regardless?
+        check = Checkbutton(newWindow, text='Ascending Order', variable=var, onvalue=1, offvalue=0)
+        check.place(x=150, y=180)
+        if var == 0:
+            sql = """SELECT DISTINCT CodeDeparture, CodeArrival, TouristDemand
+                    FROM Routes
+                    ORDER BY TouristDemand ASC;"""
+            self.mycursor.execute(sql)
+            result = self.mycursor.fetchall()
+            listbox = Listbox(newWindow, width=50, height=10, fg="blue")
+            i = 0
+            for row in result:
+                listbox.insert(i, row[1])
+            listbox.place(x=50, y=270)
+        else:
+            sql = """SELECT DISTINCT CodeDeparture, CodeArrival, TouristDemand
+                                FROM Route
+                                ORDER BY TouristDemand DESC;"""
+            self.mycursor.execute(sql)
+            result = self.mycursor.fetchall();
+            listbox = Listbox(newWindow, width=50, height=10, fg="blue")
+            i = 0
+            for row in result:
+                s = row[0] + "," + row[1]
+                listbox.insert(i, s)
+                i += 1
+            listbox.place(x=50, y=270)
+        # button2 = Button(newWindow, text="Display Results (TEST)", command=self.pressedExampleButton())
+        # button2.place(x=350, y=200, height=50, width=100)
+
+    def openNewWindowForQ4(self):
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.geometry("500x500")
+        newWindow.title("Query 4")
+        label = Label(newWindow, text="This is Query 4")
+        label.place(x=120, y=20)
+        sql1 = """CREATE TABLE IF NOT EXISTS A AS SELECT CodeDeparture AS Airport, COUNT(CodeDeparture) AS NumberOfDepartures
+        FROM flight
+        GROUP BY CodeDeparture  
+        ORDER BY COUNT(NumberOfDepartures) DESC;"""
+
+        sql2 = """CREATE TABLE IF NOT EXISTS B AS SELECT CodeDeparture AS Airport, AVG(TouristDemand) AS AverageDemand
+        FROM Routes
+        GROUP BY CodeDeparture
+        ORDER BY COUNT(CodeDeparture) DESC;"""
+
+        sql3 = """SELECT A.Airport, A.NumberOfDepartures, B.AverageDemand
+        FROM A
+        INNER JOIN B ON A.Airport = B.Airport;"""
+        self.mycursor.execute(sql1)
+        self.mycursor.execute(sql2)
+        self.mycursor.execute(sql3)
+        result = self.mycursor.fetchall();
+        listbox = Listbox(newWindow, width=50, height=10, fg="blue")
+        i = 0
+        for row in result:
+            listbox.insert(i, row[1])
+        listbox.place(x=50, y=270)
+
+    def checkboxcheck(self):
+        print("Checkbox ticked")
+
+    def viewFlights(self):
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.title("Airlines")
+        newWindow.geometry("1000x500")
+        label = Label(newWindow, text="Viewing Flights")
+        label.place(x=180, y=20)
+
+        listbox = Listbox(newWindow, width=150, height=15, fg="blue")
+        sql = "SELECT * FROM flight"
+        self.mycursor.execute(sql)
+        # get all airlines
+        airline = self.mycursor.fetchall()
+        i = 0
+        for row in airline:
+            s = "flightNumber: " + str(row[0]) + " Price: " +str(row[2]) + " LoadFactor: " +str(row[4]) + " AirlineName: " +str(row[5]) + " Airplane Used: " + row[6] + " Departing From: " + row[7] + " Arriving At: " + row[8]
+            listbox.insert(i, s)
+            i += 1
+
+        listbox.place(x=20, y=80)
+
+
+    def createRandomAirline(self):
+        names = open('names.txt','r')
+        text = names.read()
+        text = text.split("\n")
+        num = random.randrange(4500)
+        name = text[num]
+        name = name + " Air"
+        reputataion = random.randrange(100)
+        randnum = random.randint(0,2)
+        callsign = name[0:2]
+        coststructure = "LOW"
+        if randnum == 1:
+            coststructure = "LOW"
+        if randnum == 2:
+            coststructure = "MED"
+        if randnum == 0:
+            coststructure = "HIGH"
+        query = "Insert into airline values ('" + str(name) + "', '" + str(coststructure) + "', '" + str(reputataion) + "', '" + str(callsign) + "')"
+        print(query)
+        self.mycursor.execute(query)
+        self.db.commit()
     def flightSelector(self):
         savedSelection = []
         self.openSelectorMenu(savedSelection,"countries")
@@ -137,6 +327,8 @@ class MoreUiSpace():
         data = helpme[0]
         speed = data[6]
         capacity = float(data[2])
+        print("capacity = ")
+        print(capacity)
 
         cities = str(savedSelection[2])
 
@@ -161,9 +353,14 @@ class MoreUiSpace():
         gdp = gdp[0]
         wealthMultipier = gdp/40000
         cost *= wealthMultipier
+
         loadFactor *= 100
+        print("loadfactor = ")
+        print(loadFactor)
+
         if loadFactor > 100:
             loadFactor = 100
+
         landingtime = takeofftime + (range/speed*3600)
 
         query = "insert ignore into flight values ('" + str(flightNumber) + "', '"+ str(takeofftime) + "', '" + str(cost) + "', '" + str(landingtime) + "', '" + str(loadFactor) +"', '" + str(airlinenamefinal) + "', '" + str(airplane) + "', '" + str(airport1) +"', '" + str(airport2) + "')"
@@ -195,12 +392,16 @@ class MoreUiSpace():
         print(savedSelection)
         listbox = Listbox(newWindow, width=70, height=15, fg="blue")
         sql = ""
+        sortingbytuple = 0;
         if depth == 0:
             sql = self.getsqlCountry(picked)
+            sortingbytuple = 5
         if depth == 1:
             sql = self.getsqlRoute(picked)
+            sortingbytuple = 3
         if depth == 2:
             sql = self.getsqlAirline(savedSelection)
+
         if depth == 3:
             sql = self.getPlaneSelection(savedSelection)
 
@@ -208,9 +409,12 @@ class MoreUiSpace():
         self.mycursor.execute(sql)
         # get all airlines
         country = self.mycursor.fetchall()
+        country.sort(key=lambda tup: tup[sortingbytuple])
+        country.reverse()
         i = 0
         for row in country:
-            s = row[0]+ "," + row[1]
+
+            s = row[0] +  "," +row[1]
             listbox.insert(i, s)
             i += 1
         if depth >= 4:
@@ -221,9 +425,55 @@ class MoreUiSpace():
 
             listbox.place(x=20, y=80)
 
+    def runDeleteQuery(self,newWindow,event):
+        widget = event.widget
+        selection = widget.curselection()
+        picked = widget.get(selection[0])
+        query = "delete from airline where airlinename = '"+ picked +"'"
+        print(query)
+        self.mycursor.execute(query)
+        self.db.commit()
+        newWindow.destroy()
 
+    def deleteAirline(self):
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.title("Airlines")
+        newWindow.geometry("500x500")
+        label = Label(newWindow, text="Select an airline to delete")
+        label.place(x=180, y=20)
 
+        listbox = Listbox(newWindow, width=70, height=15, fg="blue")
+        sql = "SELECT * FROM airline"
+        self.mycursor.execute(sql)
+        # get all airlines
+        airline = self.mycursor.fetchall()
+        i = 0
+        for row in airline:
+            listbox.insert(i, row[0])
+            i += 1
 
+        listbox.place(x=20, y=80)
+        # Double click event with mouse
+        listbox.bind('<Double-1>', partial(self.runDeleteQuery,newWindow))
+    def openViewCountries(self):
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.title("countries")
+        newWindow.geometry("500x500")
+        label = Label(newWindow, text="Viewing Countries GDP")
+        label.place(x=180, y=20)
+
+        listbox = Listbox(newWindow, width=70, height=15, fg="blue")
+        sql = "SELECT * FROM country"
+        self.mycursor.execute(sql)
+        # get all airlines
+        country= self.mycursor.fetchall()
+        i = 0
+        for row in country:
+            s = row[1] + " = " + str(row[2])
+            listbox.insert(i, s)
+            i += 1
+
+        listbox.place(x=20, y=80)
     def openSelectorMenu(self, savedSelection,selectingFrom):
         depth = 0
         newWindow = Toplevel(self.CMPT354)
@@ -241,7 +491,9 @@ class MoreUiSpace():
         sql = "SELECT * FROM Country"
         self.mycursor.execute(sql)
         # get all airlines
+
         country = self.mycursor.fetchall()
+        country.sort(key=lambda tup: tup[1])
         i = 0
         for row in country:
             listbox.insert(i, row[1])

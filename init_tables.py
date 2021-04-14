@@ -77,19 +77,16 @@ class Init:
         mycursor.execute(query)
         query = "CREATE TABLE IF NOT EXISTS Flight (FlightNumber VARCHAR(7) NOT NULL,DepartureTime INTEGER NOT NULL," \
                 "Price INTEGER NOT NULL,ArrivalTime INTEGER NOT NULL,LoadFactor INTEGER NOT NULL,AirlineName VARCHAR(" \
-                "100),FOREIGN KEY (AirlineName) REFERENCES Airline(AirlineName),AirplaneModelType VARCHAR(100) NOT " \
+                "100),FOREIGN KEY (AirlineName) REFERENCES Airline(AirlineName) on delete cascade,AirplaneModelType VARCHAR(100) NOT " \
                 "NULL,FOREIGN KEY (AirplaneModelType) REFERENCES Airplane(ModelName0),CodeDeparture CHAR(4)," \
                 "CodeArrival CHAR(4),FOREIGN KEY (CodeDeparture) REFERENCES Routes(CodeDeparture),FOREIGN KEY (" \
                 "CodeArrival) REFERENCES Routes(CodeArrival),PRIMARY KEY (FlightNumber, DepartureTime),CONSTRAINT " \
                 "CHKTime CHECK (ArrivalTime > DepartureTime)); "
         mycursor.execute(query)
-        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation) VALUES ('Air Wayne', 'Flag', " \
-                "100)"
+        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation, callsign) VALUES ('Air Wayne', 'MED', " \
+                "100, 'WW')"
         mycursor.execute(query)
-        query = "CREATE TABLE IF NOT EXISTS BasesOps(AirlineName VARCHAR(64),BaseOfOperation VARCHAR(255), FOREIGN KEY (AirlineName) REFERENCES Airline(AirlineName),FOREIGN KEY (BaseOfOperation) REFERENCES Airport(AirportCode),PRIMARY KEY (AirlineName,BaseOfOperation));"
-        mycursor.execute(query)
-        query = "CREATE TABLE IF NOT EXISTS AirplaneModels(AirlineName VARCHAR(64),AirplaneOperated VARCHAR(255),PRIMARY KEY (AirlineName,AirplaneOperated),FOREIGN KEY (AirlineName) REFERENCES Airline(AirlineName),FOREIGN KEY (AirplaneOperated) REFERENCES Airplane(ModelName0));"
-        mycursor.execute(query)
+
 
         query = "INSERT INTO Flight (FlightNumber, DepartureTime, Price , ArrivalTime, LoadFactor, AirlineName, " \
                 "AirplaneModelType, CodeDeparture,CodeArrival)VALUES (1,1,90,2,70,'Air Wayne', 'BOEING 737-800', " \
@@ -115,12 +112,13 @@ class Init:
         query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation, callsign) VALUES ('Air William', 'LOW', 80, 'WA');"
         mycursor.execute(query)
         db.commit()
-        # BaseOPs start here (Give each airline 100 airports)
 
-
-
-
-
+        mycursor.execute(Dbquery.updateRoutesDomesticModifierTourism())
+        db.commit()
+        mycursor.execute(Dbquery.updateRoutesDomesticBusiness())
+        db.commit()
+        #mycursor.execute(Dbquery.createTriggerQuery())
+        db.commit()
 
     @classmethod
     def fixairplanes(cls, db, mycursor):

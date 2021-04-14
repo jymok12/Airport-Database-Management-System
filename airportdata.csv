@@ -3,7 +3,7 @@ ZBAA,Beijing Capital International Airport,CN,40.0448,-116.3502,29676830,3810
 OMDB,Dubai International Airport,AE,25.151,-55.2152,3143568,4000
 KLAX,Los Angeles International Airport,US,33.5633,118.2429,23033432,3939
 RJTT,Haneda Airport,JP,35.3312,-139.4652,60399940,3360
-KORD,O'Hare International Airport,US,41.5843,87.5417,14910542,3962
+KORD,OHare International Airport,US,41.5843,87.5417,14910542,3962
 EGLL,Heathrow Airport,GB,51.2839,0.2741,20248752,3902
 VHHH,Hong Kong International Airport,HK,22.1832,-113.545,13529406,3800
 ZSPD,Shanghai Pudong International Airport,CN,31.0836,-121.4818,47811500,4000
@@ -29,7 +29,7 @@ VABB,Chhatrapati Shivaji International Airport,IN,19.0519,-72.5205,41088836,3660
 KSEA,Seattle-Tacoma International Airport,US,47.2656,122.1832,6469976,3627
 KLAS,McCarran International Airport,US,36.0448,115.0907,2697127,4423
 CYYZ,Toronto Pearson International Airport,CA,43.4036,79.375,11691915,3368
-ZGSZ,Shenzhen Bao'an International Airport,CN,22.3822,-113.484,17364624,3400
+ZGSZ,Shenzhen Baoan International Airport,CN,22.3822,-113.484,17364624,3400
 MMMX,Mexico City International Airport,MX,19.261,99.0419,48191336,3900
 KMCO,Orlando International Airport,US,28.2546,81.1832,2740066,3659
 ZPPP,Kunming Changshui International Airport,CN,25.0607,-102.5544,5789295,4000
@@ -42,7 +42,7 @@ UUEE,Sheremetyevo International Airport,RU,55.5822,-37.2453,25555470,3700
 RPLL,Ninoy Aquino International Airport,PH,14.3031,-121.0108,43359612,3737
 KMIA,Miami International Airport,US,25.4736,80.1726,5747967,3967
 KPHX,Phoenix Sky Harbor International Airport,US,33.2603,112.0043,6050747,3502
-ZLXY,Xi'an Xianyang International Airport,CN,34.2649,-108.4504,8628365,3000
+ZLXY,Xian Xianyang International Airport,CN,34.2649,-108.4504,8628365,3000
 YSSY,Sydney Airport,AU,-33.5646,-151.1037,8055244,3962
 KIAH,George Bush Intercontinental Airport,US,29.5904,95.2029,7244837,3658
 ZSSS,Shanghai Hongqiao International Airport,CN,31.1153,-121.1919,33009452,3400
@@ -160,7 +160,7 @@ KBNA,Nashville International Airport,US,36.0736,86.4055,1117236,3362
 LEAL,Alicante-Elche Airport,ES,38.1656,0.3329,852033,3000
 KAUS,Austin-Bergstrom International Airport,US,30.114,97.4012,526743,3734
 ZLLL,Lanzhou Zhongchuan International Airport,CN,36.3054,-103.3712,1983168,3600
-LFMN,Nice CÃ´te d'Azur Airport,FR,43.3955,-7.1254,2359747,2960
+LFMN,Nice CÃ´te dAzur Airport,FR,43.3955,-7.1254,2359747,2960
 SABE,Aeroparque Jorge Newbery,AR,-34.3332,58.2459,4755174,2100
 ZBYN,Taiyuan Wusu International Airport,CN,37.4449,-112.3741,963282,3600
 WAAA,Sultan Hasanuddin International Airport,ID,-5.0342,-119.3314,5079782,3500
@@ -630,7 +630,7 @@ VERC,Birsa Munda Airport,IN,23.1851,-85.1918,658211,2713
 SBSL,Marechal Cunha Machado International Airport,BR,-2.3513,44.141,641248,2385
 VERP,Swami Vivekananda Airport,IN,21.1052,-81.4419,2456840,2286
 WAPP,Pattimura Airport,ID,-3.4237,-128.052,209848,2500
-ZSSH,Huai'an Lianshui Airport,CN,33.4638,-119.0853,2290569,2400
+ZSSH,Huaian Lianshui Airport,CN,33.4638,-119.0853,2290569,2400
 RPLC,Clark International Airport,PH,15.1109,-120.3336,600188,3200
 ZYYJ,Yanji Chaoyangchuan Airport,CN,42.5258,-129.2704,164242,2600
 MTPP,Toussaint Louverture International Airport,HT,18.3448,72.1733,1306276,3040
@@ -716,7 +716,7 @@ SAZS,San Carlos de Bariloche Airport,AR,-41.0904,71.0927,14531,2348
 MRLB,Daniel Oduber Quirós International Airport,CR,10.3535,85.3244,105948,2750
 EDJA,Memmingen Airport,DE,47.5933,-10.1437,530478,2981
 WITT,Sultan Iskandar Muda International Airport,ID,5.3124,-95.2513,172817,3000
-NTAA,Faa'a International Airport,PF,-17.3324,149.364,0,3420
+NTAA,Faaa International Airport,PF,-17.3324,149.364,0,3420
 RJSA,Aomori Airport,JP,40.44,-140.412,374572,3000
 SKCC,Camilo Daza International Airport,CO,7.5539,72.3042,658426,1933
 UUBW,Ramenskoye Airport,RU,55.3312,-38.0906,863809,5402
@@ -881,7 +881,7 @@ FKKD,Douala International Airport,CM,4.0021,-9.431,288836,2853
 SAWC,Comandante Armando Tola International Airport,AR,-50.1649,72.0312,531,2649
 MHTG,Toncontín International Airport,HN,14.0342,87.1301,1946575,2163
 HELX,Luxor International Airport,EG,25.4015,-32.4223,155754,3000
-NZNR,Hawke's Bay Airport,NZ,-39.2806,-176.5219,4214,1750
+NZNR,Hawkes Bay Airport,NZ,-39.2806,-176.5219,4214,1750
 EPRZ,Rzeszów-Jasionka Airport,PL,50.0636,-22.0108,591916,3200
 MMTO,Toluca International Airport,MX,19.2013,99.3357,2175581,4310
 VTST,Trang Airport,TH,7.3031,-99.37,1138254,2100
@@ -899,7 +899,7 @@ VILH,Kushok Bakula Rimpochee Airport,IN,34.0809,-77.3247,3333,2752
 VOBZ,Vijayawada Airport,IN,16.32,-80.4,1825313,2286
 EGHH,Bournemouth Airport,GB,50.4648,1.5033,0,2271
 VABP,Raja Bhoj Airport,IN,23.1715,-77.2015,732508,2750
-FZAA,N'djili Airport,CD,-4.2309,-15.2641,3051848,4700
+FZAA,Ndjili Airport,CD,-4.2309,-15.2641,3051848,4700
 VTPP,Phitsanulok Airport,TH,16.4623,-100.1655,254525,3000
 RJNS,Shizuoka Airport,JP,34.4746,-138.112,0,2500
 SANT,Teniente General Benjamín Matienzo International Airport,AR,-26.5027,65.0617,27569,2900
@@ -1231,7 +1231,7 @@ LTBR,Yenişehir Airport,TR,40.1518,-29.3345,380936,2993
 RJCO,Okadama Airport,JP,43.0703,-141.2252,1512837,1500
 RJDT,Tsushima Airport,JP,34.1706,-129.1952,30496,2000
 RPMG,Dipolog Airport,PH,8.3605,-123.2002,288078,2100
-LIRZ,Perugia San Francesco d'Assisi - Umbria International Airport,IT,43.0545,-12.3047,204420,2199
+LIRZ,Perugia San Francesco dAssisi - Umbria International Airport,IT,43.0545,-12.3047,204420,2199
 GUCY,Conakry International Airport,GN,9.3437,13.3643,134070,3300
 WMKD,Sultan Haji Ahmad Shah Airport,MY,3.4611,-103.1232,57972,2804
 LTCT,Iğdır Airport,TR,39.5836,-43.5236,164782,3000
@@ -1255,7 +1255,7 @@ SKLT,Alfredo Vásquez Cobo International Airport,CO,-4.1136,69.5635,39055,1880
 RCYU,Hualien Airport,TW,24.0123,-121.3705,170093,2750
 UWLW,Ulyanovsk Vostochny Airport,RU,54.2358,-48.4804,1104144,5000
 UNWW,Spichenkovo Airport,RU,53.4836,-86.5242,12017,2680
-LFMU,Béziers Cap d'Agde Airport,FR,43.1924,-3.2112,289177,2000
+LFMU,Béziers Cap dAgde Airport,FR,43.1924,-3.2112,289177,2000
 KMTJ,Montrose Regional Airport,US,38.3035,107.5338,7274,3048
 YSDU,Dubbo City Regional Airport,AU,-32.13,-148.343,4376,1708
 MPMG,"Albrook ""Marcos A. Gelabert"" International Airport",PA,8.5824,79.332,0,1800
@@ -1312,7 +1312,7 @@ RPMP,Pagadian Airport,PH,7.4938,-123.2729,84930,1880
 VTPM,Mae Sot Airport,TH,16.4159,-98.3242,126578,1500
 USCM,Magnitogorsk International Airport,RU,53.2336,-58.4524,28584,3250
 EGNJ,Humberside Airport,GB,53.3428,0.2103,266581,2196
-TFFG,L'Espérance Airport,MF,18.0602,63.0256,478338,1200
+TFFG,LEspérance Airport,MF,18.0602,63.0256,478338,1200
 LFOT,Tours Val de Loire Airport,FR,47.2555,-0.4323,94281,2404
 LTFC,Isparta Süleyman Demirel Airport,TR,37.5154,-30.2255,87907,3000
 SBJR,Jacarepaguá Airport,BR,-22.5915,43.2212,2408562,900
@@ -1445,7 +1445,7 @@ HKEL,Eldoret International Airport,KE,0.2416,-35.142,437392,3475
 YGEL,Geraldton Airport,AU,-28.4746,-114.4225,73,1981
 LGIO,Ioannina National Airport,GR,39.4147,-20.4921,121671,2400
 ENRA,Mo i Rana Airport Røssvoll,NO,66.215,-14.1806,13091,871
-KMVY,Martha's Vineyard Airport,US,41.2335,70.3652,25195,1678
+KMVY,Marthas Vineyard Airport,US,41.2335,70.3652,25195,1678
 KLCH,Lake Charles Regional Airport,US,30.0734,93.1324,107631,1585
 LFGJ,Dole-Jura Airport,FR,47.0234,-5.2606,83878,2800
 KFLO,Florence Regional Airport,US,34.1107,79.4326,45439,1829
@@ -1460,7 +1460,7 @@ RPUY,Cauayan Airport,PH,16.5548,-121.4511,349172,2096
 RPMN,Sanga-Sanga Airport,PH,5.0249,-119.4435,1875,1930
 PASC,Deadhorse Airport,US,70.1141,148.2754,495,1981
 HHAS,Asmara International Airport,ER,15.1731,-38.5439,329469,3000
-FEFF,Bangui M'Poko International Airport,CF,4.2355,-18.3108,59478,2600
+FEFF,Bangui MPoko International Airport,CF,4.2355,-18.3108,59478,2600
 ESGJ,Jönköping Airport,SE,57.453,-14.0418,59274,2203
 ENVD,Vadsø Airport,NO,70.0355,-29.5041,5431,997
 LFRQ,Quimper-Cornouaille Airport,FR,47.583,4.1004,6142,2150
@@ -1473,7 +1473,7 @@ LGLM,Lemnos International Airport,GR,39.5502,-25.1411,1685,3016
 BIEG,Egilsstaðir Airport,IS,65.17,14.2405,5563,2000
 KEAT,Pangborn Memorial Airport,US,47.2353,120.1222,12335,1359
 LTAL,Kastamonu Airport,TR,41.1901,-33.4746,79126,2250
-EGHE,St Mary's Airport (Isles of Scilly),GB,49.5448,6.173,0,525
+EGHE,St Marys Airport (Isles of Scilly),GB,49.5448,6.173,0,525
 WALS,Temindung Airport,ID,-0.2853,-117.0922,230574,1160
 KSAW,Sawyer International Airport,US,46.2113,87.2343,17273,3770
 PABR,Wiley Post-Will Rogers Memorial Airport,US,71.1708,156.4558,5984,2164
@@ -1522,7 +1522,7 @@ GMMI,Essaouira-Mogador Airport,MA,31.2351,9.4054,133243,2100
 LDOS,Osijek Airport,HR,45.2746,-18.4837,124881,2500
 EFKE,Kemi-Tornio Airport,FI,65.4645,-24.3505,29867,2503
 KROW,Roswell International Air Center,US,33.1806,104.3152,5437,3963
-EGHC,Land's End Airport,GB,50.061,5.4014,264276,784
+EGHC,Lands End Airport,GB,50.061,5.4014,264276,784
 VVTH,Dong Tac Airport,VN,13.0258,-109.2002,540758,2902
 MMMA,General Servando Canales International Airport,MX,25.4612,97.3131,152870,2300
 MPSM,Scarlett Martínez Airport,PA,8.2233,80.074,19835,2450
@@ -1627,10 +1627,10 @@ NTMN,Atuona Airport,PF,-9.4607,139.0047,0,1215
 NTGF,Fakarava Airport,PF,-16.0315,145.3925,0,1400
 ENHK,Hasvik Airport,NO,70.2912,-22.0823,2763,909
 RPVF,Catarman National Airport,PH,12.3009,-124.381,213928,1600
-PASM,St. Mary's Airport (Alaska),US,62.0339,163.1807,572,1831
+PASM,St. Marys Airport (Alaska),US,62.0339,163.1807,572,1831
 PAVD,Valdez Airport,US,61.0802,146.1453,1445,1981
 LKKV,Karlovy Vary Airport,CZ,50.1211,-12.5454,240250,2150
-DAFH,Hassi R'Mel Airport,DZ,32.5553,-3.1841,6905,2998
+DAFH,Hassi RMel Airport,DZ,32.5553,-3.1841,6905,2998
 ENHV,Honningsvåg Airport Valan,NO,71.0035,-25.5901,4172,880
 PAWG,Wrangell Airport,US,56.2904,132.2212,602,1828
 DAOI,Chlef International Airport,DZ,36.1255,-1.2,277443,2800
@@ -1693,7 +1693,7 @@ GMTA,Cherif Al Idrissi Airport,MA,35.1037,3.5022,203302,2500
 LGKZ,Kozani National Airport,GR,40.171,-21.5027,54704,1822
 LGKA,Kastoria National Airport,GR,40.2647,-21.1656,32708,2773
 LGKS,Kasos Island Public Airport,GR,35.2517,-26.5436,630,982
-DAUL,L'Mekrareg Airport,DZ,33.4552,-2.5541,29601,3803
+DAUL,LMekrareg Airport,DZ,33.4552,-2.5541,29601,3803
 ZMBU,Baruun-Urt Airport,MN,46.3937,-113.1706,1329,2200
 KILG,Wilmington Airport (Delaware),US,39.4043,75.3624,114114,2137
 RPUR,Dr. Juan C. Angara Airport,PH,15.4349,-121.3007,176867,1200

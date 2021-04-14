@@ -157,7 +157,10 @@ class UserInterface:
         self.mycursor.execute(sql)
         # get all airports
         airports = self.mycursor.fetchall()
+        airports.sort(key=lambda tup: tup[5])
+        airports.reverse()
         i = 0
+
         for row in airports:
             listbox.insert(i, row[1])
             i += 1
@@ -181,6 +184,10 @@ class UserInterface:
         self.mycursor.execute(Dbquery.updateRoutesQuery())
         self.db.commit()
         self.mycursor.execute(Dbquery.updateRoutesBuisnessQuery())
+        self.db.commit()
+        self.mycursor.execute(Dbquery.updateRoutesDomesticModifierTourism())
+        self.db.commit()
+        self.mycursor.execute(Dbquery.updateRoutesDomesticBusiness())
         self.db.commit()
     def runCountryGDPquery(self,editgdpMenu):
         print("usertext1 = " + self.userText)
@@ -249,10 +256,12 @@ class UserInterface:
         self.mycursor.execute(sql)
         # get all airlines
         airport = self.mycursor.fetchall()
+        airport.sort(key=lambda tup: tup[2])
+        airport.reverse()
         i = 0
         for row in airport:
 
-            s = row[0]+"-"+row[1]+", Tourist Demand =  "+str(row[2])+ ", Business Demand = "+ str(row[3]) + ", " + row[4]
+            s = row[0]+"-"+row[1]+", Tourist Demand =  "+str(row[2])+ ", Business Demand = "+ str(row[3])
             listbox.insert(i, s)
             i += 1
 
@@ -274,8 +283,11 @@ class UserInterface:
 
         listbox = Listbox(my_frame, width=70, height=15, fg="blue", yscrollcommand = scrollbar)
         sql = "SELECT * FROM airport"
+
         self.mycursor.execute(sql)
         airport= self.mycursor.fetchall()
+        airport.sort(key=lambda tup: tup[5])
+        airport.reverse()
         i = 0
         for row in airport:
             if row[5] > 1000000:
@@ -415,6 +427,7 @@ class UserInterface:
                                                               "'"+airline+"') "
         self.mycursor.execute(sql)
         airport = self.mycursor.fetchall()
+
         i = 0
         for row2 in airport:
             listbox.insert(i, row2[0])
