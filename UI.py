@@ -2,6 +2,7 @@ from functools import partial
 from tkinter import *
 from dbquery import Dbquery
 from moreui import MoreUiSpace
+from greatecirclecaculator import GreatCircle
 class UserInterface:
 
     def __init__(self, mycursor, db):
@@ -189,6 +190,7 @@ class UserInterface:
         self.db.commit()
         self.mycursor.execute(Dbquery.updateRoutesDomesticBusiness())
         self.db.commit()
+        self.updateFlight()
     def runCountryGDPquery(self,editgdpMenu):
         print("usertext1 = " + self.userText)
         print("usertext2 = " + self.userText2)
@@ -230,10 +232,59 @@ class UserInterface:
         submitButton.place(x=0, y=275)
 
 
+
         runButton = Button(editgdpMenu, text="Run query with selected data",
                            command=partial(self.runCountryGDPquery, editgdpMenu))
         runButton.place(x=0, y=350)
         editgdpMenu.mainloop()
+
+    def updateairlineinfo(self):
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.title("Update Reputation Data by double clicking an airline")
+        newWindow.geometry("500x500")
+        label = Label(newWindow, text="Select an airline to change its reputation")
+        label.place(x=180, y=20)
+
+        listbox = Listbox(newWindow, width=70, height=15, fg="blue")
+        sql = "SELECT * FROM airline"
+        self.mycursor.execute(sql)
+        # get all airlines
+        airline = self.mycursor.fetchall()
+        i = 0
+        for row in airline:
+            listbox.insert(i, row[0])
+            i += 1
+
+        listbox.place(x=20, y=80)
+        # Double click event with mouse
+        listbox.bind('<Double-1>', self.AirlineRepUpdate)
+
+    def AirlineRepUpdate(self, event):
+        widget = event.widget
+        selection = widget.curselection()
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.geometry("500x500")
+        airline = widget.get(selection[0])
+        newWindow.title("Update Reputation Data for " + airline)
+        newRep = Entry(newWindow)
+        newRep.place(x=250, y=170)
+        label = Label(newWindow, text="Input the new Reputation for " + airline)
+        label.place(x=10, y=170)
+        print(newRep)
+        button2 = Button(newWindow, text="Display Results",
+                         command=partial(self.RepUpdateSQL, newRep, newWindow, airline))
+        button2.place(x=350, y=200, height=50, width=100)
+    def RepUpdateSQL(self,newRep,window,airline):
+        newRep1 = newRep.get()
+        sql = """UPDATE airline
+                 SET Reputation = """+ str(newRep1) +"""
+                WHERE AirlineName = '"""+ airline +"""' ;"""
+        print(sql)
+        self.mycursor.execute(sql)
+        label = Label(window, text= airline + "'s reputation has been updated!")
+        label.place(x=10, y=370)
+        self.updateFlight()
+
     def AirportRouteDetails(self,event):
         newWindow = Toplevel(self.CMPT354)
         newWindow.title("Route Details")
@@ -317,8 +368,70 @@ class UserInterface:
         button.place(x=100, y=500, height=100, width=100)  # Move the button around
         button = Button(self.CMPT354, text="Routes", command=self.openRoutesFromAirportWindow)
         button.place(x=200, y=500, height=100, width=100)  # Move the button around
+        button = Button(self.CMPT354, text="Update Reputation", command=self.updateairlineinfo)
+        button.place(x=420, y=425, height=50, width=100)  # Move the button around
+        button = Button(self.CMPT354, text="Update Prices", command=self.updateFlightPrices)
+        button.place(x=500, y=600, height=50, width=100)  # Move the button around
 
         self.extraUISpace.showButtons()
+    def updateFlightPrices(self):
+
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.title("Select a flight")
+        newWindow.geometry("500x500")
+        label = Label(newWindow, text="Select a flight to modify the price in")
+        label.place(x=180, y=20)
+
+
+        listbox = Listbox(newWindow, width=70, height=15, fg="blue")
+        sql = "SELECT * FROM Flight"
+        self.mycursor.execute(sql)
+        # get all airlines
+
+        country = self.mycursor.fetchall()
+        country.sort(key=lambda tup: tup[1])
+        i = 0
+        for row in country:
+            s = row[0] + "," + row[5]
+            listbox.insert(i, s)
+            i += 1
+
+        listbox.place(x=20, y=80)
+
+        # Double click event with mouse
+        listbox.bind('<Double-1>',
+                     partial(self.openPriceInsertMenu))
+    def openPriceInsertMenu(self,event):
+        widget = event.widget
+        selection = widget.curselection()
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.geometry("500x500")
+        data = widget.get(selection)
+        data = data.split(",")
+        airline = data[1]
+        airline.strip()
+        flightNumber = data[0]
+        newWindow.title("Update")
+        newPrice = Entry(newWindow)
+        newPrice.place(x=250, y=170)
+        label = Label(newWindow, text="Input the new price for the route")
+        label.place(x=10, y=170)
+        print(newPrice)
+        button2 = Button(newWindow, text="Display Results",
+                         command=partial(self.priceUpdateSql, newPrice, newWindow, airline, flightNumber))
+        button2.place(x=350, y=200, height=50, width=100)
+
+    def priceUpdateSql(self, newPrice, window, airline, flightNumber):
+        newPrice = newPrice.get()
+        sql = """UPDATE flight
+                 SET flight.price = """ + str(newPrice) + """
+                WHERE flight.AirlineName = '""" + airline + """' AND flight.flightnumber = '""" + flightNumber + "'"
+        print(sql)
+        self.mycursor.execute(sql)
+        label = Label(window, text="Price has been updated!")
+        label.place(x=10, y=370)
+        self.updateFlight()
+
     def openGetTextMenu(self):
         print("pressed")
     def saveTextSelection(self,textfield,theRoottk):
@@ -454,7 +567,90 @@ class UserInterface:
 
         listbox.pack(pady=10)
         my_frame.place(x=10, y=40)
+    def updateFlight(self):
+        self.mycursor.execute("select * from flight")
+        flightdata = self.mycursor.fetchall()
+        print(flightdata)
+        for row in flightdata:
+            airline = row[5]
 
+            price = row[2]
+
+
+            departure = row[7]
+
+            arrival = row[8]
+            flightNumber = row[0]
+            print(airline)
+            self.mycursor.execute("select reputation from airline where airline.airlinename = '" + airline + "'")
+            reputation = self.mycursor.fetchall()
+            reputation = reputation[0]
+            reputation = reputation[0]
+
+
+            self.mycursor.execute( "select r.touristDemand+r.buisnessDemand from routes r, airport a, airport b where r.codedeparture = a.AirportCode AND r.codeArrival = b.AirportCode AND a.airportcode = '" + departure + "' AND b.airportcode = '"+ arrival+ "'")
+
+            demand = self.mycursor.fetchall()
+            demand = demand[0]
+            demand = demand[0]
+            print("demand = ")
+            print(demand)
+
+
+
+            airplaneUsed = row[6]
+
+            query = "select * from airplane where airplane.modelname0 = '" + airplaneUsed + "'"
+            self.mycursor.execute(query)
+            helpme = self.mycursor.fetchall()
+            data = helpme[0]
+            capacity = float(data[2])
+
+            query = "select a.nscoordinates, a.ewcoordinates, b.nscoordinates,b.ewcoordinates from airport a, airport b where a.airportCode = '" + departure + "' AND b.airportCode = '" + arrival + "'"
+            query = query.replace("\n", "")
+            self.mycursor.execute(query)
+            coords = self.mycursor.fetchall()
+            greatCircle = GreatCircle()
+            for row in coords:
+                greatCircle.latitude1_degrees = float(row[0])
+                greatCircle.latitude2_degrees = float(row[2])
+                greatCircle.longitude1_degrees = float(row[1])
+                greatCircle.longitude2_degrees = float(row[3])
+
+            greatCircle.calculate()
+            dist = greatCircle.distance_kilometres
+            dist = dist * 0.539957
+            basecost = 35
+            basecost = basecost + (dist / 10)
+            reputation = reputation / 100
+            reputation += 0.3
+            print("reputation = ")
+            print(reputation)
+            demand *= reputation
+            pricefactor = price/ basecost
+            print("demand = ")
+            print(demand)
+            print("capacity = ")
+            print(capacity)
+            loadFactor = demand / (capacity + 1)
+            print("loadfactor = ")
+            print(loadFactor)
+            loadFactor /= pricefactor
+            print("loadfactor = ")
+            print(loadFactor)
+            loadFactor *= 100
+
+            print("demand = ")
+            print(demand)
+
+            if loadFactor > 100:
+                loadFactor = 100
+            print("loadfactor = ")
+            print(loadFactor)
+            query = "update flight set flight.loadfactor = " + str(loadFactor) + " where flight.airlinename  = '"+ airline +"' AND flight.flightNumber = '"+ flightNumber+ "'"
+            print(query)
+            self.mycursor.execute(query)
+            self.db.commit()
     def displayAirplaneOperation(self, airline, detailWindow):
 
         my_frame = Frame(detailWindow)
@@ -511,7 +707,7 @@ class UserInterface:
         airline = self.mycursor.fetchall()
         i = 0
         for row in airline:
-            s = row[0] + ", reputation = " + str(row[2])
+            s = row[0] + ", reputation = " + str(row[2]) + "Cost Structure = " + str(row[1])
             listbox.insert(i, s)
             i += 1
 

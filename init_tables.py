@@ -119,6 +119,28 @@ class Init:
         db.commit()
         #mycursor.execute(Dbquery.createTriggerQuery())
         db.commit()
+        sql = "drop TRIGGER if exists before_reputation_update"
+        mycursor.execute(sql)
+        db.commit()
+
+        sql1 = "CREATE TRIGGER before_reputation_update \
+                            BEFORE UPDATE \
+                            ON airline FOR EACH ROW \
+                            BEGIN \
+                                DECLARE errorMessage VARCHAR(255); \
+                                DECLARE errorMessage1 VARCHAR(255); \
+                                SET errorMessage = CONCAT('The reputation cannot be a negative number'); \
+                                SET errorMessage1 = CONCAT('The reputation cannot be greater than 100'); \
+                                IF NEW.Reputation < 0 THEN \
+                                    SIGNAL SQLSTATE '45000' \
+                                        SET MESSAGE_TEXT = errorMessage; \
+                                ELSEIF NEW.REPUTATION > 100 THEN \
+                                    SIGNAL SQLSTATE '45000' \
+                                        SET MESSAGE_TEXT = errorMessage1; \
+                                END IF;\
+                            END"
+        mycursor.execute(sql1)
+        db.commit()
 
     @classmethod
     def fixairplanes(cls, db, mycursor):

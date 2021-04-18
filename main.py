@@ -9,11 +9,11 @@ from dbquery import Dbquery
 from init_tables import Init
 from UI import UserInterface
 
-
+pswd = "mju765"
 db = mysql.connector.connect(
         host="localhost",
         user="root",
-        passwd="mju765")
+        passwd=pswd)
 mycursor = db.cursor()
 query = "SELECT EXISTS(SELECT 1 FROM information_schema.schemata WHERE schema_name = '354airplaneProject1');"
 mycursor.execute(query)
@@ -26,7 +26,7 @@ if test == 0:
         db = mysql.connector.connect(
                 host="localhost",
                 user="root",
-                passwd="mju765",
+                passwd=pswd,
                 database="354airplaneProject1"
             )
         mycursor = db.cursor()
@@ -37,7 +37,7 @@ else:
         db = mysql.connector.connect(
                 host="localhost",
                 user="root",
-                passwd="mju765",
+                passwd=pswd,
                 database="354airplaneProject1"
         )
         mycursor = db.cursor()

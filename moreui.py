@@ -33,59 +33,12 @@ class MoreUiSpace():
         button.place(x=500, y=650, height=50, width=100)
         button = Button(self.CMPT354, text="Airport Flights", command=self.openNewWindowForQ4)
         button.place(x=600, y=650, height=50, width=100)
-        button = Button(self.CMPT354, text="Update Reputation", command=self.updateairlineinfo)
-        button.place(x=420, y=425, height=50, width=100)  # Move the button around
-        button = Button(self.CMPT354, text="Load Trigger", command=self.createTriggers)
-        button.place(x=600, y=425, height=50, width=100)  # Move the button around
+
+
         # Move the button around
 
-    def updateairlineinfo(self):
-        newWindow = Toplevel(self.CMPT354)
-        newWindow.title("Update Reputation Data by double clicking an airline")
-        newWindow.geometry("500x500")
-        label = Label(newWindow, text="Select an airline to change its reputation")
-        label.place(x=180, y=20)
-
-        listbox = Listbox(newWindow, width=70, height=15, fg="blue")
-        sql = "SELECT * FROM airline"
-        self.mycursor.execute(sql)
-        # get all airlines
-        airline = self.mycursor.fetchall()
-        i = 0
-        for row in airline:
-            listbox.insert(i, row[0])
-            i += 1
-
-        listbox.place(x=20, y=80)
-        # Double click event with mouse
-        listbox.bind('<Double-1>', self.AirlineRepUpdate)
 
 
-    def AirlineRepUpdate(self, event):
-        widget = event.widget
-        selection = widget.curselection()
-        newWindow = Toplevel(self.CMPT354)
-        newWindow.geometry("500x500")
-        airline = widget.get(selection[0])
-        newWindow.title("Update Reputation Data for " + airline)
-        newRep = Entry(newWindow)
-        newRep.place(x=250, y=170)
-        label = Label(newWindow, text="Input the new Reputation for "+ airline)
-        label.place(x=10, y=170)
-        print(newRep)
-        button2 = Button(newWindow, text="Display Results",
-                         command=partial(self.RepUpdateSQL, newRep, newWindow, airline))
-        button2.place(x=350, y=200, height=50, width=100)
-
-    def RepUpdateSQL(self,newRep,window,airline):
-        newRep1 = newRep.get()
-        sql = """UPDATE airline
-                 SET Reputation = """+ str(newRep1) +"""
-                WHERE AirlineName = '"""+ airline +"""' ;"""
-        print(sql)
-        self.mycursor.execute(sql)
-        label = Label(window, text= airline + "'s reputation has been updated!")
-        label.place(x=10, y=370)
     def doQueryOne(self):
         print("testing query 1: button works")
 
@@ -423,10 +376,10 @@ class MoreUiSpace():
 
 
 
+
         print("pricefactor = ")
         print(pricefactor)
-        wealthMultipier = gdp/40000
-        cost *= wealthMultipier
+
 
 
         loadFactor *= 100
@@ -447,6 +400,9 @@ class MoreUiSpace():
 
 
         newWindow.destroy()
+
+
+
     def openSelectorMenuWithEvent(self,savedSelection,selectingFrom, depth, newWindow,event):
 
 
@@ -581,28 +537,5 @@ class MoreUiSpace():
         # Double click event with mouse
         listbox.bind('<Double-1>', partial(self.openSelectorMenuWithEvent,savedSelection,selectingFrom, depth, newWindow))
 
-    def createTriggers(self):
-        sql = "drop TRIGGER if exists before_reputation_update"
-        self.mycursor.execute(sql)
-        self.db.commit()
-
-        sql1 = "CREATE TRIGGER before_reputation_update \
-                    BEFORE UPDATE \
-                    ON airline FOR EACH ROW \
-                    BEGIN \
-                        DECLARE errorMessage VARCHAR(255); \
-                        DECLARE errorMessage1 VARCHAR(255); \
-                        SET errorMessage = CONCAT('The reputation cannot be a negative number'); \
-                        SET errorMessage1 = CONCAT('The reputation cannot be greater than 100'); \
-                        IF NEW.Reputation < 0 THEN \
-                            SIGNAL SQLSTATE '45000' \
-                                SET MESSAGE_TEXT = errorMessage; \
-                        ELSEIF NEW.REPUTATION > 100 THEN \
-                            SIGNAL SQLSTATE '45000' \
-                                SET MESSAGE_TEXT = errorMessage1; \
-                        END IF;\
-                    END"
-        self.mycursor.execute(sql1)
-        self.db.commit()
 
 
