@@ -32,7 +32,7 @@ if test == 0:
         mycursor = db.cursor()
         ui = UserInterface(mycursor, db)
         Init.inittables(db, mycursor)
-        ui.Update_With_Trigger()
+
 else:
         db = mysql.connector.connect(
                 host="localhost",

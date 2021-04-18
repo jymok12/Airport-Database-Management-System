@@ -15,27 +15,77 @@ class MoreUiSpace():
         print("exampleButtonPressed")\
 
     def showButtons(self):
-        button = Button(self.CMPT354, text="this is an example button", command=self.pressedExampleButton)
-        button.place(x = 0, y= 650)
+
         button = Button(self.CMPT354, text="Add Flight", command=self.flightSelector)
         button.place(x=400, y=500, height=100, width=100)  # Move the button around
         button = Button(self.CMPT354, text="Delete Airline", command=self.deleteAirline)
         button.place(x=00, y=500, height=100, width=100)  # Move the button around
-        button = Button(self.CMPT354, text="Create Random Airline", command=self.createRandomAirline)
+        button = Button(self.CMPT354, text="Make Rand Airline", command=self.createRandomAirline)
         button.place(x=300, y=500, height=100, width=100)  # Move the button around
         button = Button(self.CMPT354, text="View Flights", command=self.viewFlights)
         button.place(x=500, y=500, height=100, width=100)  # Move the button around
 
         button = Button(self.CMPT354, text="View Countries", command=self.openViewCountries)
         button.place(x=600, y=500, height=100, width=100)  # Move the button around
-        button = Button(self.CMPT354, text="Query1 TEST", command=self.openNewWindowForQ1)
-        button.place(x=400, y=650, height=50, width=100)
-        button = Button(self.CMPT354, text="Query2 TEST", command=self.openNewWindowForQ2)
+        button = Button(self.CMPT354, text="Show Demand in Range", command=self.openNewWindowForQ1)
+        button.place(x=300, y=650, height=50, width=200)
+        button = Button(self.CMPT354, text="Show Demand", command=self.openNewWindowForQ2)
         button.place(x=500, y=650, height=50, width=100)
-        button = Button(self.CMPT354, text="Query4 TEST", command=self.openNewWindowForQ4)
+        button = Button(self.CMPT354, text="Airport Flights", command=self.openNewWindowForQ4)
         button.place(x=600, y=650, height=50, width=100)
+        button = Button(self.CMPT354, text="Update Reputation", command=self.updateairlineinfo)
+        button.place(x=420, y=425, height=50, width=100)  # Move the button around
+        button = Button(self.CMPT354, text="Load Trigger", command=self.createTriggers)
+        button.place(x=600, y=425, height=50, width=100)  # Move the button around
         # Move the button around
 
+    def updateairlineinfo(self):
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.title("Update Reputation Data by double clicking an airline")
+        newWindow.geometry("500x500")
+        label = Label(newWindow, text="Select an airline to change its reputation")
+        label.place(x=180, y=20)
+
+        listbox = Listbox(newWindow, width=70, height=15, fg="blue")
+        sql = "SELECT * FROM airline"
+        self.mycursor.execute(sql)
+        # get all airlines
+        airline = self.mycursor.fetchall()
+        i = 0
+        for row in airline:
+            listbox.insert(i, row[0])
+            i += 1
+
+        listbox.place(x=20, y=80)
+        # Double click event with mouse
+        listbox.bind('<Double-1>', self.AirlineRepUpdate)
+
+
+    def AirlineRepUpdate(self, event):
+        widget = event.widget
+        selection = widget.curselection()
+        newWindow = Toplevel(self.CMPT354)
+        newWindow.geometry("500x500")
+        airline = widget.get(selection[0])
+        newWindow.title("Update Reputation Data for " + airline)
+        newRep = Entry(newWindow)
+        newRep.place(x=250, y=170)
+        label = Label(newWindow, text="Input the new Reputation for "+ airline)
+        label.place(x=10, y=170)
+        print(newRep)
+        button2 = Button(newWindow, text="Display Results",
+                         command=partial(self.RepUpdateSQL, newRep, newWindow, airline))
+        button2.place(x=350, y=200, height=50, width=100)
+
+    def RepUpdateSQL(self,newRep,window,airline):
+        newRep1 = newRep.get()
+        sql = """UPDATE airline
+                 SET Reputation = """+ str(newRep1) +"""
+                WHERE AirlineName = '"""+ airline +"""' ;"""
+        print(sql)
+        self.mycursor.execute(sql)
+        label = Label(window, text= airline + "'s reputation has been updated!")
+        label.place(x=10, y=370)
     def doQueryOne(self):
         print("testing query 1: button works")
 
@@ -49,7 +99,7 @@ class MoreUiSpace():
         newWindow = Toplevel(self.CMPT354)
         newWindow.geometry("500x500")
         newWindow.title("Query 1")
-        label = Label(newWindow, text="Please input the parameters for running this Query")
+        label = Label(newWindow, text="Showing routes ordered by demand")
         label.place(x=120, y=20)
         lowerlimit = Entry(newWindow)
         lowerlimit.place(x=150, y=120)
@@ -114,7 +164,7 @@ class MoreUiSpace():
         sql = """SELECT DISTINCT CodeDeparture, CodeArrival, TouristDemand
                        FROM Routes
                        ORDER BY TouristDemand ASC
-                       LIMIT 50;"""
+                       limit 4000"""
         self.mycursor.execute(sql)
         print("execute")
         result = self.mycursor.fetchall()
@@ -122,7 +172,7 @@ class MoreUiSpace():
         listbox = Listbox(window, width=50, height=10, fg="blue")
         i = 0
         for row in result:
-            s = row[0] + " to " + row[1]
+            s = row[0] + " to " + row[1] + "has demand: " + str(row[2])
             listbox.insert(i, s)
         listbox.place(x=50, y=270)
 
@@ -130,13 +180,13 @@ class MoreUiSpace():
         sql = """SELECT DISTINCT CodeDeparture, CodeArrival, TouristDemand
                            FROM Routes
                            ORDER BY TouristDemand DESC
-                           LIMIT 50;"""
+                           limit 4000"""
         self.mycursor.execute(sql)
         result = self.mycursor.fetchall()
         listbox = Listbox(window, width=50, height=10, fg="blue")
         i = 0
         for row in result:
-            s = row[0] + " to " + row[1]
+            s = row[0] + " to " + row[1] + " has demand: " + str(row[2])
             listbox.insert(i, s)
             i += 1
         listbox.place(x=50, y=270)
@@ -182,8 +232,8 @@ class MoreUiSpace():
         newWindow.geometry("1000x500")
         label = Label(newWindow, text="Viewing Flights")
         label.place(x=180, y=20)
-
-        listbox = Listbox(newWindow, width=150, height=15, fg="blue")
+        scrollbar = Scrollbar(newWindow, orient=VERTICAL)
+        listbox = Listbox(newWindow, width=150, height=15, fg="blue", yscrollcommand=scrollbar)
         sql = "SELECT * FROM flight"
         self.mycursor.execute(sql)
         # get all airlines
@@ -224,11 +274,13 @@ class MoreUiSpace():
     def getsqlCountry(self, picked):
         sql = "SELECT * FROM testairports a, country c where a.CountryID = c.countryKey AND c.countryname = '"+ picked + "'"
         sql = sql.replace("\n", "")
+        print(sql)
         return(sql)
     def getsqlRoute(self, picked):
         picked = picked.split(",")
         picked = picked[0]
         sql = "SELECT * FROM routes r where r.codedeparture = '" + picked + "'"
+        print(sql)
         sql = sql.replace("\n", "")
         return(sql)
     def getsqlAirline(self, savedSelection):
@@ -273,6 +325,7 @@ class MoreUiSpace():
         print(maxlen2)
         minlen = min(maxlen,maxlen2)
         print(maxlen)
+
         query = "select * from airplane ap where ap.runway11 <= "+str(minlen)+ " AND ap.planerange7 >= " + str(dist)
         savedSelection.append(dist)
 
@@ -326,7 +379,9 @@ class MoreUiSpace():
         if airlineType == "HIGH":
             multiplier = 1.1
             cost = 50
+        basecost = 35
         range = float(savedSelection[4])
+        basecost = basecost+(range/10)
         cost = cost+(range/10)*multiplier
         airplane = savedSelection[5]
         airplane = airplane.split(",")
@@ -354,7 +409,7 @@ class MoreUiSpace():
         reputation = reputation/100
         reputation += 0.3
         demand *= reputation
-        loadFactor = capacity/demand
+        loadFactor = demand/(capacity+1)
         query = "select c.gdpPercapita+d.gdppercapita from country c, country d, airport a, airport b where a.CountryID = c.CountryKey AND b.CountryID = d.CountryKey AND a.AirportCode ='" + airport1 + "' AND b.airportCode = '" + airport2 +"'"
         query = query.replace("\n", "")
         self.mycursor.execute(query)
@@ -362,10 +417,20 @@ class MoreUiSpace():
         gdp = self.mycursor.fetchall()
         gdp = gdp[0]
         gdp = gdp[0]
+        print(cost)
+        print(basecost)
+        pricefactor = cost/basecost
+
+
+
+        print("pricefactor = ")
+        print(pricefactor)
         wealthMultipier = gdp/40000
         cost *= wealthMultipier
 
+
         loadFactor *= 100
+        loadFactor/=pricefactor
         print("loadfactor = ")
         print(loadFactor)
 
@@ -395,13 +460,13 @@ class MoreUiSpace():
         newWindow.title("Select from " + text)
         newWindow.geometry("500x500")
 
-
+        scrollbar = Scrollbar(newWindow, orient=VERTICAL)
         label = Label(newWindow, text="Select an " + text + " to make a flight in")
         label.place(x=180, y=20)
 
 
         print(savedSelection)
-        listbox = Listbox(newWindow, width=70, height=15, fg="blue")
+        listbox = Listbox(newWindow, width=70, height=15, fg="blue", yscrollcommand=scrollbar)
         sql = ""
         sortingbytuple = 0;
         if depth == 0:
@@ -423,6 +488,7 @@ class MoreUiSpace():
         country.sort(key=lambda tup: tup[sortingbytuple])
         country.reverse()
         i = 0
+
         for row in country:
 
             s = row[0] +  "," +row[1]
@@ -511,5 +577,32 @@ class MoreUiSpace():
             i += 1
 
         listbox.place(x=20, y=80)
+
         # Double click event with mouse
         listbox.bind('<Double-1>', partial(self.openSelectorMenuWithEvent,savedSelection,selectingFrom, depth, newWindow))
+
+    def createTriggers(self):
+        sql = "drop TRIGGER if exists before_reputation_update"
+        self.mycursor.execute(sql)
+        self.db.commit()
+
+        sql1 = "CREATE TRIGGER before_reputation_update \
+                    BEFORE UPDATE \
+                    ON airline FOR EACH ROW \
+                    BEGIN \
+                        DECLARE errorMessage VARCHAR(255); \
+                        DECLARE errorMessage1 VARCHAR(255); \
+                        SET errorMessage = CONCAT('The reputation cannot be a negative number'); \
+                        SET errorMessage1 = CONCAT('The reputation cannot be greater than 100'); \
+                        IF NEW.Reputation < 0 THEN \
+                            SIGNAL SQLSTATE '45000' \
+                                SET MESSAGE_TEXT = errorMessage; \
+                        ELSEIF NEW.REPUTATION > 100 THEN \
+                            SIGNAL SQLSTATE '45000' \
+                                SET MESSAGE_TEXT = errorMessage1; \
+                        END IF;\
+                    END"
+        self.mycursor.execute(sql1)
+        self.db.commit()
+
+

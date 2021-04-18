@@ -103,13 +103,13 @@ class Init:
         # Airlines start here
         query = "CREATE TABLE IF NOT EXISTS Airline(AirlineName VARCHAR(64), CostStructure CHAR(64), Reputation INT, PRIMARY KEY (AirlineName));"
         mycursor.execute(query)
-        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation, callsign) VALUES ('Air Wayne', 'HIGH', 100, 'AW');"
+        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation, callsign) VALUES ('Air Wayne', 'LOW', 100, 'AW');"
         mycursor.execute(query)
         query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation, callsign) VALUES ('Air Tim', 'HIGH', 100, 'AT');"
         mycursor.execute(query)
         query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation, callsign) VALUES ('Air Justin', 'MED', 80, 'AJ');"
         mycursor.execute(query)
-        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation, callsign) VALUES ('Air William', 'LOW', 80, 'WA');"
+        query = "INSERT ignore INTO Airline (AirlineName, CostStructure, Reputation, callsign) VALUES ('Air William', 'LOW', 50, 'WA');"
         mycursor.execute(query)
         db.commit()
 
@@ -118,42 +118,6 @@ class Init:
         mycursor.execute(Dbquery.updateRoutesDomesticBusiness())
         db.commit()
         #mycursor.execute(Dbquery.createTriggerQuery())
-        db.commit()
-        query = '''DELIMITER $$ CREATE TRIGGER blocker 
-                            BEFORE UPDATE
-                            ON airport 
-                            FOR EACH ROW 
-                            BEGIN 
-                            DECLARE ErrorMessage VARCHAR(255) ;
-                            SET ErrorMessage = 'Invalid inputs for nearby population! Try again! ';
-                            IF new.NearbyPopulation < 0 
-                            THEN SIGNAL SQLSTATE '99999'
-                            SET MESSAGE_TEXT = ErrorMessage;
-                            END IF;
-                            END $$'''
-        mycursor.execute(query, multi=True)
-        db.commit()
-        query = """DROP TRIGGER IF EXISTS before_reputation_update;
-DELIMITER $$
-CREATE TRIGGER before_reputation_update
-BEFORE UPDATE
-ON airline FOR EACH ROW
-BEGIN
-    DECLARE errorMessage VARCHAR(255);
-    DECLARE errorMessage1 VARCHAR(255);
-    SET errorMessage = CONCAT('The reputation cannot be a negative number');
-    SET errorMessage1 = CONCAT('The reputation cannot be greater than 100');
-    IF NEW.Reputation < 0 THEN
-        SIGNAL SQLSTATE '45000'
-            SET MESSAGE_TEXT = errorMessage;
-    ELSEIF NEW.REPUTATION > 100 THEN
-        SIGNAL SQLSTATE '45000'
-            SET MESSAGE_TEXT = errorMessage1;
-    END IF;
-END $$
-
-DELIMITER ;"""
-        mycursor.execute(query, multi=True)
         db.commit()
 
     @classmethod
