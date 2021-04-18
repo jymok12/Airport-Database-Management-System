@@ -100,37 +100,46 @@ class MoreUiSpace():
         newWindow.title("Query 2")
         label = Label(newWindow, text="Please input the parameters for running this Query")
         label.place(x=120, y=20)
-        var = 0
-        # Weird issue: the button will press regardless?
-        check = Checkbutton(newWindow, text='Ascending Order', variable=var, onvalue=1, offvalue=0)
+        var = 1
+        self.Q2SQLD(newWindow)
+        check = Checkbutton(newWindow, text='Ascending Order', variable=var, onvalue=0, offvalue=1,
+                            command=partial(self.Q2SQLA, newWindow))
+        check2 = Checkbutton(newWindow, text='Descending Order', variable=var, onvalue=1, offvalue=0,
+                             command=partial(self.Q2SQLD, newWindow))
         check.place(x=150, y=180)
-        if var == 0:
-            sql = """SELECT DISTINCT CodeDeparture, CodeArrival, TouristDemand
-                    FROM Routes
-                    ORDER BY TouristDemand ASC;"""
-            self.mycursor.execute(sql)
-            result = self.mycursor.fetchall()
-            listbox = Listbox(newWindow, width=50, height=10, fg="blue")
-            i = 0
-            for row in result:
-                listbox.insert(i, row[1])
-            listbox.place(x=50, y=270)
-        else:
-            sql = """SELECT DISTINCT CodeDeparture, CodeArrival, TouristDemand
-                                FROM Route
-                                ORDER BY TouristDemand DESC;"""
-            self.mycursor.execute(sql)
-            result = self.mycursor.fetchall();
-            listbox = Listbox(newWindow, width=50, height=10, fg="blue")
-            i = 0
-            for row in result:
-                s = row[0] + "," + row[1]
-                listbox.insert(i, s)
-                i += 1
-            listbox.place(x=50, y=270)
-        # button2 = Button(newWindow, text="Display Results (TEST)", command=self.pressedExampleButton())
-        # button2.place(x=350, y=200, height=50, width=100)
+        check2.place(x=150, y=210)
 
+    def Q2SQLA(self, window):
+        print("var = 0")
+        sql = """SELECT DISTINCT CodeDeparture, CodeArrival, TouristDemand
+                       FROM Routes
+                       ORDER BY TouristDemand ASC
+                       LIMIT 50;"""
+        self.mycursor.execute(sql)
+        print("execute")
+        result = self.mycursor.fetchall()
+        print("fetch")
+        listbox = Listbox(window, width=50, height=10, fg="blue")
+        i = 0
+        for row in result:
+            s = row[0] + " to " + row[1]
+            listbox.insert(i, s)
+        listbox.place(x=50, y=270)
+
+    def Q2SQLD(self, window):
+        sql = """SELECT DISTINCT CodeDeparture, CodeArrival, TouristDemand
+                           FROM Routes
+                           ORDER BY TouristDemand DESC
+                           LIMIT 50;"""
+        self.mycursor.execute(sql)
+        result = self.mycursor.fetchall()
+        listbox = Listbox(window, width=50, height=10, fg="blue")
+        i = 0
+        for row in result:
+            s = row[0] + " to " + row[1]
+            listbox.insert(i, s)
+            i += 1
+        listbox.place(x=50, y=270)
     def openNewWindowForQ4(self):
         newWindow = Toplevel(self.CMPT354)
         newWindow.geometry("1000x500")

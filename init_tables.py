@@ -66,7 +66,7 @@ class Init:
 
         print("reached here")
         query = "CREATE TABLE IF NOT EXISTS Routes(CodeDeparture char(4),CodeArrival char(4),TouristDemand INTEGER," \
-                "BuisnessDemand INTEGER,CargoDemand INTEGER,PRIMARY KEY (CodeDeparture, CodeArrival),FOREIGN KEY (" \
+                "BuisnessDemand INTEGER,CargoDemand INTEGER, FOREIGN KEY (" \
                 "CodeDeparture) REFERENCES airport(AirportCode),FOREIGN KEY (CodeArrival) REFERENCES airport(" \
                 "AirportCode)); "
         mycursor.execute(query)
@@ -118,6 +118,42 @@ class Init:
         mycursor.execute(Dbquery.updateRoutesDomesticBusiness())
         db.commit()
         #mycursor.execute(Dbquery.createTriggerQuery())
+        db.commit()
+        query = '''DELIMITER $$ CREATE TRIGGER blocker 
+                            BEFORE UPDATE
+                            ON airport 
+                            FOR EACH ROW 
+                            BEGIN 
+                            DECLARE ErrorMessage VARCHAR(255) ;
+                            SET ErrorMessage = 'Invalid inputs for nearby population! Try again! ';
+                            IF new.NearbyPopulation < 0 
+                            THEN SIGNAL SQLSTATE '99999'
+                            SET MESSAGE_TEXT = ErrorMessage;
+                            END IF;
+                            END $$'''
+        mycursor.execute(query, multi=True)
+        db.commit()
+        query = """DROP TRIGGER IF EXISTS before_reputation_update;
+DELIMITER $$
+CREATE TRIGGER before_reputation_update
+BEFORE UPDATE
+ON airline FOR EACH ROW
+BEGIN
+    DECLARE errorMessage VARCHAR(255);
+    DECLARE errorMessage1 VARCHAR(255);
+    SET errorMessage = CONCAT('The reputation cannot be a negative number');
+    SET errorMessage1 = CONCAT('The reputation cannot be greater than 100');
+    IF NEW.Reputation < 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = errorMessage;
+    ELSEIF NEW.REPUTATION > 100 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = errorMessage1;
+    END IF;
+END $$
+
+DELIMITER ;"""
+        mycursor.execute(query, multi=True)
         db.commit()
 
     @classmethod

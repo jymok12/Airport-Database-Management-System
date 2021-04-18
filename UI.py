@@ -376,7 +376,7 @@ class UserInterface:
         inputLabel.place(x= 0, y = 75)
         textField = Text(editAllMenu,height = 1, width = 15)
         textField.place(x=0, y=100)
-        submitButton = Button(editAllMenu, text="Save text selection", command=partial(self.saveTextSelection,textField,editAllMenu))
+        submitButton = Button(editAllMenu, text="Save text selection", command=partial(self.saveTextSelection3,textField,editAllMenu))
         submitButton.place(x=0, y=125)
 
         runButton = Button(editAllMenu, text="Run query with selected data",command=partial(self.runQuery, editAllMenu))
@@ -413,6 +413,18 @@ class UserInterface:
         runButton.place(x=0, y=350)
         editSomeMenu.mainloop()
 
+    def saveTextSelection3(self, textfield, theRoottk):
+        self.userText = ""
+        text = textfield.get("1.0", END)
+        if text == '\n':  # Get rid of empty
+            text = "1"
+        if text[0:1] == '-':
+            text = text[1:len(text)]
+            print(text + " is text")
+        label = Label(theRoottk, text="Multiplier: " + text)
+        label.place(x=0, y=175)
+        self.userText = text
+        print(text)
     def displayBaseOfOperation(self, airline, detailWindow):
         my_frame = Frame(detailWindow)
         scrollbar = Scrollbar(my_frame, orient=VERTICAL)
@@ -421,7 +433,7 @@ class UserInterface:
         listbox = Listbox(my_frame, width=75, height=10, fg="blue", yscrollcommand=scrollbar)
 
 
-
+        print("display this")
         sql = "Select distinct a.airportName from airport a where a.airportCode in (Select distinct f.CodeDeparture " \
               "from flight f where f.AirlineName = '"+airline+"') union all Select distinct a.airportName from " \
                                                               "airport a where a.airportCode in (Select distinct " \
@@ -544,27 +556,7 @@ class UserInterface:
     def Update_With_Trigger(self):
 
         print("test")
-        sql1 = "CREATE TRIGGER before_reputation_update \
-                BEFORE UPDATE \
-                ON airline FOR EACH ROW \
-                BEGIN \
-                    DECLARE errorMessage VARCHAR(255); \
-                    DECLARE errorMessage1 VARCHAR(255); \
-                    SET errorMessage = CONCAT('The reputation cannot be a negative number'); \
-                    SET errorMessage1 = CONCAT('The reputation cannot be greater than 100'); \
-                    IF NEW.Reputation < 0 THEN \
-                        SIGNAL SQLSTATE '45000' \
-                            SET MESSAGE_TEXT = errorMessage; \
-                    ELSEIF NEW.REPUTATION > 100 THEN \
-                        SIGNAL SQLSTATE '45000' \
-                            SET MESSAGE_TEXT = errorMessage1; \
-                    END IF;\
-                END"
-        sql = "UPDATE airline SET Reputation = '50' WHERE AirlineName = 'Air Justin'"
-        self.mycursor.execute(sql1)
-        self.db.commit()
-        self.mycursor.execute(sql)
-        self.db.commit()
+
 
     def StartUI(self):
         self.listBoxCreate()
